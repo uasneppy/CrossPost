@@ -1,0 +1,103 @@
+{
+  "-1002204399883": {
+    "title": "Testing",
+    "username": "testingyiff",
+    "emojis": [
+      "🇺🇦",
+      "💻",
+      "🎮"
+    ],
+    "id": -1002204399883,
+    "is_sfw": false,
+    "subscribers": 4,
+    "schedule": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": false,
+      "6": true
+    },
+    "reserved_position": 1
+  },
+  "-1002467496944": {
+    "title": "Testing SFW",
+    "username": "testingnotyiff",
+    "emojis": [
+      "😄😁😘"
+    ],
+    "id": -1002467496944,
+    "is_sfw": true,
+    "subscribers": 2,
+    "schedule": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true
+    }
+  },
+  "-1002357763694": {
+    "title": "Memes SFW",
+    "username": "memessfw",
+    "emojis": [
+      "🇺🇦",
+      "💻",
+      "🎮"
+    ],
+    "id": -1002357763694,
+    "is_sfw": true,
+    "subscribers": 2,
+    "schedule": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true
+    }
+  },
+  "-1002487566547": {
+    "title": "Memes NSFW",
+    "username": "memesnsfw",
+    "emojis": [
+      "🎰🎮🥰"
+    ],
+    "id": -1002487566547,
+    "is_sfw": false,
+    "subscribers": 2,
+    "schedule": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true
+    }
+  },
+  "-1002297658240": {
+    "title": "Testing SFW #2",
+    "username": "testingsfw2",
+    "emojis": [
+      "😁😇😘"
+    ],
+    "id": -1002297658240,
+    "is_sfw": true,
+    "schedule": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true
+    },
+    "subscribers": 2,
+    "reserved_position": 1
+  }
+}

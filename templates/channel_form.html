@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - Українське ТҐ-Комʼюніті{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>{{ title }}</h1>
+    <a href="{{ url_for('view_channel', channel_id=channel.id|default('')) }}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Назад
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('edit_channel', channel_id=channel.id) }}">
+                    {{ form.csrf_token }}
+                    
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Назва каналу</label>
+                        {{ form.title(class="form-control", id="title") }}
+                        {% if form.title.errors %}
+                            {% for error in form.title.errors %}
+                                <div class="text-danger">{{ error }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        {{ form.username(class="form-control", id="username") }}
+                        {% if form.username.errors %}
+                            {% for error in form.username.errors %}
+                                <div class="text-danger">{{ error }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="channel_id" class="form-label">ID каналу</label>
+                        {{ form.channel_id(class="form-control", id="channel_id", readonly=true) }}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="url" class="form-label">URL каналу</label>
+                        {{ form.url(class="form-control", id="url") }}
+                        {% if form.url.errors %}
+                            {% for error in form.url.errors %}
+                                <div class="text-danger">{{ error }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="emojis" class="form-label">Емодзі (через кому)</label>
+                        {{ form.emojis(class="form-control", id="emojis") }}
+                        <div class="form-text">Введіть до 3 емодзі, які представляють канал, розділяючи їх комами</div>
+                        {% if form.emojis.errors %}
+                            {% for error in form.emojis.errors %}
+                                <div class="text-danger">{{ error }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="subscribers" class="form-label">Кількість підписників</label>
+                        {{ form.subscribers(class="form-control", id="subscribers") }}
+                        {% if form.subscribers.errors %}
+                            {% for error in form.subscribers.errors %}
+                                <div class="text-danger">{{ error }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3 form-check">
+                        {{ form.is_nsfw(class="form-check-input", id="is_nsfw") }}
+                        <label class="form-check-label" for="is_nsfw">NSFW контент</label>
+                    </div>
+                    
+                    <div class="text-center">
+                        {{ form.submit(class="btn btn-primary") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

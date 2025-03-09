@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - Українське ТҐ-Комʼюніті{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>{{ title }}</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        {% if pending %}
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Назва</th>
+                            <th>Username</th>
+                            <th>Тип</th>
+                            <th>Підписники</th>
+                            <th>Емодзі</th>
+                            <th>Дії</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for channel_id, channel in pending.items() %}
+                            <tr>
+                                <td>{{ channel.title|default(channel.name|default('Без імені')) }}</td>
+                                <td>@{{ channel.username|default('невідомий') }}</td>
+                                <td>
+                                    <span class="badge {% if channel.is_nsfw|default(false) %}bg-danger{% else %}bg-success{% endif %}">
+                                        {% if channel.is_nsfw|default(false) %}NSFW{% else %}SFW{% endif %}
+                                    </span>
+                                </td>
+                                <td>{{ channel.subscribers|default(0)|int }}</td>
+                                <td>{{ channel.emojis|default([])|join(' ') }}</td>
+                                <td>
+                                    <a href="{{ url_for('view_pending', channel_id=channel_id) }}" class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-eye"></i> Переглянути
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle"></i> Немає заявок на розгляді.
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

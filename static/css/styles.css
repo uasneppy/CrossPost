@@ -1,0 +1,180 @@
+/* Main Styles */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.footer {
+    border-top: 1px solid #e9ecef;
+    margin-top: 2rem;
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-title {
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+/* Stats Cards */
+.stat-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #0d6efd;
+}
+
+.stat-card p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* Table Styles */
+.table th {
+    background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f8ff;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 5px;
+}
+
+.btn-outline-primary {
+    border-color: #0d6efd;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Badge Styles */
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+/* Custom Components */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.day-card {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.day-card.active {
+    background-color: #d1e7dd;
+    border-color: #a3cfbb;
+}
+
+.day-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .stat-card h3 {
+        font-size: 1.75rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* Channel Row Styles */
+.channel-row.nsfw .badge {
+    background-color: #dc3545;
+}
+
+.channel-row.sfw .badge {
+    background-color: #198754;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.alert {
+    animation: fadeIn 0.5s;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body.dark-mode {
+        background-color: #212529;
+        color: #f8f9fa;
+    }
+    
+    body.dark-mode .card {
+        background-color: #343a40;
+        border-color: #495057;
+    }
+    
+    body.dark-mode .stat-card {
+        background-color: #343a40;
+    }
+    
+    body.dark-mode .stat-card p {
+        color: #adb5bd;
+    }
+    
+    body.dark-mode .table {
+        color: #e9ecef;
+    }
+    
+    body.dark-mode .table th {
+        background-color: #343a40;
+    }
+    
+    body.dark-mode .table-hover tbody tr:hover {
+        background-color: #495057;
+    }
+}

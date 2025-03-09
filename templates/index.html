@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}Головна - Українське ТҐ-Комʼюніті{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Статистика мережі</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="stat-card mb-3">
+                            <h3 id="total-channels">{{ channels|length }}</h3>
+                            <p>Всього каналів</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card mb-3">
+                            <h3 id="pending-channels">{{ pending|length }}</h3>
+                            <p>Заявок на розгляді</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="stat-card mb-3">
+                            <h3 id="sfw-channels">
+                                {% set sfw_count = 0 %}
+                                {% for channel in channels.values() %}
+                                    {% if channel.is_sfw|default(true) %}
+                                        {% set sfw_count = sfw_count + 1 %}
+                                    {% endif %}
+                                {% endfor %}
+                                {{ sfw_count }}
+                            </h3>
+                            <p>SFW каналів</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card mb-3">
+                            <h3 id="nsfw-channels">
+                                {% set nsfw_count = 0 %}
+                                {% for channel in channels.values() %}
+                                    {% if not channel.is_sfw|default(true) %}
+                                        {% set nsfw_count = nsfw_count + 1 %}
+                                    {% endif %}
+                                {% endfor %}
+                                {{ nsfw_count }}
+                            </h3>
+                            <p>NSFW каналів</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3 id="total-subscribers">
+                        {% set total_subscribers = 0 %}
+                        {% for channel in channels.values() %}
+                            {% if channel.subscribers is defined %}
+                                {% set total_subscribers = total_subscribers + channel.subscribers|int %}
+                            {% endif %}
+                        {% endfor %}
+                        {{ total_subscribers }}
+                    </h3>
+                    <p>Всього підписників</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Графіки</h2>
+                <canvas id="channelsChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h2 class="card-title mb-0">Останні заявки</h2>
+                <a href="{{ url_for('list_pending') }}" class="btn btn-sm btn-outline-primary">Переглянути всі</a>
+            </div>
+            <ul class="list-group list-group-flush">
+                {% if pending %}
+                    {% for channel_id, channel in pending.items() %}
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>{{ channel.title|default(channel.name|default('Без імені')) }}</strong>
+                                    <small class="text-muted d-block">@{{ channel.username|default('невідомий') }}</small>
+                                </div>
+                                <div>
+                                    <a href="{{ url_for('view_pending', channel_id=channel_id) }}" class="btn btn-sm btn-outline-info">
+                                        <i class="bi bi-eye"></i> Деталі
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                {% else %}
+                    <li class="list-group-item text-center text-muted">
+                        Немає заявок на розгляді
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h2 class="card-title mb-0">Останні канали</h2>
+                <a href="{{ url_for('list_channels') }}" class="btn btn-sm btn-outline-primary">Переглянути всі</a>
+            </div>
+            <ul class="list-group list-group-flush">
+                {% if channels and channels|length > 0 %}
+                    {% set counter = namespace(value=0) %}
+                    {% for channel_id, channel in channels.items() %}
+                        {% if counter.value < 5 and channel_id %}
+                            {% set counter.value = counter.value + 1 %}
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>{{ channel.title|default(channel.name|default('Без імені')) }}</strong>
+                                        <small class="text-muted d-block">@{{ channel.username|default('невідомий') }} - {{ channel.subscribers|default(0) }} підписників</small>
+                                    </div>
+                                    <div>
+                                        <span class="badge {% if not channel.is_sfw|default(true) %}bg-danger{% else %}bg-success{% endif %}">
+                                            {% if not channel.is_sfw|default(true) %}NSFW{% else %}SFW{% endif %}
+                                        </span>
+                                        <a href="{{ url_for('view_channel', channel_id=channel_id) }}" class="btn btn-sm btn-outline-info ms-2">
+                                            <i class="bi bi-eye"></i> Деталі
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <li class="list-group-item text-center text-muted">
+                        Немає каналів у мережі
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Create channels chart
+    const ctx = document.getElementById('channelsChart').getContext('2d');
+    window.channelsChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['SFW Канали', 'NSFW Канали'],
+            datasets: [{
+                data: [0, 0], // Initial empty data, will be filled by API
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(255, 99, 132, 0.7)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

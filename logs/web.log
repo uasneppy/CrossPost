@@ -1,0 +1,1699 @@
+2025-03-08 20:00:25,832 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:00:25,832 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:00:25,833 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:00:25,853 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:00:25,853 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:00:26,027 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:00:26,028 - __main__ - INFO - Starting bot in separate thread
+2025-03-08 20:00:26,029 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:00:26,029 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:00:26,409 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:00:26,411 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:00:26,412 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:00:26,412 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:00:26,413 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:00:26,413 - bot - INFO - Bot started
+2025-03-08 20:00:30,315 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-08 20:00:30,316 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-08 20:00:30,353 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:00:30] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:00:31,735 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:00:31] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:00:34,319 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-08 20:00:34,320 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-08 20:00:39,088 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-08 20:00:39,089 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-08 20:00:45,402 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-08 20:00:45,403 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-08 20:00:53,106 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:00:53,107 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:00:53,107 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:00:53,154 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:00:53,155 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:00:53,330 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:00:53,331 - __main__ - INFO - Starting bot in separate thread
+2025-03-08 20:00:53,332 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:00:53,332 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:00:53,386 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:00:53] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:00:53,466 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:00:53] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:00:53,704 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:00:53,706 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:00:53,706 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:00:53,707 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:00:53,707 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:00:53,707 - bot - INFO - Bot started
+2025-03-08 20:02:34,651 - server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 68, in index
+    pending = get_pending_channels()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/index.html", line 40, in block 'content'
+    <h3 id="total-subscribers">{{ channels.values()|map(attribute='subscribers')|sum }}</h3>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/async_utils.py", line 48, in wrapper
+    return normal_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/filters.py", line 1336, in sync_do_sum
+    return sum(iterable, start)  # type: ignore[no-any-return, call-overload]
+           ^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'subscribers'
+2025-03-08 20:02:34,654 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:02:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-08 20:02:41,226 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:02:41,226 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:02:41,410 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:02:41,412 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:02:41,412 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:02:41,790 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:02:41,792 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:02:41,792 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:02:41,793 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:02:41,794 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:02:41,794 - bot - INFO - Bot started
+2025-03-08 20:02:41,794 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:02:41,794 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:02:41,810 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:02:41,810 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:02:42,099 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:02:42] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:02:42,149 - server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 69, in index
+    return render_template('index.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/index.html", line 40, in block 'content'
+    <h3 id="total-subscribers">{{ channels.values()|map(attribute='subscribers')|sum }}</h3>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/async_utils.py", line 48, in wrapper
+    return normal_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/filters.py", line 1336, in sync_do_sum
+    return sum(iterable, start)  # type: ignore[no-any-return, call-overload]
+           ^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'subscribers'
+2025-03-08 20:02:42,152 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:02:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-08 20:03:47,966 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:03:47,967 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:03:48,163 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:03:48,164 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:03:48,164 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:03:48,546 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:03:48,549 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:03:48,552 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:03:48,553 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:03:48,554 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:03:48,554 - bot - INFO - Bot started
+2025-03-08 20:03:48,558 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:03:48,558 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:03:48,595 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:03:48,595 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:03:48,971 - server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 69, in index
+    return render_template('index.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/index.html", line 122, in block 'content'
+    {% for channel_id, channel in channels.items()|list|slice(0, 5) %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/filters.py", line 1083, in sync_do_slice
+    items_per_slice = length // slices
+                      ~~~~~~~^^~~~~~~~
+ZeroDivisionError: integer division or modulo by zero
+2025-03-08 20:03:48,974 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:03:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-08 20:04:13,801 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:04:13,802 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:04:13,976 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:04:13,977 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:04:13,978 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:04:14,419 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:04:14,420 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:04:14,421 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:04:14,422 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:04:14,422 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:04:14,422 - bot - INFO - Bot started
+2025-03-08 20:04:14,423 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:04:14,423 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:04:14,438 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:04:14,439 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:04:14,647 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:04:14] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:04:14,792 - server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 69, in index
+    return render_template('index.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/index.html", line 122, in block 'content'
+    {% for channel_id, channel in channels.items()|list|slice(0, 5) if channel_id %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/index.html", line 122, in template
+    {% for channel_id, channel in channels.items()|list|slice(0, 5) if channel_id %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/filters.py", line 1083, in sync_do_slice
+    items_per_slice = length // slices
+                      ~~~~~~~^^~~~~~~~
+ZeroDivisionError: integer division or modulo by zero
+2025-03-08 20:04:14,794 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:04:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-08 20:04:59,633 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:04:59,633 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:04:59,835 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:04:59,836 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:04:59,836 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:05:00,291 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:05:00,293 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:05:00,293 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:05:00,294 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:05:00,294 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:05:00,294 - bot - INFO - Bot started
+2025-03-08 20:05:00,295 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:05:00,295 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:05:00,300 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:05:00,300 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:05:00,661 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:00] "GET / HTTP/1.1" 200 -
+2025-03-08 20:05:00,970 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:00] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-08 20:05:01,334 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:01] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-08 20:05:01,848 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:01] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:05:14,798 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:05:14,799 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:05:14,966 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:05:14,968 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:05:14,968 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:05:15,425 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:05:15,427 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:05:15,427 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:05:15,428 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:05:15,428 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:05:15,428 - bot - INFO - Bot started
+2025-03-08 20:05:15,428 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:05:15,429 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:05:15,443 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:05:15,444 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:05:15,808 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:15] "GET / HTTP/1.1" 200 -
+2025-03-08 20:05:15,972 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:05:16,090 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:05:16,933 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:16] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:05:21,508 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:21] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:05:22,041 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:22] "GET / HTTP/1.1" 200 -
+2025-03-08 20:05:22,200 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:05:22,321 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:05:23,103 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:23] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:05:39,852 - server - ERROR - Exception on /channels [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 78, in list_channels
+    return render_template('channels.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/channels.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/channels.html", line 44, in block 'content'
+    <tr class="channel-row {% if channel.is_nsfw %}nsfw{% else %}sfw{% endif %} {% if channel.subscribers < 300 %}small{% else %}large{% endif %}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'subscribers'
+2025-03-08 20:05:39,853 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:39] "[35m[1mGET /channels HTTP/1.1[0m" 500 -
+2025-03-08 20:05:48,479 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:48] "GET / HTTP/1.1" 200 -
+2025-03-08 20:05:48,645 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:05:48,765 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:05:49,546 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:05:49] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:06:17,996 - server - ERROR - Exception on /pending [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 196, in list_pending
+    return render_template('pending.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/pending.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 61, in top-level template code
+    <span class="text-muted">© {{ now.year }} Українське ТҐ-Комʼюніті</span>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'now' is undefined
+2025-03-08 20:06:18,001 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:06:18] "[35m[1mGET /pending HTTP/1.1[0m" 500 -
+2025-03-08 20:06:45,537 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:06:45] "GET / HTTP/1.1" 200 -
+2025-03-08 20:06:45,820 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:06:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:06:45,876 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:06:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:06:46,635 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:06:46] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:06:47,807 - server - ERROR - Exception on /channels [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 78, in list_channels
+    return render_template('channels.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/channels.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/channels.html", line 44, in block 'content'
+    <tr class="channel-row {% if channel.is_nsfw %}nsfw{% else %}sfw{% endif %} {% if channel.subscribers < 300 %}small{% else %}large{% endif %}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'subscribers'
+2025-03-08 20:06:47,808 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:06:47] "[35m[1mGET /channels HTTP/1.1[0m" 500 -
+2025-03-08 20:08:38,214 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:08:38,214 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:08:38,376 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:08:38,377 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:08:38,377 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:08:38,778 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:08:38,780 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:08:38,781 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:08:38,782 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:08:38,782 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:08:38,783 - bot - INFO - Bot started
+2025-03-08 20:08:38,783 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:08:38,783 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:08:38,790 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:08:38,791 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:08:39,091 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:08:39] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:08:39,451 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:08:39] "GET / HTTP/1.1" 200 -
+2025-03-08 20:08:39,618 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:08:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:08:39,738 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:08:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:08:40,511 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:08:40] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:10:24,295 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:10:24,295 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:10:24,502 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:10:24,506 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:10:24,506 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:10:24,885 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:10:24,887 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:10:24,887 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:10:24,888 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:10:24,888 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:10:24,889 - bot - INFO - Bot started
+2025-03-08 20:10:24,889 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:10:24,889 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:10:24,904 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:10:24,904 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:10:25,204 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:10:25] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:10:25,272 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:10:25] "GET / HTTP/1.1" 200 -
+2025-03-08 20:10:25,437 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:10:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:10:25,565 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:10:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:10:26,426 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:10:26] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:11:35,172 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:11:35,172 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:11:35,400 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:11:35,401 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:11:35,401 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:11:35,832 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:11:35,835 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:11:35,835 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:11:35,836 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:11:35,836 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:11:35,836 - bot - INFO - Bot started
+2025-03-08 20:11:35,836 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:11:35,837 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:11:35,841 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:11:35,841 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:11:36,218 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:11:36] "GET / HTTP/1.1" 200 -
+2025-03-08 20:11:36,274 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:11:36] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:11:36,390 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:11:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:11:36,509 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:11:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:11:36,689 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:11:36] "GET / HTTP/1.1" 200 -
+2025-03-08 20:11:36,970 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:11:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:11:36,989 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:11:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:11:37,606 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:11:37] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:12:02,734 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:02] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:12:02,905 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:12:02,906 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:12:03,733 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:03] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:12:15,552 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:15] "GET /channels/-1002487566547/edit HTTP/1.1" 200 -
+2025-03-08 20:12:15,726 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:12:15,726 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:12:16,593 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:16] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:12:26,694 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:26] "GET / HTTP/1.1" 200 -
+2025-03-08 20:12:26,864 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:12:26,987 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:12:27,802 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:27] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:12:32,718 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:32] "GET /pending HTTP/1.1" 200 -
+2025-03-08 20:12:32,883 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:12:32,885 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:12:33,805 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:33] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:12:35,089 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:35] "GET / HTTP/1.1" 200 -
+2025-03-08 20:12:35,254 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:12:35,255 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:12:35,927 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:35] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:12:39,596 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:39] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:12:39,764 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:12:39,765 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:12:40,559 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:40] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:12:42,670 - server - ERROR - Exception on /channels/-1002204399883/schedule [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 168, in edit_schedule
+    return render_template('schedule_form.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/schedule_form.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/schedule_form.html", line 23, in block 'content'
+    {% for i, day in enumerate(days) %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'enumerate' is undefined
+2025-03-08 20:12:42,673 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:42] "[35m[1mGET /channels/-1002204399883/schedule HTTP/1.1[0m" 500 -
+2025-03-08 20:12:55,534 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:55] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:12:55,691 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:12:55,820 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:12:56,626 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:12:56] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:13:01,852 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:01] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:13:02,018 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:13:02,021 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:13:02,823 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:02] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:13:13,571 - server - ERROR - Exception on /channels/-1002204399883/schedule [GET]
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 37, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/server.py", line 168, in edit_schedule
+    return render_template('schedule_form.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/workspace/templates/schedule_form.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/workspace/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/templates/schedule_form.html", line 23, in block 'content'
+    {% for i, day in enumerate(days) %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/jinja2/utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'enumerate' is undefined
+2025-03-08 20:13:13,573 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:13] "[35m[1mGET /channels/-1002204399883/schedule HTTP/1.1[0m" 500 -
+2025-03-08 20:13:55,640 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:13:55,640 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:13:55,868 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:13:55,870 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:13:55,870 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:13:56,249 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:13:56,251 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:13:56,251 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:13:56,252 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:13:56,252 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:13:56,252 - bot - INFO - Bot started
+2025-03-08 20:13:56,255 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:13:56,255 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:13:56,263 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:13:56,263 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:13:56,634 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:56] "GET / HTTP/1.1" 200 -
+2025-03-08 20:13:56,718 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:56] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:13:56,937 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:13:57,086 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:13:57,478 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:57] "GET / HTTP/1.1" 200 -
+2025-03-08 20:13:57,781 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:13:57,924 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:13:58,579 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:13:58] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:14:56,301 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:14:56] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:14:56,888 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:14:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:14:56,932 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:14:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:14:57,335 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:14:57] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:14:58,593 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:14:58] "GET /channels/-1002204399883/schedule HTTP/1.1" 200 -
+2025-03-08 20:14:58,756 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:14:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:14:58,758 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:14:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:14:59,431 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:14:59] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:15:04,822 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 0 to True
+2025-03-08 20:15:04,822 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 1 to True
+2025-03-08 20:15:04,823 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 2 to False
+2025-03-08 20:15:04,824 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 3 to True
+2025-03-08 20:15:04,825 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 4 to False
+2025-03-08 20:15:04,825 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 5 to True
+2025-03-08 20:15:04,826 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 6 to True
+2025-03-08 20:15:04,827 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:04] "[32mPOST /channels/-1002204399883/schedule HTTP/1.1[0m" 302 -
+2025-03-08 20:15:04,969 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:04] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:15:05,127 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:15:05,154 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:15:06,061 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:06] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:15:14,294 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:14] "GET /channels/-1002204399883/schedule HTTP/1.1" 200 -
+2025-03-08 20:15:14,448 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:15:14,450 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:15:15,258 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:15] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:15:19,400 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:19] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:15:19,559 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:15:19,587 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:15:20,449 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:20] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:15:23,519 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:23] "GET /pending HTTP/1.1" 200 -
+2025-03-08 20:15:23,694 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:15:23,695 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:15:24,614 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:24] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:15:26,458 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:26] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:15:26,618 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:15:26,739 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:15:27,718 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:27] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:15:29,702 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:29] "GET / HTTP/1.1" 200 -
+2025-03-08 20:15:29,865 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:15:29,983 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:15:30,781 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:15:30] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:16:37,116 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:16:37,117 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:16:37,332 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:16:37,334 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:16:37,334 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:16:37,713 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:16:37,715 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:16:37,715 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:16:37,716 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:16:37,717 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:16:37,717 - bot - INFO - Bot started
+2025-03-08 20:16:37,717 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:16:37,717 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:16:37,734 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:16:37,734 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:16:38,214 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:16:38] "GET / HTTP/1.1" 200 -
+2025-03-08 20:16:38,514 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:16:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:16:38,660 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:16:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:16:39,296 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:16:39] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:16:59,123 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:16:59] "GET / HTTP/1.1" 200 -
+2025-03-08 20:16:59,283 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:16:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:16:59,366 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:16:59] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:16:59,413 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:16:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:17:00,229 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:00] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:17:15,992 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:15] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:17:16,158 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:17:16,159 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:17:16,957 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:16] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:17:21,715 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:21] "GET / HTTP/1.1" 200 -
+2025-03-08 20:17:21,881 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:17:21,995 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:17:22,808 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:17:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:17:54,396 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 20:17:54] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:17:57,070 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 20:17:57] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:19:02,370 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:19:02,370 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:19:02,571 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:19:02,573 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:19:02,573 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:19:02,966 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:19:02,968 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:19:02,968 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:19:02,969 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:19:02,969 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:19:02,969 - bot - INFO - Bot started
+2025-03-08 20:19:02,970 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:19:02,972 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:19:02,985 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:19:02,985 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:19:03,344 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:03] "GET / HTTP/1.1" 200 -
+2025-03-08 20:19:03,741 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:19:03,799 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:03] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:19:03,891 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:19:04,415 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:04] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:19:30,186 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 20:19:30] "[31m[1mGET /api/stats HTTP/1.1[0m" 401 -
+2025-03-08 20:19:43,934 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 20:19:43] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:19:51,487 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:19:51,487 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:19:51,701 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:19:51,703 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:19:51,703 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:19:52,150 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:19:52,151 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:19:52,152 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:19:52,152 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:19:52,153 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:19:52,153 - bot - INFO - Bot started
+2025-03-08 20:19:52,153 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:19:52,153 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:19:52,160 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:19:52,161 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:19:52,494 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:52] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:19:52,537 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:52] "GET / HTTP/1.1" 200 -
+2025-03-08 20:19:52,710 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:19:52,822 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:19:53,134 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:53] "GET / HTTP/1.1" 200 -
+2025-03-08 20:19:53,413 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:19:53,430 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:19:54,212 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:19:54] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:20:19,042 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:20:19] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:20:19,276 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:20:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:20:19,284 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:20:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:20:20,027 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:20:20] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:21:09,184 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:21:09] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:21:09,350 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:21:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:21:09,351 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:21:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:21:10,131 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:21:10] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:22:41,837 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:22:41,838 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:22:42,039 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:22:42,041 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:22:42,041 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:22:42,417 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:22:42,420 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:22:42,421 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:22:42,422 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:22:42,422 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:22:42,423 - bot - INFO - Bot started
+2025-03-08 20:22:42,424 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:22:42,424 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:22:42,440 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:22:42,440 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:22:42,737 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:22:42] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:22:42,827 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:22:42] "GET / HTTP/1.1" 200 -
+2025-03-08 20:22:42,993 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:22:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:22:43,116 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:22:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:22:43,913 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:22:43] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:23:00,380 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:00] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:23:00,785 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:00] "GET / HTTP/1.1" 200 -
+2025-03-08 20:23:00,945 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:23:01,064 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:23:01,885 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:01] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:23:21,919 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:21] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:23:22,085 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:23:22,204 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:23:23,019 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:23] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:23:26,924 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:26] "GET / HTTP/1.1" 200 -
+2025-03-08 20:23:27,092 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:23:27,211 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:23:28,025 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:23:28] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:25:15,351 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:25:15,351 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:25:15,585 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:25:15,587 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:25:15,587 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:25:16,081 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:25:16,083 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:25:16,084 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:25:16,085 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:25:16,087 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:25:16,088 - bot - INFO - Bot started
+2025-03-08 20:25:16,088 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:25:16,088 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:25:16,106 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:25:16,106 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:25:16,306 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:25:16] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:25:16,441 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:25:16] "GET / HTTP/1.1" 200 -
+2025-03-08 20:25:16,606 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:25:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:25:16,728 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:25:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:25:17,505 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:25:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:26:46,625 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:26:46,625 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:26:46,813 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:26:46,814 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:26:46,814 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:26:47,229 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:26:47,230 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:26:47,231 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:26:47,231 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:26:47,232 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:26:47,232 - bot - INFO - Bot started
+2025-03-08 20:26:47,232 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:26:47,232 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:26:47,248 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:26:47,248 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:26:47,566 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:26:47] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:26:47,631 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:26:47] "GET / HTTP/1.1" 200 -
+2025-03-08 20:26:47,994 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:26:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:26:48,148 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:26:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:26:48,792 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:26:48] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:27:58,799 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:27:58,799 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:27:58,987 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:27:58,988 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:27:58,988 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:27:59,377 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:27:59,378 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:27:59,379 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:27:59,379 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:27:59,380 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:27:59,380 - bot - INFO - Bot started
+2025-03-08 20:27:59,380 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:27:59,381 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:27:59,387 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:27:59,387 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:27:59,632 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:27:59] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:27:59,734 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:27:59] "GET / HTTP/1.1" 200 -
+2025-03-08 20:28:00,040 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:28:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:28:00,186 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:28:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:28:00,851 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:28:00] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:28:56,821 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:28:56] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:28:57,319 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:28:57] "GET / HTTP/1.1" 200 -
+2025-03-08 20:28:57,617 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:28:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:28:57,763 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:28:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:28:58,397 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:28:58] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:32:40,112 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:32:40,113 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:32:40,438 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:32:40,439 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:32:40,439 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:32:40,820 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:32:40,822 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:32:40,822 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:32:40,823 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:32:40,824 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:32:40,824 - bot - INFO - Bot started
+2025-03-08 20:32:40,825 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:32:40,826 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:32:40,832 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:32:40,832 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:32:41,199 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:32:41] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:32:41,316 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:32:41] "GET / HTTP/1.1" 200 -
+2025-03-08 20:32:41,623 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:32:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:32:41,695 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:32:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:32:42,462 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:32:42] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:32:59,098 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 20:32:59] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:33:30,090 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 20:33:30] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:33:36,460 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:33:36,460 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:33:36,767 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:33:36,771 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:33:36,771 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:33:37,281 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:33:37,283 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:33:37,284 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:33:37,284 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:33:37,285 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:33:37,285 - bot - INFO - Bot started
+2025-03-08 20:33:37,285 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:33:37,285 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:33:37,291 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:33:37,292 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:33:37,684 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:33:37] "GET / HTTP/1.1" 200 -
+2025-03-08 20:33:37,706 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:33:37] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:33:37,847 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:33:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:33:37,970 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:33:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:33:38,225 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:33:38] "GET / HTTP/1.1" 200 -
+2025-03-08 20:33:38,516 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:33:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:33:38,531 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:33:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:33:39,307 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:33:39] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:36:18,396 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:36:18,397 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:36:18,613 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:36:18,615 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:36:18,615 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:36:18,987 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:36:18,989 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:36:18,989 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:36:18,990 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:36:18,990 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-08 20:36:18,991 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:36:18,991 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-08 20:36:20,128 - utils.crosspost - INFO - Successfully updated subscriber counts for 4 channels
+2025-03-08 20:36:20,128 - bot - INFO - Bot started
+2025-03-08 20:36:20,129 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:36:20,131 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:36:20,150 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:36:20,151 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:36:20,437 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:36:20] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:36:20,524 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:36:20] "GET / HTTP/1.1" 200 -
+2025-03-08 20:36:20,815 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:36:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:36:20,818 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:36:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:36:21,566 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:36:21] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:37:25,799 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:37:25,800 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:37:26,007 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:37:26,021 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:37:26,021 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:37:26,419 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:37:26,421 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:37:26,422 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:37:26,423 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:37:26,423 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-08 20:37:26,424 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:37:26,424 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-08 20:37:27,586 - utils.crosspost - INFO - Successfully updated subscriber counts for 4 channels
+2025-03-08 20:37:27,586 - bot - INFO - Bot started
+2025-03-08 20:37:27,586 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:37:27,588 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:37:27,601 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:37:27,601 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:37:27,841 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:37:27] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:37:27,961 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:37:27] "GET / HTTP/1.1" 200 -
+2025-03-08 20:37:28,245 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:37:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:37:28,257 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:37:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:37:29,059 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:37:29] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:38:05,254 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:38:05,254 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:38:05,448 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:38:05,460 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:38:05,460 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:38:05,861 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:38:05,863 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:38:05,864 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:38:05,865 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:38:05,865 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-08 20:38:05,866 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:38:05,866 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-08 20:38:06,872 - utils.crosspost - INFO - Successfully updated subscriber counts for 4 channels
+2025-03-08 20:38:06,872 - bot - INFO - Bot started
+2025-03-08 20:38:06,872 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:38:06,874 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:38:06,888 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:38:06,888 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:38:07,509 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:07] "GET / HTTP/1.1" 200 -
+2025-03-08 20:38:07,671 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:38:07,787 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:38:08,596 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:08] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:38:13,130 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:13] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:38:13,521 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:13] "GET / HTTP/1.1" 200 -
+2025-03-08 20:38:13,754 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:38:13,811 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:38:14,572 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:38:14] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:40:17,534 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:40:17,535 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:40:17,801 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:40:17,803 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:40:17,803 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:40:18,246 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:40:18,247 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:40:18,248 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:40:18,248 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:40:18,249 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-08 20:40:18,250 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:40:18,250 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-08 20:40:19,371 - utils.crosspost - INFO - Successfully updated subscriber counts for 4 channels
+2025-03-08 20:40:19,372 - bot - INFO - Bot started
+2025-03-08 20:40:19,372 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:40:19,372 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:40:19,389 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:40:19,390 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:40:19,646 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:40:19] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:40:19,763 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:40:19] "GET / HTTP/1.1" 200 -
+2025-03-08 20:40:19,925 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:40:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:40:20,045 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:40:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:40:20,936 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:40:20] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:40:31,082 - werkzeug - INFO - 127.0.0.1 - - [08/Mar/2025 20:40:31] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:41:04,134 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-08 20:41:04,137 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-08 20:41:04,496 - bot - INFO - Bot initialized with state storage
+2025-03-08 20:41:04,498 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 20:41:04,499 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 20:41:04,873 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 20:41:04,876 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 20:41:04,876 - utils.scheduler - INFO - Scheduler started
+2025-03-08 20:41:04,877 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 20:41:04,878 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-08 20:41:04,880 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 20:41:04,880 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-08 20:41:05,859 - utils.crosspost - INFO - Successfully updated subscriber counts for 4 channels
+2025-03-08 20:41:05,859 - bot - INFO - Bot started
+2025-03-08 20:41:05,859 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-08 20:41:05,859 - __main__ - INFO - Starting web server on port 5000
+2025-03-08 20:41:05,882 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.19:5000
+2025-03-08 20:41:05,882 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:41:06,251 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:06] "GET / HTTP/1.1" 200 -
+2025-03-08 20:41:06,420 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:41:06,544 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:06] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-08 20:41:07,401 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:07] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:41:12,334 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:12] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-08 20:41:12,713 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:12] "GET / HTTP/1.1" 200 -
+2025-03-08 20:41:12,872 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:41:12,993 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:41:13,810 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:13] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:41:44,092 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:41:44] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:42:14,100 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:42:14] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:42:44,097 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:42:44] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:13,918 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:13] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:17,861 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:17] "GET /pending HTTP/1.1" 200 -
+2025-03-08 20:43:18,029 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:43:18,094 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:43:18,977 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:18] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:20,135 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:20] "GET / HTTP/1.1" 200 -
+2025-03-08 20:43:20,297 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:43:20,297 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:43:20,988 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:20] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:24,456 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:24] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:43:24,624 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:43:24,625 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:43:25,434 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:25] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:36,200 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:36] "GET /channels/-1002204399883/remove HTTP/1.1" 200 -
+2025-03-08 20:43:36,377 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:43:36,378 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:43:37,318 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:37] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:42,197 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:42] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:43:42,363 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:43:42,365 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:43:43,186 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:43] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:46,960 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:46] "GET /channels/-1002204399883/schedule HTTP/1.1" 200 -
+2025-03-08 20:43:47,120 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:43:47,121 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:43:47,931 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:47] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:52,582 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 0 to True
+2025-03-08 20:43:52,583 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 1 to True
+2025-03-08 20:43:52,584 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 2 to True
+2025-03-08 20:43:52,584 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 3 to True
+2025-03-08 20:43:52,585 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 4 to True
+2025-03-08 20:43:52,586 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 5 to True
+2025-03-08 20:43:52,587 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 6 to True
+2025-03-08 20:43:52,610 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:52] "[32mPOST /channels/-1002204399883/schedule HTTP/1.1[0m" 302 -
+2025-03-08 20:43:52,756 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:52] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:43:52,918 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:43:52,944 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:43:53,842 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:53] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:43:57,949 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:57] "GET / HTTP/1.1" 200 -
+2025-03-08 20:43:58,111 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:43:58,232 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:43:59,054 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:43:59] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:44:21,875 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-08 20:44:22,334 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-08 20:44:29,101 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:44:29] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:44:59,674 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:44:59] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:45:03,820 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-08 20:45:03,821 - handlers.channel - INFO - Processing channel name for user 1336308262: Testing SFW #2
+2025-03-08 20:45:03,821 - handlers.channel - INFO - Stored channel title 'Testing SFW #2' for user 1336308262
+2025-03-08 20:45:03,966 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-08 20:45:03,966 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-08 20:45:13,537 - handlers.channel - INFO - Handling waiting_channel_url state for user 1336308262
+2025-03-08 20:45:13,539 - handlers.channel - INFO - Processing channel URL for user 1336308262: @testingsfw2
+2025-03-08 20:45:13,539 - handlers.channel - INFO - Stored channel username 'testingsfw2' for user 1336308262
+2025-03-08 20:45:13,924 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-08 20:45:13,924 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-08 20:45:20,346 - handlers.channel - INFO - Handling waiting_emoji state for user 1336308262
+2025-03-08 20:45:20,348 - handlers.channel - INFO - Processing emoji selection for user 1336308262
+2025-03-08 20:45:20,348 - handlers.channel - INFO - Found emojis: ['😁😇😘']
+2025-03-08 20:45:20,348 - handlers.channel - INFO - Stored emojis ['😁😇😘'] for user 1336308262
+2025-03-08 20:45:20,501 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_emoji
+2025-03-08 20:45:20,501 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_emoji to ChannelStates:waiting_admin_verification
+2025-03-08 20:45:22,784 - handlers.channel - INFO - Handling waiting_admin_verification state for user 1336308262
+2025-03-08 20:45:22,784 - handlers.channel - INFO - Processing admin verification for user 1336308262
+2025-03-08 20:45:22,786 - handlers.channel - INFO - Channel data so far: {'title': 'Testing SFW #2', 'username': 'testingsfw2', 'emojis': ['😁😇😘']}
+2025-03-08 20:45:22,786 - handlers.channel - INFO - Skipping admin verification check for now
+2025-03-08 20:45:22,985 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_admin_verification
+2025-03-08 20:45:22,985 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_admin_verification to ChannelStates:waiting_post_forward
+2025-03-08 20:45:29,104 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:29] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:45:29,883 - handlers.channel - INFO - Handling waiting_post_forward state for user 1336308262
+2025-03-08 20:45:29,883 - handlers.channel - INFO - Processing forwarded post from user 1336308262
+2025-03-08 20:45:29,883 - handlers.channel - INFO - Message details: forward_from_chat={'id': -1002297658240, 'type': 'channel', 'title': 'Testing SFW #2', 'username': 'testingsfw2', 'first_name': None, 'last_name': None, 'is_forum': None, 'max_reaction_count': None, 'photo': None, 'bio': None, 'join_to_send_messages': None, 'join_by_request': None, 'has_private_forwards': None, 'has_restricted_voice_and_video_messages': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'permissions': None, 'slow_mode_delay': None, 'message_auto_delete_time': None, 'has_protected_content': None, 'sticker_set_name': None, 'can_set_sticker_set': None, 'linked_chat_id': None, 'location': None, 'active_usernames': None, 'emoji_status_custom_emoji_id': None, 'has_hidden_members': None, 'has_aggressive_anti_spam_enabled': None, 'emoji_status_expiration_date': None, 'available_reactions': None, 'accent_color_id': None, 'background_custom_emoji_id': None, 'profile_accent_color_id': None, 'profile_background_custom_emoji_id': None, 'has_visible_history': None, 'unrestrict_boost_count': None, 'custom_emoji_sticker_set_name': None, 'business_intro': None, 'business_location': None, 'business_opening_hours': None, 'personal_chat': None, 'birthdate': None, 'can_send_paid_media': None}
+2025-03-08 20:45:29,883 - handlers.channel - INFO - Chat type: channel
+2025-03-08 20:45:29,883 - handlers.channel - INFO - Processing channel: -1002297658240 - Testing SFW #2
+2025-03-08 20:45:35,258 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:35] "GET /pending HTTP/1.1" 200 -
+2025-03-08 20:45:35,901 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:45:35,902 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:45:36,277 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:36] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:45:38,792 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:38] "GET /pending/-1002297658240 HTTP/1.1" 200 -
+2025-03-08 20:45:38,954 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:45:38,955 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:45:39,806 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:39] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:45:45,220 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:45] "[32mPOST /pending/-1002297658240 HTTP/1.1[0m" 302 -
+2025-03-08 20:45:45,369 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:45] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:45:45,536 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:45:45,656 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:45:46,462 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:45:46] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:46:10,043 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:10] "GET / HTTP/1.1" 200 -
+2025-03-08 20:46:10,210 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:46:10,331 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:46:11,152 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:11] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:46:18,861 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:18] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:46:19,027 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:46:19,151 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:46:19,950 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:19] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:46:34,935 - handlers.admin - INFO - Admin callback: update_subscribers
+2025-03-08 20:46:34,936 - handlers.admin - INFO - Admin callback: update_subscribers
+2025-03-08 20:46:35,241 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-08 20:46:36,640 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-08 20:46:36,779 - handlers.admin - INFO - Manual subscriber count update completed successfully
+2025-03-08 20:46:39,274 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:39] "GET / HTTP/1.1" 200 -
+2025-03-08 20:46:39,441 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:46:39,558 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:46:40,399 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:46:40] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:46:53,392 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 20:46:53,394 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 20:46:53,742 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-08 20:46:53,742 - utils.scheduler - INFO - Found 5 active channels for immediate crosspost
+2025-03-08 20:46:53,742 - utils.crosspost - INFO - Creating crosspost for 5 active channels
+2025-03-08 20:46:54,536 - utils.crosspost - INFO - Found 3 small channels (<300 subscribers) and 0 large channels
+2025-03-08 20:46:54,536 - utils.crosspost - INFO - Only 3 channels available, using all of them
+2025-03-08 20:46:54,665 - utils.crosspost - INFO - Preparing SFW crosspost for 3 channels
+2025-03-08 20:46:55,460 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002467496944 (excluding itself from list)
+2025-03-08 20:46:55,756 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002357763694 (excluding itself from list)
+2025-03-08 20:46:55,987 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002297658240 (excluding itself from list)
+2025-03-08 20:46:55,987 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-08 20:46:56,489 - utils.crosspost - INFO - Found 2 small channels (<300 subscribers) and 0 large channels
+2025-03-08 20:46:56,490 - utils.crosspost - INFO - Only 2 channels available, using all of them
+2025-03-08 20:46:56,628 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 2 channels
+2025-03-08 20:46:56,800 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883 (excluding itself from list)
+2025-03-08 20:46:56,988 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002487566547 (excluding itself from list)
+2025-03-08 20:46:56,989 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-08 20:46:56,989 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-08 20:46:57,133 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-08 20:47:11,103 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:47:11] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:47:41,111 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:47:41] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:48:11,110 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:48:11] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:48:41,176 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:48:41] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:49:10,419 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:10] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:49:13,824 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:13] "GET /channels HTTP/1.1" 200 -
+2025-03-08 20:49:13,988 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:49:14,113 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:49:14,927 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:14] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:49:19,848 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:19] "GET /channels/-1002204399883/schedule HTTP/1.1" 200 -
+2025-03-08 20:49:20,016 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:49:20,017 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:49:20,830 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:20] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:49:24,208 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 0 to True
+2025-03-08 20:49:24,209 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 1 to True
+2025-03-08 20:49:24,210 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 2 to True
+2025-03-08 20:49:24,210 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 3 to True
+2025-03-08 20:49:24,211 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 4 to True
+2025-03-08 20:49:24,211 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 5 to False
+2025-03-08 20:49:24,212 - utils.storage - INFO - Set schedule for channel -1002204399883 on day 6 to True
+2025-03-08 20:49:24,213 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:24] "[32mPOST /channels/-1002204399883/schedule HTTP/1.1[0m" 302 -
+2025-03-08 20:49:24,357 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:24] "GET /channels/-1002204399883 HTTP/1.1" 200 -
+2025-03-08 20:49:24,522 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:49:24,543 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:49:25,461 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:25] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:49:43,186 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:43] "GET /channels/-1002204399883/edit HTTP/1.1" 200 -
+2025-03-08 20:49:43,348 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:49:43,349 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:49:44,185 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:44] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:49:50,950 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:50] "GET / HTTP/1.1" 200 -
+2025-03-08 20:49:51,123 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 20:49:51,246 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-08 20:49:52,108 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:49:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:50:09,047 - handlers.admin - INFO - Admin callback: view_stats
+2025-03-08 20:50:12,842 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-08 20:50:12,844 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-08 20:50:13,137 - handlers.admin - INFO - Admin panel markup displayed successfully
+2025-03-08 20:50:17,234 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-08 20:50:22,108 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:50:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:50:25,368 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-08 20:50:25,370 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-08 20:50:25,678 - handlers.admin - INFO - Admin panel markup displayed successfully
+2025-03-08 20:50:52,217 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:50:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:51:22,105 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:51:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:51:52,106 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:51:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:52:22,107 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:52:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-08 20:53:21,225 - werkzeug - INFO - 172.31.128.19 - - [08/Mar/2025 20:53:21] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:25:06,853 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 09:25:06,856 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 09:25:07,455 - bot - INFO - Bot initialized with state storage
+2025-03-09 09:25:07,466 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 09:25:07,466 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 09:25:07,836 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 09:25:07,838 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 09:25:07,838 - utils.scheduler - INFO - Scheduler started
+2025-03-09 09:25:07,839 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 09:25:07,839 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 09:25:07,840 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 09:25:07,840 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 09:25:07,840 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 09:25:09,208 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 09:25:09,208 - bot - INFO - Bot started
+2025-03-09 09:25:09,208 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 09:25:09,208 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 09:25:09,222 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 09:25:09,222 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 09:25:31,500 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 09:25:31,502 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 09:25:31,788 - bot - INFO - Bot initialized with state storage
+2025-03-09 09:25:31,790 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 09:25:31,790 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 09:25:32,175 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 09:25:32,177 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 09:25:32,177 - utils.scheduler - INFO - Scheduler started
+2025-03-09 09:25:32,178 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 09:25:32,179 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 09:25:32,179 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 09:25:32,181 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 09:25:32,181 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 09:25:33,456 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 09:25:33,457 - bot - INFO - Bot started
+2025-03-09 09:25:33,458 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 09:25:33,458 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 09:25:33,475 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 09:25:33,475 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 09:25:34,654 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:25:34] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 09:25:44,802 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-09 09:25:45,315 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-09 09:25:50,120 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-09 09:25:50,120 - handlers.channel - INFO - Processing channel name for user 1336308262: MonoYiff
+2025-03-09 09:25:50,122 - handlers.channel - INFO - Stored channel title 'MonoYiff' for user 1336308262
+2025-03-09 09:25:50,514 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-09 09:25:50,515 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-09 09:28:14,609 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 09:28:14,610 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 09:28:14,925 - bot - INFO - Bot initialized with state storage
+2025-03-09 09:28:14,930 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 09:28:14,930 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 09:28:15,369 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 09:28:15,371 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 09:28:15,372 - utils.scheduler - INFO - Scheduler started
+2025-03-09 09:28:15,372 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 09:28:15,373 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 09:28:15,373 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 09:28:15,374 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 09:28:15,374 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 09:28:17,404 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 09:28:17,404 - bot - INFO - Bot started
+2025-03-09 09:28:17,404 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 09:28:17,405 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 09:28:17,413 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 09:28:17,413 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 09:28:41,120 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-09 09:28:41,121 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-09 09:28:41,715 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-09 09:28:41,715 - utils.scheduler - INFO - Found 5 active channels for immediate crosspost
+2025-03-09 09:28:41,715 - utils.crosspost - INFO - Creating crosspost for 5 active channels
+2025-03-09 09:28:42,462 - utils.crosspost - INFO - Found 3 small channels (<300 subscribers) and 0 large channels
+2025-03-09 09:28:42,462 - utils.crosspost - INFO - Only 3 channels available, using all of them
+2025-03-09 09:28:42,600 - utils.crosspost - INFO - Preparing SFW crosspost for 3 channels
+2025-03-09 09:28:43,402 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002467496944 (excluding itself from list)
+2025-03-09 09:28:43,716 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002357763694 (excluding itself from list)
+2025-03-09 09:28:44,060 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002297658240 (excluding itself from list)
+2025-03-09 09:28:44,060 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-09 09:28:44,558 - utils.crosspost - INFO - Found 2 small channels (<300 subscribers) and 0 large channels
+2025-03-09 09:28:44,558 - utils.crosspost - INFO - Only 2 channels available, using all of them
+2025-03-09 09:28:44,680 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 2 channels
+2025-03-09 09:28:44,868 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883 (excluding itself from list)
+2025-03-09 09:28:45,054 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002487566547 (excluding itself from list)
+2025-03-09 09:28:45,055 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-09 09:28:45,055 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-09 09:28:45,211 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-09 09:32:33,402 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 09:32:33,403 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 09:32:33,642 - bot - INFO - Bot initialized with state storage
+2025-03-09 09:32:33,644 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 09:32:33,644 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 09:32:34,016 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 09:32:34,018 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 09:32:34,019 - utils.scheduler - INFO - Scheduler started
+2025-03-09 09:32:34,020 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 09:32:34,020 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 09:32:34,021 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 09:32:34,021 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 09:32:34,021 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 09:32:35,367 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 09:32:35,367 - bot - INFO - Bot started
+2025-03-09 09:32:35,367 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 09:32:35,368 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 09:32:35,378 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 09:32:35,378 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 09:32:35,846 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:32:35] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 09:34:14,524 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 09:34:14,524 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 09:34:14,748 - bot - INFO - Bot initialized with state storage
+2025-03-09 09:34:14,749 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 09:34:14,749 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 09:34:15,158 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 09:34:15,160 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 09:34:15,160 - utils.scheduler - INFO - Scheduler started
+2025-03-09 09:34:15,161 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 09:34:15,162 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 09:34:15,163 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 09:34:15,163 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 09:34:15,163 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 09:34:16,602 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 09:34:16,602 - bot - INFO - Bot started
+2025-03-09 09:34:16,603 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 09:34:16,603 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 09:34:16,610 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 09:34:16,611 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 09:34:16,920 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:34:16] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 09:35:12,915 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 09:35:12,916 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 09:35:13,213 - bot - INFO - Bot initialized with state storage
+2025-03-09 09:35:13,228 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 09:35:13,229 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 09:35:13,673 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 09:35:13,674 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 09:35:13,675 - utils.scheduler - INFO - Scheduler started
+2025-03-09 09:35:13,676 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 09:35:13,676 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 09:35:13,676 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 09:35:13,677 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 09:35:13,677 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 09:35:14,893 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 09:35:14,893 - bot - INFO - Bot started
+2025-03-09 09:35:14,894 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 09:35:14,894 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 09:35:14,902 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 09:35:14,902 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 09:35:15,187 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:35:15] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 09:36:27,725 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 09:36:27,725 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 09:36:28,026 - bot - INFO - Bot initialized with state storage
+2025-03-09 09:36:28,045 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 09:36:28,045 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 09:36:28,480 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 09:36:28,482 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 09:36:28,483 - utils.scheduler - INFO - Scheduler started
+2025-03-09 09:36:28,483 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 09:36:28,484 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 09:36:28,484 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 09:36:28,485 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 09:36:28,485 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 09:36:29,906 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 09:36:29,907 - bot - INFO - Bot started
+2025-03-09 09:36:29,907 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 09:36:29,908 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 09:36:29,915 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 09:36:29,915 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 09:36:37,126 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:36:37] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 09:36:38,812 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:36:38] "GET / HTTP/1.1" 200 -
+2025-03-09 09:36:39,606 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:36:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 09:36:39,810 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:36:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 09:36:40,012 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:36:40] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:37:10,173 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:10] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:37:15,196 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:15] "GET /channels HTTP/1.1" 200 -
+2025-03-09 09:37:15,484 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 09:37:15,607 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 09:37:16,380 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:16] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:37:21,259 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:21] "GET /channels/-1002204399883/edit HTTP/1.1" 200 -
+2025-03-09 09:37:21,427 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 09:37:21,433 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 09:37:22,281 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:37:27,657 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:27] "GET /pending HTTP/1.1" 200 -
+2025-03-09 09:37:27,824 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 09:37:27,828 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 09:37:28,855 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:28] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:37:30,658 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:30] "GET / HTTP/1.1" 200 -
+2025-03-09 09:37:30,823 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 09:37:30,943 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 09:37:31,772 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:31] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:37:38,520 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:38] "GET /channels/-1002467496944 HTTP/1.1" 200 -
+2025-03-09 09:37:38,691 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 09:37:38,760 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 09:37:39,508 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:37:39] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:37:59,936 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 09:38:06,233 - handlers.admin - INFO - Admin callback: manage_-1002204399883
+2025-03-09 09:38:10,044 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:38:10] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:38:12,106 - handlers.admin - INFO - Admin callback: set_position_-1002204399883
+2025-03-09 09:38:17,147 - handlers.admin - INFO - Admin callback: save_position_-1002204399883_1
+2025-03-09 09:38:17,150 - utils.storage - INFO - Set reserved position 1 for channel -1002204399883
+2025-03-09 09:38:17,438 - handlers.admin - INFO - Admin callback: manage_-1002204399883
+2025-03-09 09:38:23,230 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 09:38:25,016 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 09:38:28,767 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-09 09:38:28,769 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-09 09:38:29,037 - handlers.admin - INFO - Admin panel markup displayed successfully
+2025-03-09 09:38:31,505 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-09 09:38:31,506 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-09 09:38:31,806 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-09 09:38:31,807 - utils.scheduler - INFO - Found 5 active channels for immediate crosspost
+2025-03-09 09:38:31,807 - utils.crosspost - INFO - Creating crosspost for 5 active channels
+2025-03-09 09:38:32,539 - utils.crosspost - INFO - Found 3 small channels (<300 subscribers) and 0 large channels
+2025-03-09 09:38:32,541 - utils.crosspost - INFO - Found 0 channels with reserved positions for SFW content
+2025-03-09 09:38:32,542 - utils.crosspost - INFO - Only 3 channels available, using all of them
+2025-03-09 09:38:32,669 - utils.crosspost - INFO - Preparing SFW crosspost for 3 channels
+2025-03-09 09:38:33,451 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002467496944 (excluding itself from list)
+2025-03-09 09:38:33,731 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002357763694 (excluding itself from list)
+2025-03-09 09:38:33,973 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002297658240 (excluding itself from list)
+2025-03-09 09:38:33,973 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-09 09:38:34,459 - utils.crosspost - INFO - Found 2 small channels (<300 subscribers) and 0 large channels
+2025-03-09 09:38:34,460 - utils.crosspost - INFO - Found 1 channels with reserved positions for NSFW content
+2025-03-09 09:38:34,460 - utils.crosspost - INFO - Reserved position 1 filled with channel Testing
+2025-03-09 09:38:34,460 - utils.crosspost - INFO - Only 2 channels available, using all of them
+2025-03-09 09:38:34,582 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 2 channels
+2025-03-09 09:38:34,778 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883 (excluding itself from list)
+2025-03-09 09:38:34,943 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002487566547 (excluding itself from list)
+2025-03-09 09:38:34,945 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-09 09:38:34,945 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-09 09:38:35,086 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-09 09:38:40,051 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:38:40] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:39:10,049 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:39:10] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:39:40,050 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:39:40] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:39:48,672 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 09:39:56,655 - handlers.admin - INFO - Admin callback: manage_-1002204399883
+2025-03-09 09:40:16,905 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 09:40:20,673 - handlers.admin - INFO - Admin callback: manage_-1002297658240
+2025-03-09 09:40:23,286 - handlers.admin - INFO - Admin callback: set_position_-1002297658240
+2025-03-09 09:40:24,332 - handlers.admin - INFO - Admin callback: save_position_-1002297658240_1
+2025-03-09 09:40:24,336 - utils.storage - INFO - Set reserved position 1 for channel -1002297658240
+2025-03-09 09:40:24,613 - handlers.admin - INFO - Admin callback: manage_-1002297658240
+2025-03-09 09:40:26,642 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 09:40:28,024 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 09:40:31,684 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-09 09:40:31,686 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-09 09:40:31,964 - handlers.admin - INFO - Admin panel markup displayed successfully
+2025-03-09 09:40:33,480 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-09 09:40:33,482 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-09 09:40:33,772 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-09 09:40:33,773 - utils.scheduler - INFO - Found 5 active channels for immediate crosspost
+2025-03-09 09:40:33,773 - utils.crosspost - INFO - Creating crosspost for 5 active channels
+2025-03-09 09:40:34,048 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:40:34] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:40:34,511 - utils.crosspost - INFO - Found 3 small channels (<300 subscribers) and 0 large channels
+2025-03-09 09:40:34,511 - utils.crosspost - INFO - Found 1 channels with reserved positions for SFW content
+2025-03-09 09:40:34,511 - utils.crosspost - INFO - Reserved position 1 filled with channel Testing SFW #2
+2025-03-09 09:40:34,512 - utils.crosspost - INFO - Only 3 channels available, using all of them
+2025-03-09 09:40:34,650 - utils.crosspost - INFO - Preparing SFW crosspost for 3 channels
+2025-03-09 09:40:35,428 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002467496944 (excluding itself from list)
+2025-03-09 09:40:35,662 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002357763694 (excluding itself from list)
+2025-03-09 09:40:36,129 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002297658240 (excluding itself from list)
+2025-03-09 09:40:36,129 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-09 09:40:36,621 - utils.crosspost - INFO - Found 2 small channels (<300 subscribers) and 0 large channels
+2025-03-09 09:40:36,622 - utils.crosspost - INFO - Found 1 channels with reserved positions for NSFW content
+2025-03-09 09:40:36,622 - utils.crosspost - INFO - Reserved position 1 filled with channel Testing
+2025-03-09 09:40:36,622 - utils.crosspost - INFO - Only 2 channels available, using all of them
+2025-03-09 09:40:36,744 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 2 channels
+2025-03-09 09:40:36,931 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883 (excluding itself from list)
+2025-03-09 09:40:37,104 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002487566547 (excluding itself from list)
+2025-03-09 09:40:37,104 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-09 09:40:37,104 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-09 09:40:37,242 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-09 09:40:50,090 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:40:50] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:41:09,526 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:41:09] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:41:39,530 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:41:39] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:42:09,533 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:42:09] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:42:39,984 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 09:42:39,985 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 09:42:40,303 - bot - INFO - Bot initialized with state storage
+2025-03-09 09:42:40,310 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 09:42:40,310 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 09:42:40,686 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 09:42:40,688 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 09:42:40,689 - utils.scheduler - INFO - Scheduler started
+2025-03-09 09:42:40,689 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 09:42:40,690 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 09:42:40,691 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 09:42:40,691 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 09:42:40,691 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 09:42:42,287 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 09:42:42,287 - bot - INFO - Bot started
+2025-03-09 09:42:42,287 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 09:42:42,289 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 09:42:42,297 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 09:42:42,297 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 09:42:42,807 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:42:42] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 09:42:43,073 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:42:43] "GET / HTTP/1.1" 200 -
+2025-03-09 09:42:43,359 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:42:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 09:42:43,729 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:42:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 09:42:44,341 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:42:44] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:43:14,356 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:43:14] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:43:44,355 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:43:44] "GET /api/stats HTTP/1.1" 200 -

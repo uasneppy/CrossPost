@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - Українське ТҐ-Комʼюніті{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>{{ title }}</h1>
+</div>
+
+<div class="row" id="filters">
+    <div class="col-md-12 mb-3">
+        <div class="input-group">
+            <input type="text" id="channel-search" class="form-control" placeholder="Пошук за назвою каналу...">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Фільтр
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item filter-option" data-filter="all" href="#">Всі</a></li>
+                <li><a class="dropdown-item filter-option" data-filter="sfw" href="#">SFW</a></li>
+                <li><a class="dropdown-item filter-option" data-filter="nsfw" href="#">NSFW</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item filter-option" data-filter="small" href="#">< 300 підписників</a></li>
+                <li><a class="dropdown-item filter-option" data-filter="large" href="#">≥ 300 підписників</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover" id="channels-table">
+        <thead class="table-light">
+            <tr>
+                <th>Назва</th>
+                <th>Username</th>
+                <th>Тип</th>
+                <th>Підписники</th>
+                <th>Емодзі</th>
+                <th>Дії</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if channels %}
+                {% for channel_id, channel in channels.items() %}
+                    <tr class="channel-row {% if not channel.is_sfw|default(true) %}nsfw{% else %}sfw{% endif %} {% if channel.subscribers|default(0)|int < 300 %}small{% else %}large{% endif %}">
+                        <td>{{ channel.title|default(channel.name|default('Без імені')) }}</td>
+                        <td>@{{ channel.username|default('невідомий') }}</td>
+                        <td>
+                            <span class="badge {% if not channel.is_sfw|default(true) %}bg-danger{% else %}bg-success{% endif %}">
+                                {% if not channel.is_sfw|default(true) %}NSFW{% else %}SFW{% endif %}
+                            </span>
+                        </td>
+                        <td>{{ channel.subscribers|default(0)|int }}</td>
+                        <td>{{ channel.emojis|default([])|join(' ') }}</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a href="{{ url_for('view_channel', channel_id=channel_id) }}" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a href="{{ url_for('edit_channel', channel_id=channel_id) }}" class="btn btn-sm btn-outline-secondary">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a href="{{ url_for('edit_schedule', channel_id=channel_id) }}" class="btn btn-sm btn-outline-info">
+                                    <i class="bi bi-calendar"></i>
+                                </a>
+                                <a href="{{ url_for('remove_channel_route', channel_id=channel_id) }}" class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="6" class="text-center">
+                        <p class="text-muted">Немає каналів у мережі</p>
+                    </td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Search functionality
+    const searchInput = document.getElementById('channel-search');
+    searchInput.addEventListener('input', filterChannels);
+
+    // Filter options
+    const filterOptions = document.querySelectorAll('.filter-option');
+    filterOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const filter = this.getAttribute('data-filter');
+            applyFilter(filter);
+        });
+    });
+
+    function filterChannels() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const rows = document.querySelectorAll('#channels-table tbody tr.channel-row');
+        
+        rows.forEach(row => {
+            const name = row.cells[0].textContent.toLowerCase();
+            const username = row.cells[1].textContent.toLowerCase();
+            
+            if (name.includes(searchTerm) || username.includes(searchTerm)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    function applyFilter(filter) {
+        const rows = document.querySelectorAll('#channels-table tbody tr.channel-row');
+        
+        rows.forEach(row => {
+            switch(filter) {
+                case 'all':
+                    row.style.display = '';
+                    break;
+                case 'sfw':
+                    row.style.display = row.classList.contains('sfw') ? '' : 'none';
+                    break;
+                case 'nsfw':
+                    row.style.display = row.classList.contains('nsfw') ? '' : 'none';
+                    break;
+                case 'small':
+                    row.style.display = row.classList.contains('small') ? '' : 'none';
+                    break;
+                case 'large':
+                    row.style.display = row.classList.contains('large') ? '' : 'none';
+                    break;
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

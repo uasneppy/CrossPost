@@ -1,0 +1,807 @@
+2025-03-08 18:28:46,260 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:28:46,265 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:28:46,265 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:28:46,653 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:28:46,655 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:28:46,656 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:28:46,656 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:28:46,657 - utils.scheduler - INFO - No active channels for today (day 5)
+2025-03-08 18:28:46,657 - __main__ - INFO - Bot started
+2025-03-08 18:30:48,682 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:30:48,689 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:30:48,689 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:30:49,078 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:30:49,080 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:30:49,080 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:30:49,081 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:30:49,081 - utils.scheduler - INFO - No active channels for today (day 5)
+2025-03-08 18:30:49,081 - __main__ - INFO - Bot started
+2025-03-08 18:32:35,723 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:32:35,728 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:32:35,729 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:32:36,101 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:32:36,102 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:32:36,103 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:32:36,103 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:32:36,104 - utils.scheduler - INFO - No active channels for today (day 5)
+2025-03-08 18:32:36,104 - __main__ - INFO - Bot started
+2025-03-08 18:33:18,223 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-08 18:33:18,637 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-08 18:33:29,290 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-08 18:33:29,292 - handlers.channel - INFO - Processing channel name for user 1336308262: MonoYiff
+2025-03-08 18:33:29,292 - handlers.channel - INFO - Stored channel title 'MonoYiff' for user 1336308262
+2025-03-08 18:33:29,487 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-08 18:33:29,487 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-08 18:33:35,356 - handlers.channel - INFO - Handling waiting_channel_url state for user 1336308262
+2025-03-08 18:33:35,358 - handlers.channel - INFO - Processing channel URL for user 1336308262: @gayyiffukraine
+2025-03-08 18:33:35,358 - handlers.channel - INFO - Stored channel username 'gayyiffukraine' for user 1336308262
+2025-03-08 18:33:35,520 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-08 18:33:35,520 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-08 18:33:41,713 - handlers.channel - INFO - Handling waiting_emoji state for user 1336308262
+2025-03-08 18:33:41,714 - handlers.channel - INFO - Processing emoji selection for user 1336308262
+2025-03-08 18:33:41,715 - handlers.channel - INFO - Found emojis: ['😘🥰😇']
+2025-03-08 18:33:41,715 - handlers.channel - INFO - Stored emojis ['😘🥰😇'] for user 1336308262
+2025-03-08 18:33:42,259 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_emoji
+2025-03-08 18:33:42,259 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_emoji to ChannelStates:waiting_admin_verification
+2025-03-08 18:34:03,679 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-08 18:34:03,845 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-08 18:34:15,610 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-08 18:34:15,611 - handlers.channel - INFO - Processing channel name for user 1336308262: Testing
+2025-03-08 18:34:15,611 - handlers.channel - INFO - Stored channel title 'Testing' for user 1336308262
+2025-03-08 18:34:15,860 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-08 18:34:15,860 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-08 18:34:37,831 - handlers.channel - INFO - Handling waiting_channel_url state for user 1336308262
+2025-03-08 18:34:37,831 - handlers.channel - INFO - Processing channel URL for user 1336308262: @testingyiff
+2025-03-08 18:34:37,832 - handlers.channel - INFO - Stored channel username 'testingyiff' for user 1336308262
+2025-03-08 18:34:37,972 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-08 18:34:37,972 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-08 18:34:42,587 - handlers.channel - INFO - Handling waiting_emoji state for user 1336308262
+2025-03-08 18:34:42,587 - handlers.channel - INFO - Processing emoji selection for user 1336308262
+2025-03-08 18:34:42,588 - handlers.channel - INFO - Found emojis: ['🇺🇦', '💻', '🎮']
+2025-03-08 18:34:42,588 - handlers.channel - INFO - Stored emojis ['🇺🇦', '💻', '🎮'] for user 1336308262
+2025-03-08 18:34:42,747 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_emoji
+2025-03-08 18:34:42,748 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_emoji to ChannelStates:waiting_admin_verification
+2025-03-08 18:34:58,002 - handlers.channel - INFO - Handling waiting_admin_verification state for user 1336308262
+2025-03-08 18:34:58,003 - handlers.channel - INFO - Processing admin verification for user 1336308262
+2025-03-08 18:34:58,003 - handlers.channel - INFO - Channel data so far: {'title': 'Testing', 'username': 'testingyiff', 'emojis': ['🇺🇦', '💻', '🎮']}
+2025-03-08 18:34:58,003 - handlers.channel - INFO - Skipping admin verification check for now
+2025-03-08 18:34:58,208 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_admin_verification
+2025-03-08 18:34:58,208 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_admin_verification to ChannelStates:waiting_post_forward
+2025-03-08 18:35:06,884 - handlers.channel - INFO - Handling waiting_post_forward state for user 1336308262
+2025-03-08 18:35:06,887 - handlers.channel - INFO - Processing forwarded post from user 1336308262
+2025-03-08 18:35:06,887 - handlers.channel - INFO - Message details: forward_from_chat={'id': -1002204399883, 'type': 'channel', 'title': 'Тестуємо', 'username': 'testingyiff', 'first_name': None, 'last_name': None, 'is_forum': None, 'max_reaction_count': None, 'photo': None, 'bio': None, 'join_to_send_messages': None, 'join_by_request': None, 'has_private_forwards': None, 'has_restricted_voice_and_video_messages': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'permissions': None, 'slow_mode_delay': None, 'message_auto_delete_time': None, 'has_protected_content': None, 'sticker_set_name': None, 'can_set_sticker_set': None, 'linked_chat_id': None, 'location': None, 'active_usernames': None, 'emoji_status_custom_emoji_id': None, 'has_hidden_members': None, 'has_aggressive_anti_spam_enabled': None, 'emoji_status_expiration_date': None, 'available_reactions': None, 'accent_color_id': None, 'background_custom_emoji_id': None, 'profile_accent_color_id': None, 'profile_background_custom_emoji_id': None, 'has_visible_history': None, 'unrestrict_boost_count': None, 'custom_emoji_sticker_set_name': None, 'business_intro': None, 'business_location': None, 'business_opening_hours': None, 'personal_chat': None, 'birthdate': None, 'can_send_paid_media': None}
+2025-03-08 18:35:06,887 - handlers.channel - INFO - Chat type: channel
+2025-03-08 18:35:06,887 - handlers.channel - INFO - Processing channel: -1002204399883 - Тестуємо
+2025-03-08 18:37:23,113 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:37:23,117 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:37:23,118 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:37:23,517 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:37:23,518 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:37:23,519 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:37:23,519 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:37:23,520 - utils.scheduler - INFO - No active channels for today (day 5)
+2025-03-08 18:37:23,520 - __main__ - INFO - Bot started
+2025-03-08 18:42:12,460 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:42:12,475 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:42:12,475 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:42:12,867 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:42:12,868 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:42:12,869 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:42:12,870 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:42:12,870 - utils.scheduler - INFO - No active channels for today (day 5)
+2025-03-08 18:42:12,870 - __main__ - INFO - Bot started
+2025-03-08 18:44:25,465 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:44:25,467 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:44:25,467 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:44:25,860 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:44:25,862 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:44:25,864 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:44:25,865 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:44:25,865 - utils.scheduler - INFO - No active channels for today (day 5)
+2025-03-08 18:44:25,866 - __main__ - INFO - Bot started
+2025-03-08 18:45:07,347 - handlers.admin - INFO - Admin callback: view_pending
+2025-03-08 18:45:20,915 - handlers.admin - INFO - Admin callback: approve_-1002204399883
+2025-03-08 18:45:25,805 - handlers.admin - INFO - Admin callback: view_stats
+2025-03-08 18:46:27,261 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 18:48:49,019 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:48:49,032 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:48:49,032 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:48:49,412 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:48:49,414 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:48:49,415 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:48:49,416 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:48:49,416 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 18:48:49,416 - __main__ - INFO - Bot started
+2025-03-08 18:49:00,557 - handlers.channel - INFO - User 1336308262 requested settings
+2025-03-08 18:49:00,557 - handlers.channel - INFO - Found 1 approved channels
+2025-03-08 18:49:00,558 - handlers.channel - INFO - Added channel -1002204399883: Testing to menu
+2025-03-08 18:49:02,048 - handlers.channel - INFO - Callback query: settings_-1002204399883
+2025-03-08 18:49:04,823 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:49:04,829 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:49:04,830 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:49:05,203 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:49:05,204 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:49:05,205 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:49:05,206 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:49:05,206 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 18:49:05,206 - __main__ - INFO - Bot started
+2025-03-08 18:49:05,706 - handlers.channel - INFO - Handling callback query: schedule_-1002204399883
+2025-03-08 18:49:05,707 - handlers.channel - INFO - Callback query: schedule_-1002204399883
+2025-03-08 18:49:07,911 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_6
+2025-03-08 18:49:07,912 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_6
+2025-03-08 18:49:07,913 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 6 to False
+2025-03-08 18:50:10,426 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:50:10,435 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:50:10,435 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:50:10,942 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:50:10,943 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:50:10,944 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:50:10,945 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:50:10,945 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 18:50:10,945 - __main__ - INFO - Bot started
+2025-03-08 18:50:11,477 - handlers.channel - INFO - User 1336308262 requested settings
+2025-03-08 18:50:11,477 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_6
+2025-03-08 18:50:11,478 - handlers.channel - INFO - Found 1 approved channels
+2025-03-08 18:50:11,478 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_6
+2025-03-08 18:50:11,478 - handlers.channel - INFO - Added channel -1002204399883: Testing to menu
+2025-03-08 18:50:11,480 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 6 to True
+2025-03-08 18:50:11,857 - handlers.channel - INFO - Handling callback query: settings_-1002204399883
+2025-03-08 18:50:11,857 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-03-08 18:50:11,859 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/channel.py", line 797, in handle_callback_query
+    callback_query_handler(call, bot)
+  File "/home/runner/workspace/handlers/channel.py", line 623, in callback_query_handler
+    bot.answer_callback_query(call.id, "Schedule updated")
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 6058, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 1854, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+2025-03-08 18:50:11,858 - handlers.channel - INFO - Callback query: settings_-1002204399883
+2025-03-08 18:50:12,139 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-03-08 18:50:12,140 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/channel.py", line 797, in handle_callback_query
+    callback_query_handler(call, bot)
+  File "/home/runner/workspace/handlers/channel.py", line 560, in callback_query_handler
+    bot.answer_callback_query(call.id)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 6058, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 1854, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+2025-03-08 18:50:23,229 - handlers.channel - INFO - Handling callback query: settings_-1002204399883
+2025-03-08 18:50:23,231 - handlers.channel - INFO - Callback query: settings_-1002204399883
+2025-03-08 18:50:24,410 - handlers.channel - INFO - Handling callback query: schedule_-1002204399883
+2025-03-08 18:50:24,411 - handlers.channel - INFO - Callback query: schedule_-1002204399883
+2025-03-08 18:50:25,282 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_4
+2025-03-08 18:50:25,283 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_4
+2025-03-08 18:50:25,284 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 4 to False
+2025-03-08 18:50:26,231 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_4
+2025-03-08 18:50:26,232 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_4
+2025-03-08 18:50:26,232 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 4 to True
+2025-03-08 18:50:27,004 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_5
+2025-03-08 18:50:27,006 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_5
+2025-03-08 18:50:27,006 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 5 to False
+2025-03-08 18:50:28,531 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_6
+2025-03-08 18:50:28,533 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_6
+2025-03-08 18:50:28,534 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 6 to False
+2025-03-08 18:50:29,774 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_6
+2025-03-08 18:50:29,775 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_6
+2025-03-08 18:50:29,776 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 6 to True
+2025-03-08 18:50:30,525 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_5
+2025-03-08 18:50:30,527 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_5
+2025-03-08 18:50:30,527 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 5 to True
+2025-03-08 18:50:31,493 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_0
+2025-03-08 18:50:31,494 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_0
+2025-03-08 18:50:31,494 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 0 to False
+2025-03-08 18:50:32,261 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_0
+2025-03-08 18:50:32,262 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_0
+2025-03-08 18:50:32,262 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 0 to True
+2025-03-08 18:50:33,955 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_1
+2025-03-08 18:50:33,956 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_1
+2025-03-08 18:50:33,957 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 1 to False
+2025-03-08 18:50:35,224 - handlers.channel - INFO - Handling callback query: toggle_day_-1002204399883_1
+2025-03-08 18:50:35,225 - handlers.channel - INFO - Callback query: toggle_day_-1002204399883_1
+2025-03-08 18:50:35,226 - utils.storage - INFO - Toggled schedule for channel -1002204399883 on day 1 to True
+2025-03-08 18:50:36,349 - handlers.channel - INFO - Handling callback query: settings_-1002204399883
+2025-03-08 18:50:36,349 - handlers.channel - INFO - Callback query: settings_-1002204399883
+2025-03-08 18:50:38,396 - handlers.channel - INFO - Handling callback query: emojis_-1002204399883
+2025-03-08 18:50:38,396 - handlers.channel - INFO - Callback query: emojis_-1002204399883
+2025-03-08 18:50:43,441 - handlers.channel - INFO - Handling callback query: settings_-1002204399883
+2025-03-08 18:50:43,443 - handlers.channel - INFO - Callback query: settings_-1002204399883
+2025-03-08 18:50:46,528 - handlers.channel - INFO - Handling callback query: info_-1002204399883
+2025-03-08 18:50:46,529 - handlers.channel - INFO - Callback query: info_-1002204399883
+2025-03-08 18:50:48,822 - handlers.channel - INFO - Handling callback query: settings_-1002204399883
+2025-03-08 18:50:48,822 - handlers.channel - INFO - Callback query: settings_-1002204399883
+2025-03-08 18:50:49,710 - handlers.channel - INFO - Handling callback query: info_-1002204399883
+2025-03-08 18:50:49,711 - handlers.channel - INFO - Callback query: info_-1002204399883
+2025-03-08 18:50:51,068 - handlers.channel - INFO - Handling callback query: settings_-1002204399883
+2025-03-08 18:50:51,070 - handlers.channel - INFO - Callback query: settings_-1002204399883
+2025-03-08 18:50:53,926 - handlers.channel - INFO - User 1336308262 requested settings
+2025-03-08 18:50:53,926 - handlers.channel - INFO - Found 1 approved channels
+2025-03-08 18:50:53,926 - handlers.channel - INFO - Added channel -1002204399883: Testing to menu
+2025-03-08 18:51:00,505 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 18:51:00,650 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-08 18:51:00,652 - apscheduler.executors.default - WARNING - Run time of job "create_and_send_crosspost (trigger: date[2025-03-08 18:51:10 EET], next run at: 2025-03-08 18:51:10 EET)" was missed by 1:59:50.001958
+2025-03-08 18:51:00,652 - apscheduler.scheduler - INFO - Removed job immediate_crosspost
+2025-03-08 18:53:39,819 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:53:39,820 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:53:39,821 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:53:40,202 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:53:40,204 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:53:40,204 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:53:40,205 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:53:40,205 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 18:53:40,205 - __main__ - INFO - Bot started
+2025-03-08 18:54:44,495 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:54:44,506 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:54:44,507 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:54:44,935 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:54:44,936 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:54:44,937 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:54:44,938 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:54:44,938 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 18:54:44,938 - __main__ - INFO - Bot started
+2025-03-08 18:54:51,109 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 18:54:51,110 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 18:54:51,110 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 18:54:51,487 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 18:54:51,489 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 18:54:51,489 - utils.scheduler - INFO - Scheduler started
+2025-03-08 18:54:51,490 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 18:54:51,490 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 18:54:51,490 - __main__ - INFO - Bot started
+2025-03-08 18:55:24,738 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 18:55:24,738 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 18:55:25,111 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-08 18:55:25,112 - utils.scheduler - INFO - Found 1 active channels for immediate crosspost
+2025-03-08 18:55:25,112 - utils.crosspost - INFO - Creating crosspost for 1 active channels
+2025-03-08 18:55:26,171 - utils.crosspost - INFO - Sent crosspost to channel -1002204399883
+2025-03-08 18:55:26,172 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-08 18:55:26,172 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-08 18:55:26,331 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-08 18:58:25,599 - handlers.admin - INFO - Admin callback: view_stats
+2025-03-08 19:00:47,665 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:00:47,678 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:00:47,678 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:00:48,068 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:00:48,070 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:00:48,071 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:00:48,071 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:00:48,072 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 19:00:48,072 - __main__ - INFO - Bot started
+2025-03-08 19:04:06,239 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:04:06,242 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:04:06,242 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:04:06,617 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:04:06,619 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:04:06,620 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:04:06,620 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:04:06,621 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 19:04:06,621 - __main__ - INFO - Bot started
+2025-03-08 19:05:38,785 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:05:38,798 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:05:38,798 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:05:39,248 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:05:39,250 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:05:39,251 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:05:39,251 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:05:39,252 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 19:05:39,252 - __main__ - INFO - Bot started
+2025-03-08 19:06:48,966 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:06:48,975 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:06:48,975 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:06:49,347 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:06:49,350 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:06:49,350 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:06:49,357 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:06:49,358 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 19:06:49,358 - __main__ - INFO - Bot started
+2025-03-08 19:08:13,135 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-08 19:08:19,791 - handlers.admin - INFO - Admin callback: manage_-1002204399883
+2025-03-08 19:08:23,137 - handlers.admin - INFO - Admin callback: toggle_sfw_-1002204399883
+2025-03-08 19:08:23,139 - handlers.admin - INFO - Admin toggling SFW status for channel: -1002204399883
+2025-03-08 19:08:23,139 - handlers.admin - INFO - Changing channel 'Testing' (-1002204399883) from SFW to NSFW
+2025-03-08 19:08:23,517 - handlers.admin - INFO - Successfully updated channel -1002204399883 to NSFW
+2025-03-08 19:08:23,517 - handlers.admin - INFO - Admin callback: manage_-1002204399883
+2025-03-08 19:08:27,861 - handlers.admin - INFO - Admin callback: edit_schedule_-1002204399883
+2025-03-08 19:08:29,381 - handlers.admin - INFO - Admin callback: manage_-1002204399883
+2025-03-08 19:08:31,916 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-08 19:08:44,494 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:08:44,495 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:08:44,787 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-08 19:08:44,788 - utils.scheduler - INFO - Found 1 active channels for immediate crosspost
+2025-03-08 19:08:44,788 - utils.crosspost - INFO - Creating crosspost for 1 active channels
+2025-03-08 19:08:44,908 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 1 channels
+2025-03-08 19:08:45,354 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883
+2025-03-08 19:08:45,354 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-08 19:08:45,354 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-08 19:08:45,564 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-08 19:16:26,542 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:16:26,549 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:16:26,549 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:16:26,950 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:16:26,951 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:16:26,952 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:16:26,953 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:16:26,953 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 19:16:26,954 - __main__ - INFO - Bot started
+2025-03-08 19:16:43,500 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:16:43,511 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:16:43,511 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:16:43,907 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:16:43,908 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:16:43,909 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:16:43,909 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:16:43,910 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 19:16:43,910 - __main__ - INFO - Bot started
+2025-03-08 19:18:04,326 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:18:04,340 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:18:04,340 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:18:04,340 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:18:04,731 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:18:04,733 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:18:04,734 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:18:04,735 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:18:04,735 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 19:18:04,735 - __main__ - INFO - Bot started
+2025-03-08 19:18:27,642 - handlers.admin - INFO - Admin callback: manage_images
+2025-03-08 19:18:27,643 - handlers.admin - INFO - Admin callback: manage_images
+2025-03-08 19:18:29,756 - handlers.admin - INFO - Admin callback: upload_sfw_image
+2025-03-08 19:18:29,757 - handlers.admin - INFO - Admin selected to upload SFW image
+2025-03-08 19:18:43,415 - handlers.admin - INFO - Admin 1336308262 uploading SFW image
+2025-03-08 19:20:54,394 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:20:54,405 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:20:54,406 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:20:54,406 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:20:54,777 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:20:54,779 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:20:54,779 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:20:54,780 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:20:54,781 - utils.scheduler - INFO - Current time is past the crosspost window, skipping today
+2025-03-08 19:20:54,781 - __main__ - INFO - Bot started
+2025-03-08 19:21:10,298 - handlers.admin - INFO - Admin callback: manage_images
+2025-03-08 19:21:10,300 - handlers.admin - INFO - Admin callback: manage_images
+2025-03-08 19:21:11,805 - handlers.admin - INFO - Admin callback: upload_sfw_image
+2025-03-08 19:21:11,805 - handlers.admin - INFO - Admin selected to upload SFW image
+2025-03-08 19:21:15,701 - handlers.admin - INFO - Admin 1336308262 uploading SFW image
+2025-03-08 19:21:17,863 - handlers.admin - INFO - Admin callback: manage_images
+2025-03-08 19:21:17,865 - handlers.admin - INFO - Admin callback: manage_images
+2025-03-08 19:21:19,236 - handlers.admin - INFO - Admin callback: upload_nsfw_image
+2025-03-08 19:21:19,236 - handlers.admin - INFO - Admin selected to upload NSFW image
+2025-03-08 19:21:22,786 - handlers.admin - INFO - Admin 1336308262 uploading NSFW image
+2025-03-08 19:21:25,646 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:21:25,647 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:21:25,919 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-08 19:21:25,920 - utils.scheduler - INFO - Found 1 active channels for immediate crosspost
+2025-03-08 19:21:25,920 - utils.crosspost - INFO - Creating crosspost for 1 active channels
+2025-03-08 19:21:26,041 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 1 channels
+2025-03-08 19:21:26,580 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883
+2025-03-08 19:21:26,580 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-08 19:21:26,580 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-08 19:21:26,716 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-08 19:22:47,976 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-08 19:22:48,131 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-08 19:22:54,277 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-08 19:22:54,278 - handlers.channel - INFO - Processing channel name for user 1336308262: Testing SFW
+2025-03-08 19:22:54,279 - handlers.channel - INFO - Stored channel title 'Testing SFW' for user 1336308262
+2025-03-08 19:22:54,494 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-08 19:22:54,494 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-08 19:23:02,760 - handlers.channel - INFO - Handling waiting_channel_url state for user 1336308262
+2025-03-08 19:23:02,761 - handlers.channel - INFO - Processing channel URL for user 1336308262: @testingnotyiff
+2025-03-08 19:23:02,761 - handlers.channel - INFO - Stored channel username 'testingnotyiff' for user 1336308262
+2025-03-08 19:23:03,004 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-08 19:23:03,005 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-08 19:23:10,734 - handlers.channel - INFO - Handling waiting_emoji state for user 1336308262
+2025-03-08 19:23:10,735 - handlers.channel - INFO - Processing emoji selection for user 1336308262
+2025-03-08 19:23:10,735 - handlers.channel - INFO - Found emojis: ['😄😁😘']
+2025-03-08 19:23:10,735 - handlers.channel - INFO - Stored emojis ['😄😁😘'] for user 1336308262
+2025-03-08 19:23:10,995 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_emoji
+2025-03-08 19:23:10,995 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_emoji to ChannelStates:waiting_admin_verification
+2025-03-08 19:23:13,806 - handlers.channel - INFO - Handling waiting_admin_verification state for user 1336308262
+2025-03-08 19:23:13,809 - handlers.channel - INFO - Processing admin verification for user 1336308262
+2025-03-08 19:23:13,809 - handlers.channel - INFO - Channel data so far: {'title': 'Testing SFW', 'username': 'testingnotyiff', 'emojis': ['😄😁😘']}
+2025-03-08 19:23:13,809 - handlers.channel - INFO - Skipping admin verification check for now
+2025-03-08 19:23:13,956 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_admin_verification
+2025-03-08 19:23:13,957 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_admin_verification to ChannelStates:waiting_post_forward
+2025-03-08 19:23:27,990 - handlers.channel - INFO - Handling waiting_post_forward state for user 1336308262
+2025-03-08 19:23:27,992 - handlers.channel - INFO - Processing forwarded post from user 1336308262
+2025-03-08 19:23:27,992 - handlers.channel - INFO - Message details: forward_from_chat={'id': -1002467496944, 'type': 'channel', 'title': 'Тестуємо SFW', 'username': 'testingnotyiff', 'first_name': None, 'last_name': None, 'is_forum': None, 'max_reaction_count': None, 'photo': None, 'bio': None, 'join_to_send_messages': None, 'join_by_request': None, 'has_private_forwards': None, 'has_restricted_voice_and_video_messages': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'permissions': None, 'slow_mode_delay': None, 'message_auto_delete_time': None, 'has_protected_content': None, 'sticker_set_name': None, 'can_set_sticker_set': None, 'linked_chat_id': None, 'location': None, 'active_usernames': None, 'emoji_status_custom_emoji_id': None, 'has_hidden_members': None, 'has_aggressive_anti_spam_enabled': None, 'emoji_status_expiration_date': None, 'available_reactions': None, 'accent_color_id': None, 'background_custom_emoji_id': None, 'profile_accent_color_id': None, 'profile_background_custom_emoji_id': None, 'has_visible_history': None, 'unrestrict_boost_count': None, 'custom_emoji_sticker_set_name': None, 'business_intro': None, 'business_location': None, 'business_opening_hours': None, 'personal_chat': None, 'birthdate': None, 'can_send_paid_media': None}
+2025-03-08 19:23:27,992 - handlers.channel - INFO - Chat type: channel
+2025-03-08 19:23:27,992 - handlers.channel - INFO - Processing channel: -1002467496944 - Тестуємо SFW
+2025-03-08 19:23:36,019 - handlers.admin - INFO - Admin callback: view_pending
+2025-03-08 19:23:39,355 - handlers.admin - INFO - Admin callback: approve_-1002467496944
+2025-03-08 19:23:44,956 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:23:44,958 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:23:45,353 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-08 19:23:45,354 - utils.scheduler - INFO - Found 2 active channels for immediate crosspost
+2025-03-08 19:23:45,354 - utils.crosspost - INFO - Creating crosspost for 2 active channels
+2025-03-08 19:23:45,475 - utils.crosspost - INFO - Preparing SFW crosspost for 1 channels
+2025-03-08 19:23:46,154 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002467496944
+2025-03-08 19:23:46,154 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-08 19:23:46,274 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 1 channels
+2025-03-08 19:23:46,643 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883
+2025-03-08 19:23:46,644 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-08 19:23:46,644 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-08 19:23:46,839 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-08 19:30:28,931 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:30:28,934 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:30:28,935 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:30:28,936 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:30:29,318 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:30:29,320 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:30:29,321 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:30:29,322 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:30:29,323 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:30:29,324 - __main__ - INFO - Bot started
+2025-03-08 19:31:46,545 - handlers.admin - INFO - Admin callback: view_pending
+2025-03-08 19:31:49,530 - handlers.admin - INFO - Admin callback: view_stats
+2025-03-08 19:31:54,225 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-08 19:33:52,449 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:33:52,462 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:33:52,463 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:33:52,463 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:33:52,842 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:33:52,843 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:33:52,844 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:33:52,844 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:33:52,845 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:33:52,845 - __main__ - INFO - Bot started
+2025-03-08 19:37:06,389 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:38:07,388 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:38:07,401 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:38:07,401 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:38:07,401 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:38:07,779 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:38:07,781 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:38:07,782 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:38:07,782 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:38:07,783 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:38:07,783 - __main__ - INFO - Bot started
+2025-03-08 19:38:16,662 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:38:16,664 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:38:16,665 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:38:16,665 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:38:17,148 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:38:17,149 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:38:17,150 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:38:17,150 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:38:17,151 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:38:17,151 - __main__ - INFO - Bot started
+2025-03-08 19:38:35,024 - handlers.admin - INFO - Admin callback: manage_images
+2025-03-08 19:38:35,025 - handlers.admin - INFO - Admin callback: manage_images
+2025-03-08 19:39:25,621 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:39:25,623 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:39:25,623 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:39:25,624 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:39:26,033 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:39:26,035 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:39:26,035 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:39:26,036 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:39:26,036 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:39:26,036 - __main__ - INFO - Bot started
+2025-03-08 19:39:45,545 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:39:45,557 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:39:45,557 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:39:45,557 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:39:45,946 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:39:45,948 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:39:45,948 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:39:45,949 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:39:45,950 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:39:45,950 - __main__ - INFO - Bot started
+2025-03-08 19:39:58,890 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:39:58,892 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:39:58,892 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:39:58,893 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:39:59,268 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:39:59,270 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:39:59,270 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:39:59,271 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:39:59,272 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:39:59,272 - __main__ - INFO - Bot started
+2025-03-08 19:40:23,793 - handlers.admin - INFO - Admin callback: view_stats
+2025-03-08 19:40:51,023 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:40:51,037 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:40:51,038 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:40:51,038 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:40:51,417 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:40:51,419 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:40:51,419 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:40:51,420 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:40:51,421 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:40:51,421 - __main__ - INFO - Bot started
+2025-03-08 19:40:54,855 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-08 19:40:54,857 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-08 19:40:55,578 - handlers.admin - INFO - Admin panel markup displayed successfully
+2025-03-08 19:40:57,768 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-08 19:41:01,254 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-08 19:41:01,254 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-08 19:41:01,889 - handlers.admin - INFO - Admin panel markup displayed successfully
+2025-03-08 19:42:12,664 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:42:12,665 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:42:12,950 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-08 19:42:12,950 - utils.scheduler - INFO - Found 2 active channels for immediate crosspost
+2025-03-08 19:42:12,951 - utils.crosspost - INFO - Creating crosspost for 2 active channels
+2025-03-08 19:42:13,224 - utils.crosspost - INFO - Found 1 small channels (<300 subscribers) and 0 large channels
+2025-03-08 19:42:13,224 - utils.crosspost - INFO - Only 1 channels available, using all of them
+2025-03-08 19:42:13,350 - utils.crosspost - INFO - Preparing SFW crosspost for 1 channels
+2025-03-08 19:42:13,770 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002467496944
+2025-03-08 19:42:13,770 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-08 19:42:14,043 - utils.crosspost - INFO - Found 1 small channels (<300 subscribers) and 0 large channels
+2025-03-08 19:42:14,043 - utils.crosspost - INFO - Only 1 channels available, using all of them
+2025-03-08 19:42:14,164 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 1 channels
+2025-03-08 19:42:14,354 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883
+2025-03-08 19:42:14,355 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-08 19:42:14,355 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-08 19:42:14,494 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-08 19:43:44,376 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:43:44,378 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:43:44,379 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:43:44,379 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:43:44,758 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:43:44,759 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:43:44,760 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:43:44,761 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:43:44,761 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:43:44,761 - __main__ - INFO - Bot started
+2025-03-08 19:44:56,070 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-08 19:44:56,555 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-08 19:45:01,026 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-08 19:45:01,026 - handlers.channel - INFO - Processing channel name for user 1336308262: Memes SFW
+2025-03-08 19:45:01,026 - handlers.channel - INFO - Stored channel title 'Memes SFW' for user 1336308262
+2025-03-08 19:45:01,194 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-08 19:45:01,194 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-08 19:45:08,227 - handlers.channel - INFO - Handling waiting_channel_url state for user 1336308262
+2025-03-08 19:45:08,227 - handlers.channel - INFO - Processing channel URL for user 1336308262: @memessfw
+2025-03-08 19:45:08,227 - handlers.channel - INFO - Stored channel username 'memessfw' for user 1336308262
+2025-03-08 19:45:08,636 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-08 19:45:08,636 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-08 19:45:13,662 - handlers.channel - INFO - Handling waiting_emoji state for user 1336308262
+2025-03-08 19:45:13,663 - handlers.channel - INFO - Processing emoji selection for user 1336308262
+2025-03-08 19:45:13,663 - handlers.channel - INFO - Found emojis: ['🇺🇦', '💻', '🎮']
+2025-03-08 19:45:13,664 - handlers.channel - INFO - Stored emojis ['🇺🇦', '💻', '🎮'] for user 1336308262
+2025-03-08 19:45:13,839 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_emoji
+2025-03-08 19:45:13,839 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_emoji to ChannelStates:waiting_admin_verification
+2025-03-08 19:45:16,015 - handlers.channel - INFO - Handling waiting_admin_verification state for user 1336308262
+2025-03-08 19:45:16,016 - handlers.channel - INFO - Processing admin verification for user 1336308262
+2025-03-08 19:45:16,016 - handlers.channel - INFO - Channel data so far: {'title': 'Memes SFW', 'username': 'memessfw', 'emojis': ['🇺🇦', '💻', '🎮']}
+2025-03-08 19:45:16,016 - handlers.channel - INFO - Skipping admin verification check for now
+2025-03-08 19:45:16,211 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_admin_verification
+2025-03-08 19:45:16,211 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_admin_verification to ChannelStates:waiting_post_forward
+2025-03-08 19:45:25,821 - handlers.channel - INFO - Handling waiting_post_forward state for user 1336308262
+2025-03-08 19:45:25,823 - handlers.channel - INFO - Processing forwarded post from user 1336308262
+2025-03-08 19:45:25,823 - handlers.channel - INFO - Message details: forward_from_chat={'id': -1002357763694, 'type': 'channel', 'title': 'Memes SFW', 'username': 'memessfw', 'first_name': None, 'last_name': None, 'is_forum': None, 'max_reaction_count': None, 'photo': None, 'bio': None, 'join_to_send_messages': None, 'join_by_request': None, 'has_private_forwards': None, 'has_restricted_voice_and_video_messages': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'permissions': None, 'slow_mode_delay': None, 'message_auto_delete_time': None, 'has_protected_content': None, 'sticker_set_name': None, 'can_set_sticker_set': None, 'linked_chat_id': None, 'location': None, 'active_usernames': None, 'emoji_status_custom_emoji_id': None, 'has_hidden_members': None, 'has_aggressive_anti_spam_enabled': None, 'emoji_status_expiration_date': None, 'available_reactions': None, 'accent_color_id': None, 'background_custom_emoji_id': None, 'profile_accent_color_id': None, 'profile_background_custom_emoji_id': None, 'has_visible_history': None, 'unrestrict_boost_count': None, 'custom_emoji_sticker_set_name': None, 'business_intro': None, 'business_location': None, 'business_opening_hours': None, 'personal_chat': None, 'birthdate': None, 'can_send_paid_media': None}
+2025-03-08 19:45:25,824 - handlers.channel - INFO - Chat type: channel
+2025-03-08 19:45:25,824 - handlers.channel - INFO - Processing channel: -1002357763694 - Memes SFW
+2025-03-08 19:45:30,688 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-08 19:45:30,853 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-08 19:45:35,447 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-08 19:45:35,449 - handlers.channel - INFO - Processing channel name for user 1336308262: Memes NSFW
+2025-03-08 19:45:35,449 - handlers.channel - INFO - Stored channel title 'Memes NSFW' for user 1336308262
+2025-03-08 19:45:35,671 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-08 19:45:35,672 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-08 19:45:39,661 - handlers.channel - INFO - Handling waiting_channel_url state for user 1336308262
+2025-03-08 19:45:39,664 - handlers.channel - INFO - Processing channel URL for user 1336308262: @memesnsfw
+2025-03-08 19:45:39,664 - handlers.channel - INFO - Stored channel username 'memesnsfw' for user 1336308262
+2025-03-08 19:45:39,855 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-08 19:45:39,861 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-08 19:45:45,962 - handlers.channel - INFO - Handling waiting_emoji state for user 1336308262
+2025-03-08 19:45:45,964 - handlers.channel - INFO - Processing emoji selection for user 1336308262
+2025-03-08 19:45:45,964 - handlers.channel - INFO - Found emojis: ['🎰🎮🥰']
+2025-03-08 19:45:45,964 - handlers.channel - INFO - Stored emojis ['🎰🎮🥰'] for user 1336308262
+2025-03-08 19:45:46,110 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_emoji
+2025-03-08 19:45:46,111 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_emoji to ChannelStates:waiting_admin_verification
+2025-03-08 19:45:47,760 - handlers.channel - INFO - Handling waiting_admin_verification state for user 1336308262
+2025-03-08 19:45:47,762 - handlers.channel - INFO - Processing admin verification for user 1336308262
+2025-03-08 19:45:47,762 - handlers.channel - INFO - Channel data so far: {'title': 'Memes NSFW', 'username': 'memesnsfw', 'emojis': ['🎰🎮🥰']}
+2025-03-08 19:45:47,762 - handlers.channel - INFO - Skipping admin verification check for now
+2025-03-08 19:45:47,910 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_admin_verification
+2025-03-08 19:45:47,910 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_admin_verification to ChannelStates:waiting_post_forward
+2025-03-08 19:45:56,140 - handlers.channel - INFO - Handling waiting_post_forward state for user 1336308262
+2025-03-08 19:45:56,142 - handlers.channel - INFO - Processing forwarded post from user 1336308262
+2025-03-08 19:45:56,142 - handlers.channel - INFO - Message details: forward_from_chat={'id': -1002487566547, 'type': 'channel', 'title': 'Memes NSFW', 'username': 'memesnsfw', 'first_name': None, 'last_name': None, 'is_forum': None, 'max_reaction_count': None, 'photo': None, 'bio': None, 'join_to_send_messages': None, 'join_by_request': None, 'has_private_forwards': None, 'has_restricted_voice_and_video_messages': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'permissions': None, 'slow_mode_delay': None, 'message_auto_delete_time': None, 'has_protected_content': None, 'sticker_set_name': None, 'can_set_sticker_set': None, 'linked_chat_id': None, 'location': None, 'active_usernames': None, 'emoji_status_custom_emoji_id': None, 'has_hidden_members': None, 'has_aggressive_anti_spam_enabled': None, 'emoji_status_expiration_date': None, 'available_reactions': None, 'accent_color_id': None, 'background_custom_emoji_id': None, 'profile_accent_color_id': None, 'profile_background_custom_emoji_id': None, 'has_visible_history': None, 'unrestrict_boost_count': None, 'custom_emoji_sticker_set_name': None, 'business_intro': None, 'business_location': None, 'business_opening_hours': None, 'personal_chat': None, 'birthdate': None, 'can_send_paid_media': None}
+2025-03-08 19:45:56,142 - handlers.channel - INFO - Chat type: channel
+2025-03-08 19:45:56,142 - handlers.channel - INFO - Processing channel: -1002487566547 - Memes NSFW
+2025-03-08 19:46:02,806 - handlers.admin - INFO - Admin callback: view_pending
+2025-03-08 19:46:06,954 - handlers.admin - INFO - Admin callback: approve_-1002357763694
+2025-03-08 19:46:11,874 - handlers.admin - INFO - Admin callback: view_pending
+2025-03-08 19:46:13,995 - handlers.admin - INFO - Admin callback: approve_-1002487566547
+2025-03-08 19:46:16,572 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-08 19:46:16,573 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-08 19:46:16,941 - handlers.admin - INFO - Admin panel markup displayed successfully
+2025-03-08 19:46:19,757 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:46:19,758 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:46:20,041 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-08 19:46:20,041 - utils.scheduler - INFO - Found 4 active channels for immediate crosspost
+2025-03-08 19:46:20,041 - utils.crosspost - INFO - Creating crosspost for 4 active channels
+2025-03-08 19:46:20,860 - utils.crosspost - INFO - Found 3 small channels (<300 subscribers) and 0 large channels
+2025-03-08 19:46:20,860 - utils.crosspost - INFO - Only 3 channels available, using all of them
+2025-03-08 19:46:20,998 - utils.crosspost - INFO - Preparing SFW crosspost for 3 channels
+2025-03-08 19:46:21,419 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002467496944 (excluding itself from list)
+2025-03-08 19:46:21,596 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002357763694 (excluding itself from list)
+2025-03-08 19:46:21,778 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002487566547 (excluding itself from list)
+2025-03-08 19:46:21,778 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-08 19:46:22,097 - utils.crosspost - INFO - Found 1 small channels (<300 subscribers) and 0 large channels
+2025-03-08 19:46:22,097 - utils.crosspost - INFO - Only 1 channels available, using all of them
+2025-03-08 19:46:22,223 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 1 channels
+2025-03-08 19:46:22,223 - utils.crosspost - WARNING - No other channels to promote to -1002204399883, skipping
+2025-03-08 19:46:22,223 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-08 19:46:22,223 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-08 19:46:22,375 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-08 19:46:46,848 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-08 19:46:57,242 - handlers.admin - INFO - Admin callback: manage_-1002487566547
+2025-03-08 19:46:59,192 - handlers.admin - INFO - Admin callback: toggle_sfw_-1002487566547
+2025-03-08 19:46:59,193 - handlers.admin - INFO - Admin toggling SFW status for channel: -1002487566547
+2025-03-08 19:46:59,194 - handlers.admin - INFO - Changing channel 'Memes NSFW' (-1002487566547) from SFW to NSFW
+2025-03-08 19:46:59,501 - handlers.admin - INFO - Successfully updated channel -1002487566547 to NSFW
+2025-03-08 19:46:59,501 - handlers.admin - INFO - Admin callback: manage_-1002487566547
+2025-03-08 19:47:01,537 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-08 19:47:05,436 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-08 19:47:05,436 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-08 19:47:05,759 - handlers.admin - INFO - Admin panel markup displayed successfully
+2025-03-08 19:47:09,797 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:47:09,799 - handlers.admin - INFO - Admin callback: trigger_post
+2025-03-08 19:47:10,192 - utils.scheduler - INFO - Scheduling immediate crosspost
+2025-03-08 19:47:10,192 - utils.scheduler - INFO - Found 4 active channels for immediate crosspost
+2025-03-08 19:47:10,193 - utils.crosspost - INFO - Creating crosspost for 4 active channels
+2025-03-08 19:47:10,718 - utils.crosspost - INFO - Found 2 small channels (<300 subscribers) and 0 large channels
+2025-03-08 19:47:10,718 - utils.crosspost - INFO - Only 2 channels available, using all of them
+2025-03-08 19:47:10,845 - utils.crosspost - INFO - Preparing SFW crosspost for 2 channels
+2025-03-08 19:47:11,268 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002467496944 (excluding itself from list)
+2025-03-08 19:47:11,570 - utils.crosspost - INFO - Sent SFW crosspost to channel -1002357763694 (excluding itself from list)
+2025-03-08 19:47:11,571 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-08 19:47:12,113 - utils.crosspost - INFO - Found 2 small channels (<300 subscribers) and 0 large channels
+2025-03-08 19:47:12,113 - utils.crosspost - INFO - Only 2 channels available, using all of them
+2025-03-08 19:47:12,241 - utils.crosspost - INFO - Preparing NSFW 🔞 crosspost for 2 channels
+2025-03-08 19:47:12,430 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002204399883 (excluding itself from list)
+2025-03-08 19:47:12,611 - utils.crosspost - INFO - Sent NSFW 🔞 crosspost to channel -1002487566547 (excluding itself from list)
+2025-03-08 19:47:12,611 - utils.crosspost - INFO - Completed crosspost for NSFW 🔞 group
+2025-03-08 19:47:12,611 - utils.scheduler - INFO - Successfully executed manual crosspost
+2025-03-08 19:47:12,767 - handlers.admin - INFO - Manual crosspost completed successfully
+2025-03-08 19:58:27,241 - __main__ - INFO - Bot initialized with state storage
+2025-03-08 19:58:27,253 - bot - INFO - Bot initialized with state storage
+2025-03-08 19:58:27,253 - handlers.channel - INFO - Channel handlers registered
+2025-03-08 19:58:27,253 - handlers.admin - INFO - Admin handlers registered
+2025-03-08 19:58:27,701 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-08 19:58:27,702 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-08 19:58:27,702 - utils.scheduler - INFO - Scheduler started
+2025-03-08 19:58:27,703 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-08 19:58:27,704 - utils.scheduler - INFO - Current time is past 6 PM Kyiv time, skipping today
+2025-03-08 19:58:27,704 - __main__ - INFO - Bot started
+2025-03-08 20:00:26,934 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-08 20:00:26,935 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-08 20:00:30,696 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-08 20:00:30,696 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-08 20:00:34,959 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-08 20:00:34,960 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-08 20:00:40,212 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-08 20:00:40,223 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+

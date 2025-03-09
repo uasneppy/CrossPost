@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - Українське ТҐ-Комʼюніті{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>{{ title }}</h1>
+    <a href="{{ url_for('view_channel', channel_id=channel.id|default('')) }}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Назад
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-4">Оберіть дні, коли канал "{{ channel.name|default('Без імені') }}" має брати участь у кросспостінгу:</h5>
+                
+                <form method="POST" action="{{ url_for('edit_schedule', channel_id=channel.id|default('')) }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    
+                    <div class="row">
+                        {% for i in range(days|length) %}
+                            <div class="col-md-6 mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="day{{ i }}" name="{{ i }}" 
+                                           {% if schedule.get(i|string, false) %}checked{% endif %}>
+                                    <label class="form-check-label" for="day{{ i }}">{{ days[i] }}</label>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button type="button" id="select-all" class="btn btn-sm btn-outline-secondary me-2">Обрати всі</button>
+                        <button type="button" id="unselect-all" class="btn btn-sm btn-outline-secondary me-2">Зняти всі</button>
+                        <button type="submit" class="btn btn-primary">Зберегти розклад</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectAllBtn = document.getElementById('select-all');
+    const unselectAllBtn = document.getElementById('unselect-all');
+    const checkboxes = document.querySelectorAll('.form-check-input[type="checkbox"]');
+    
+    selectAllBtn.addEventListener('click', function() {
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = true;
+        });
+    });
+    
+    unselectAllBtn.addEventListener('click', function() {
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    });
+});
+</script>
+{% endblock %}

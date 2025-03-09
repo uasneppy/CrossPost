@@ -1,0 +1,7 @@
+pyTelegramBotAPI>=4.26.0
+APScheduler==3.6.3
+pytz>=2025.1
+Flask>=3.1.0
+Flask-WTF>=1.2.0
+python-dotenv>=1.0.0
+# Add future dependencies here
