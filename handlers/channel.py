@@ -20,6 +20,9 @@ class ChannelStates(StatesGroup):
     waiting_admin_verification = State()  # Step 4: User makes bot admin
     waiting_post_forward = State()  # Step 5: User forwards a post
 
+# Constants
+CANCEL_COMMAND = "❌ Cancel Registration"
+
 # User session storage (since telebot doesn't have built-in user_data like python-telegram-bot)
 user_sessions = {}
 
@@ -35,6 +38,7 @@ def start_command(message):
         "/settings - Manage your channel's settings\n"
         "/schedule - Set your channel's crossposting schedule\n"
         "/status - Check your channel's status\n"
+        "/cancel - Cancel registration process\n"
         "/help - Show this help message\n\n"
         "To get started, use /apply to submit your channel for approval."
     )
@@ -49,14 +53,36 @@ def help_command(message):
         "/settings - Manage your channel's settings\n"
         "/schedule - Set your channel's crossposting schedule\n"
         "/status - Check your channel's status\n"
+        "/cancel - Cancel registration process\n"
         "/help - Show this help message\n\n"
         "*About the Bot*\n"
         "This bot facilitates crossposting between verified Ukrainian Telegram channels. "
         "Channels can opt in or out of crossposting on specific days. "
-        "Crossposts happen between 3:00 PM and 6:00 PM Kyiv time and include a random selection of up to 10 channels.\n\n"
-        "To get started, use /apply to submit your channel for approval."
+        "Crossposts happen exactly at 6:00 PM Kyiv time and include a selection of up to 10 channels.\n\n"
+        "To get started, use /apply to submit your channel for approval.\n"
+        "You can cancel registration at any time by clicking the ❌ Cancel button or using the /cancel command."
     )
     return response
+
+# Cancel command handler
+def cancel_command(message, bot):
+    """Cancel the current operation and reset state."""
+    user_id = message.from_user.id
+    logger.info(f"User {user_id} cancelled operation")
+    
+    # Clear user data
+    if user_id in user_sessions:
+        del user_sessions[user_id]
+    
+    # Reset state
+    bot.delete_state(message.from_user.id, message.chat.id)
+    
+    # Send confirmation
+    bot.send_message(
+        message.chat.id,
+        "✅ Registration cancelled. You can start over with /apply when you're ready.",
+        reply_markup=types.ReplyKeyboardRemove()
+    )
 
 # Apply command handler
 def apply_command(message, bot):
@@ -68,10 +94,16 @@ def apply_command(message, bot):
     user_sessions[user_id] = {"channel": {}}
     
     try:
+        # Create keyboard with cancel button
+        markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+        markup.add(types.KeyboardButton(CANCEL_COMMAND))
+        
         bot.send_message(
             message.chat.id,
             "Let's add your channel to our crossposting network!\n\n"
-            "Step 1 of 5: Please enter the name of your channel."
+            "Step 1 of 5: Please enter the name of your channel.\n\n"
+            "You can cancel at any time by clicking the button below.",
+            reply_markup=markup
         )
         
         # Set state to waiting for channel name
@@ -86,6 +118,11 @@ def channel_name_handler(message, bot):
     """Process the channel name input."""
     user_id = message.from_user.id
     logger.info(f"Processing channel name for user {user_id}: {message.text}")
+    
+    # Check for cancel command
+    if message.text == CANCEL_COMMAND:
+        cancel_command(message, bot)
+        return
     
     if not message.text:
         bot.send_message(
@@ -111,11 +148,16 @@ def channel_name_handler(message, bot):
         # Format the channel name and create a message with the name highlighted
         channel_name = message.text
         
+        # Create keyboard with cancel button
+        markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+        markup.add(types.KeyboardButton(CANCEL_COMMAND))
+        
         # Move to the next step
         bot.send_message(
             message.chat.id,
             f"Step 2 of 5: Please send the URL of your channel *{channel_name}*.\n\n"
             f"For example: @yourchannel",
+            reply_markup=markup,
             parse_mode="Markdown"
         )
         
@@ -136,6 +178,11 @@ def channel_url_handler(message, bot):
     """Process the channel URL input."""
     user_id = message.from_user.id
     logger.info(f"Processing channel URL for user {user_id}: {message.text}")
+    
+    # Check for cancel command
+    if message.text == CANCEL_COMMAND:
+        cancel_command(message, bot)
+        return
     
     if not message.text:
         bot.send_message(
@@ -164,6 +211,10 @@ def channel_url_handler(message, bot):
         channel_name = user_sessions[user_id]["channel"]["title"]
         channel_url_formatted = f"@{channel_url}"
         
+        # Create keyboard with cancel button
+        markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+        markup.add(types.KeyboardButton(CANCEL_COMMAND))
+        
         # Move to the next step - emoji selection
         bot.send_message(
             message.chat.id,
@@ -171,6 +222,7 @@ def channel_url_handler(message, bot):
             "These will be displayed next to your channel in crossposts.\n\n"
             "For example: 🇺🇦 💻 🎮\n\n"
             "Send the emojis in a single message.",
+            reply_markup=markup,
             parse_mode="Markdown"
         )
         
@@ -191,6 +243,11 @@ def emoji_handler(message, bot):
     """Process emoji selection."""
     user_id = message.from_user.id
     logger.info(f"Processing emoji selection for user {user_id}")
+    
+    # Check for cancel command
+    if message.text == CANCEL_COMMAND:
+        cancel_command(message, bot)
+        return
     
     if user_id not in user_sessions or "channel" not in user_sessions[user_id]:
         logger.warning(f"User {user_id} has no active session in emoji_handler")
@@ -244,6 +301,13 @@ def emoji_handler(message, bot):
         emoji_list = " ".join(emojis[:3])
         
         # Move to the next step - bot admin verification
+        # Create keyboard with both admin confirmation and cancel buttons
+        markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+        markup.add(
+            types.KeyboardButton("✅ I've made the bot an admin"),
+            types.KeyboardButton(CANCEL_COMMAND)
+        )
+        
         bot.send_message(
             message.chat.id,
             f"Step 4 of 5: Now, you need to make the bot an administrator in your channel *{channel_name}* ({channel_url_formatted}).\n\n"
@@ -256,11 +320,7 @@ def emoji_handler(message, bot):
             "7. Save the changes\n\n"
             f"Selected emojis: {emoji_list}\n\n"
             "When you've done this, click the button below to continue.",
-            reply_markup=types.ReplyKeyboardMarkup(
-                row_width=1, 
-                one_time_keyboard=True,
-                resize_keyboard=True
-            ).add(types.KeyboardButton("✅ I've made the bot an admin")),
+            reply_markup=markup,
             parse_mode="Markdown"
         )
         
@@ -282,6 +342,11 @@ def admin_verification_handler(message, bot):
     user_id = message.from_user.id
     logger.info(f"Processing admin verification for user {user_id}")
     
+    # Check for cancel command
+    if message.text == CANCEL_COMMAND:
+        cancel_command(message, bot)
+        return
+    
     if user_id not in user_sessions or "channel" not in user_sessions[user_id]:
         logger.warning(f"User {user_id} has no active session in admin_verification_handler")
         bot.send_message(message.chat.id, "Something went wrong. Please start over with /apply.")
@@ -302,12 +367,16 @@ def admin_verification_handler(message, bot):
         emoji_list = " ".join(user_sessions[user_id]["channel"]["emojis"])
         
         # Move to the final step - forward a post
+        # Create keyboard with cancel button for the last step
+        markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+        markup.add(types.KeyboardButton(CANCEL_COMMAND))
+        
         bot.send_message(
             message.chat.id,
             f"Step 5 of 5: Finally, please forward a post from your channel *{channel_name}* ({channel_url_formatted}).\n\n"
             f"Selected emojis: {emoji_list}\n\n"
             "This will help us verify your ownership and complete the application process.",
-            reply_markup=types.ReplyKeyboardRemove(),
+            reply_markup=markup,
             parse_mode="Markdown"
         )
         
@@ -328,6 +397,11 @@ def post_forward_handler(message, bot):
     """Process a forwarded post from a channel."""
     user_id = message.from_user.id
     logger.info(f"Processing forwarded post from user {user_id}")
+    
+    # Check if this is a cancel command - need special handling since this accepts all content types
+    if hasattr(message, 'text') and message.text == CANCEL_COMMAND:
+        cancel_command(message, bot)
+        return
     
     # Log message details for debugging
     logger.info(f"Message details: forward_from_chat={getattr(message, 'forward_from_chat', None)}")
@@ -778,6 +852,11 @@ def register_channel_handlers(bot):
     @bot.message_handler(commands=['apply'])
     def handle_apply(message):
         apply_command(message, bot)
+        
+    # Cancel command to cancel any application process
+    @bot.message_handler(commands=['cancel'])
+    def handle_cancel_command(message):
+        cancel_command(message, bot)
     
     @bot.message_handler(commands=['settings'])
     def handle_settings(message):
