@@ -1,13 +1,11 @@
 {
-  "-1002280664118": {
-    "title": "Memes",
-    "username": "mrmes23",
+  "-1001761783348": {
+    "title": "Чорно-Білий Шітпост",
+    "username": "Blacky_White_Shitpost",
     "emojis": [
-      "🇺🇦",
-      "💻",
-      "🎮"
+      "💀🤣👌"
     ],
-    "id": -1002280664118,
+    "id": -1001761783348,
     "is_sfw": true,
     "schedule": {
       "0": true,
@@ -18,28 +16,7 @@
       "5": true,
       "6": true
     },
-    "owner_id": 8106482945,
-    "subscribers": 2
-  },
-  "-1002467496944": {
-    "title": "Testing SFW",
-    "username": "testingnotyiff",
-    "emojis": [
-      "🇺🇦",
-      "💻",
-      "🎮"
-    ],
-    "id": -1002467496944,
-    "is_sfw": true,
-    "schedule": {
-      "0": true,
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": true,
-      "6": true
-    },
-    "owner_id": 1336308262
+    "owner_id": 897759308,
+    "subscribers": 58
   }
 }
