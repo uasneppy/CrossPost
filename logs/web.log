@@ -1697,3 +1697,122 @@ jinja2.exceptions.UndefinedError: 'enumerate' is undefined
 2025-03-09 09:42:44,341 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:42:44] "GET /api/stats HTTP/1.1" 200 -
 2025-03-09 09:43:14,356 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:43:14] "GET /api/stats HTTP/1.1" 200 -
 2025-03-09 09:43:44,355 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:43:44] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:44:14,365 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:44:14] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 09:44:44,357 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 09:44:44] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 10:20:12,242 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 10:20:12,245 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 10:20:12,549 - bot - INFO - Bot initialized with state storage
+2025-03-09 10:20:12,555 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 10:20:12,555 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 10:20:12,941 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 10:20:12,943 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 10:20:12,944 - utils.scheduler - INFO - Scheduler started
+2025-03-09 10:20:12,945 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 10:20:12,945 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 10:20:12,948 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 10:20:12,948 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 10:20:12,948 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 10:20:14,396 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 10:20:14,397 - bot - INFO - Bot started
+2025-03-09 10:20:14,397 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 10:20:14,397 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 10:20:14,408 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 10:20:14,409 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 10:20:15,126 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 10:20:15,516 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-03-09 10:20:15,518 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 1225, in handle_admin_callbacks
+    admin_callback_handler(call, bot)
+  File "/home/runner/workspace/handlers/admin.py", line 498, in admin_callback_handler
+    bot.answer_callback_query(call.id, "Loading approved channels...")
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 6058, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 1854, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+2025-03-09 10:21:45,986 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 10:21:45,987 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 10:21:46,192 - bot - INFO - Bot initialized with state storage
+2025-03-09 10:21:46,193 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 10:21:46,194 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 10:21:46,580 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 10:21:46,583 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 10:21:46,584 - utils.scheduler - INFO - Scheduler started
+2025-03-09 10:21:46,585 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 10:21:46,586 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 10:21:46,587 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 10:21:46,587 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 10:21:46,588 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 10:21:48,006 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 10:21:48,006 - bot - INFO - Bot started
+2025-03-09 10:21:48,006 - __main__ - INFO - Bot initialized successfully on attempt 1/5
+2025-03-09 10:21:48,007 - __main__ - INFO - Bot thread started successfully
+2025-03-09 10:21:48,007 - __main__ - INFO - Watchdog thread started
+2025-03-09 10:21:48,007 - __main__ - INFO - Watchdog thread started
+2025-03-09 10:21:48,007 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 10:21:48,016 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 10:21:48,016 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 10:22:12,202 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 10:22:12,202 - __main__ - INFO - Cleanup complete. Exiting.
+2025-03-09 10:22:15,789 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 10:22:15,789 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 10:22:15,975 - bot - INFO - Bot initialized with state storage
+2025-03-09 10:22:15,977 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 10:22:15,977 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 10:22:16,351 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 10:22:16,353 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 10:22:16,354 - utils.scheduler - INFO - Scheduler started
+2025-03-09 10:22:16,354 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 10:22:16,355 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 10:22:16,355 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 10:22:16,355 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 10:22:16,356 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 10:22:17,595 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 10:22:17,596 - bot - INFO - Bot started
+2025-03-09 10:22:17,596 - __main__ - INFO - Bot initialized successfully on attempt 1/5
+2025-03-09 10:22:17,596 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 10:22:17,596 - __main__ - INFO - Bot thread started successfully
+2025-03-09 10:22:17,598 - __main__ - INFO - Watchdog thread started
+2025-03-09 10:22:17,598 - __main__ - INFO - Watchdog thread started
+2025-03-09 10:22:17,598 - __main__ - INFO - Starting web server on port 5000
+2025-03-09 10:22:17,607 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.20:5000
+2025-03-09 10:22:17,608 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 10:22:18,174 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:22:18] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 10:22:31,640 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:22:31] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 10:22:33,411 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:22:33] "GET / HTTP/1.1" 200 -
+2025-03-09 10:22:34,136 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:22:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 10:22:34,295 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:22:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 10:22:34,560 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:22:34] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 10:23:04,591 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:23:04] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 10:23:34,587 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:23:34] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 10:24:04,596 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:24:04] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 10:24:35,586 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 10:24:35] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 10:25:01,675 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 10:25:01,675 - __main__ - INFO - Cleanup complete. Exiting.

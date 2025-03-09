@@ -1,0 +1,425 @@
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:25:12 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7f808154fb18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3628)
+spawned uWSGI worker 1 (pid: 3635, cores: 2)
+spawned uWSGI worker 2 (pid: 3636, cores: 2)
+spawned uWSGI worker 3 (pid: 3637, cores: 2)
+spawned uWSGI worker 4 (pid: 3638, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 3639)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f808154fb18 pid: 3636 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f808154fb18 pid: 3638 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f808154fb18 pid: 3637 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f808154fb18 pid: 3635 (default app)
+Sun Mar  9 10:25:12 2025 - GET / - 200 - 24ms
+Sun Mar  9 10:25:13 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:25:13 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:25:14 2025 - GET /api/stats - 200 - 3ms
+gateway "uWSGI http 1" has been buried (pid: 3639)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/runner/workspace
+closing all non-uwsgi socket fds > 2 (max_fd = 83886)...
+found fd 6 mapped to socket 0 (127.0.0.1:8000)
+running /home/runner/workspace/.pythonlibs/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+[uwsgi-static] added mapping for /static => ./static
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:25:44 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 inherited INET address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7f2f0bcd9b18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3628)
+spawned uWSGI worker 1 (pid: 3738, cores: 2)
+spawned uWSGI worker 2 (pid: 3739, cores: 2)
+spawned uWSGI worker 3 (pid: 3740, cores: 2)
+spawned uWSGI worker 4 (pid: 3741, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 3743)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f2f0bcd9b18 pid: 3739 (default app)
+Sun Mar  9 10:25:44 2025 - GET /api/stats - 200 - 3ms
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f2f0bcd9b18 pid: 3738 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f2f0bcd9b18 pid: 3740 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7f2f0bcd9b18 pid: 3741 (default app)
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:25:46 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7fc091b35b18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3756)
+spawned uWSGI worker 1 (pid: 3763, cores: 2)
+spawned uWSGI worker 2 (pid: 3764, cores: 2)
+spawned uWSGI worker 3 (pid: 3765, cores: 2)
+spawned uWSGI worker 4 (pid: 3766, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 3767)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fc091b35b18 pid: 3765 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fc091b35b18 pid: 3764 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fc091b35b18 pid: 3763 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fc091b35b18 pid: 3766 (default app)
+Sun Mar  9 10:25:46 2025 - GET / - 200 - 24ms
+Sun Mar  9 10:25:46 2025 - GET / - 401 - 2ms
+Sun Mar  9 10:25:46 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:25:46 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:25:47 2025 - GET / - 200 - 27ms
+Sun Mar  9 10:25:47 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:25:47 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:25:48 2025 - GET /api/stats - 200 - 0ms
+gateway "uWSGI http 1" has been buried (pid: 3767)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/runner/workspace
+closing all non-uwsgi socket fds > 2 (max_fd = 83886)...
+found fd 6 mapped to socket 0 (127.0.0.1:8000)
+running /home/runner/workspace/.pythonlibs/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+[uwsgi-static] added mapping for /static => ./static
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:25:57 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 inherited INET address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7efca28b6b18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3756)
+spawned uWSGI worker 1 (pid: 3803, cores: 2)
+spawned uWSGI worker 2 (pid: 3804, cores: 2)
+spawned uWSGI worker 3 (pid: 3805, cores: 2)
+spawned uWSGI worker 4 (pid: 3806, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 3807)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7efca28b6b18 pid: 3806 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7efca28b6b18 pid: 3805 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7efca28b6b18 pid: 3803 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7efca28b6b18 pid: 3804 (default app)
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:25:59 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7f8d3b12fb18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3819)
+spawned uWSGI worker 1 (pid: 3826, cores: 2)
+spawned uWSGI worker 2 (pid: 3827, cores: 2)
+spawned uWSGI worker 3 (pid: 3828, cores: 2)
+spawned uWSGI worker 4 (pid: 3829, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 3830)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7f8d3b12fb18 pid: 3829 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7f8d3b12fb18 pid: 3828 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7f8d3b12fb18 pid: 3827 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7f8d3b12fb18 pid: 3826 (default app)
+Sun Mar  9 10:26:00 2025 - GET / - 401 - 2ms
+Sun Mar  9 10:26:00 2025 - GET / - 200 - 27ms
+Sun Mar  9 10:26:00 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:26:00 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:26:01 2025 - GET /api/stats - 200 - 1ms
+[uwsgi-python-reloader] module/file /home/runner/workspace/server.py has been modified
+gateway "uWSGI http 1" has been buried (pid: 3830)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 3826)...
+Gracefully killing worker 4 (pid: 3829)...
+Gracefully killing worker 3 (pid: 3828)...
+Gracefully killing worker 2 (pid: 3827)...
+[uwsgi-python-reloader] module/file /home/runner/workspace/server.py has been modified
+[uwsgi-python-reloader] module/file /home/runner/workspace/server.py has been modified
+[uwsgi-python-reloader] module/file /home/runner/workspace/server.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/runner/workspace
+closing all non-uwsgi socket fds > 2 (max_fd = 83886)...
+found fd 6 mapped to socket 0 (127.0.0.1:8000)
+running /home/runner/workspace/.pythonlibs/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+[uwsgi-static] added mapping for /static => ./static
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:26:20 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 inherited INET address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7fac27389b18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3819)
+spawned uWSGI worker 1 (pid: 3950, cores: 2)
+spawned uWSGI worker 2 (pid: 3951, cores: 2)
+spawned uWSGI worker 3 (pid: 3952, cores: 2)
+spawned uWSGI worker 4 (pid: 3953, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 3954)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fac27389b18 pid: 3953 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fac27389b18 pid: 3950 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fac27389b18 pid: 3952 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fac27389b18 pid: 3951 (default app)
+gateway "uWSGI http 1" has been buried (pid: 3954)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/runner/workspace
+closing all non-uwsgi socket fds > 2 (max_fd = 83886)...
+found fd 6 mapped to socket 0 (127.0.0.1:8000)
+running /home/runner/workspace/.pythonlibs/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+[uwsgi-static] added mapping for /static => ./static
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:26:28 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 inherited INET address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7fbf39fc7b18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3819)
+spawned uWSGI worker 1 (pid: 3982, cores: 2)
+spawned uWSGI worker 2 (pid: 3983, cores: 2)
+spawned uWSGI worker 3 (pid: 3984, cores: 2)
+spawned uWSGI worker 4 (pid: 3985, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 3986)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fbf39fc7b18 pid: 3982 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fbf39fc7b18 pid: 3985 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fbf39fc7b18 pid: 3984 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fbf39fc7b18 pid: 3983 (default app)
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:26:30 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7fc732df6b18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4000)
+spawned uWSGI worker 1 (pid: 4007, cores: 2)
+spawned uWSGI worker 2 (pid: 4008, cores: 2)
+spawned uWSGI worker 3 (pid: 4009, cores: 2)
+spawned uWSGI worker 4 (pid: 4010, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 4011)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fc732df6b18 pid: 4008 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fc732df6b18 pid: 4010 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fc732df6b18 pid: 4007 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fc732df6b18 pid: 4009 (default app)
+Sun Mar  9 10:26:31 2025 - GET / - 200 - 34ms
+Sun Mar  9 10:26:31 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:26:31 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:26:32 2025 - GET /api/stats - 200 - 3ms
+Sun Mar  9 10:26:42 2025 - GET / - 401 - 0ms
+Sun Mar  9 10:26:43 2025 - GET / - 200 - 24ms
+Sun Mar  9 10:26:43 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:26:43 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:26:44 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:26:54 2025 - GET /channels - 200 - 13ms
+Sun Mar  9 10:26:54 2025 - GET /static/css/styles.css - 304 - 0ms

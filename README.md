@@ -93,6 +93,32 @@ Each crosspost includes:
 - Custom emoji for each channel
 - A call-to-action button
 
-## Note on Deployment
+## Production Deployment with uWSGI
 
-The bot must be running continuously to maintain the scheduler functionality. Consider using a service like systemd on Linux servers or a cloud hosting solution for production deployment.
+For production environments, the project is configured to use uWSGI, a high-performance application server:
+
+1. Install uWSGI:
+   ```
+   pip install uwsgi
+   ```
+
+2. Run the application with uWSGI:
+   ```
+   uwsgi --ini uwsgi.ini
+   ```
+
+This provides several advantages over the development server:
+- Multi-process and multi-threaded capabilities for better performance
+- Process monitoring and auto-restart for reliability
+- Socket management for integration with Nginx or Apache
+- Memory management and optimization
+- Watchdog mechanisms to prevent application freezes
+- Detailed logging and statistics collection
+
+To customize the uWSGI configuration, edit the `uwsgi.ini` file. The default configuration includes:
+- 4 worker processes with 2 threads each
+- HTTP access on port 5000
+- Automatic process monitoring
+- Detailed logging to `./logs/uwsgi.log`
+- Stats server for monitoring
+- Automatic reload on Python code changes

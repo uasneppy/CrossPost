@@ -252,6 +252,8 @@ dependencies = [
     { name = "pytelegrambotapi" },
     { name = "python-dotenv" },
     { name = "pytz" },
+    { name = "uwsgi" },
+    { name = "wtforms" },
 ]
 
 [package.metadata]
@@ -262,6 +264,8 @@ requires-dist = [
     { name = "pytelegrambotapi", specifier = ">=4.26.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "pytz", specifier = ">=2025.1" },
+    { name = "uwsgi", specifier = ">=2.0.28" },
+    { name = "wtforms", specifier = ">=3.2.1" },
 ]
 
 [[package]]
@@ -326,6 +330,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/aa/63/e53da845320b757bf
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c8/19/4ec628951a74043532ca2cf5d97b7b14863931476d117c471e8e2b1eb39f/urllib3-2.3.0-py3-none-any.whl", hash = "sha256:1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df", size = 128369 },
 ]
+
+[[package]]
+name = "uwsgi"
+version = "2.0.28"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/24/c2/d58480aadc9a1f420dd96fc43cf0dcd8cb5ededb95cab53743529c23b6cd/uwsgi-2.0.28.tar.gz", hash = "sha256:79ca1891ef2df14508ab0471ee8c0eb94bd2d51d03f32f90c4bbe557ab1e99d0", size = 816212 }
 
 [[package]]
 name = "werkzeug"

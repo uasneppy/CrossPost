@@ -40,10 +40,14 @@ def requires_auth(f):
 
 def authenticate():
     """Send a 401 response that enables basic auth."""
-    return (
+    response = app.make_response((
         'Could not verify your access level for that URL.\n'
-        'You have to login with proper credentials'
-    ), 401, {'WWW-Authenticate': 'Basic realm="Login Required"', 'Content-Type': 'text/plain'}
+        'You have to login with proper credentials',
+        401,
+        {'Content-Type': 'text/plain'}
+    ))
+    response.headers['WWW-Authenticate'] = 'Basic realm="Login Required"'
+    return response
 
 # Forms
 class ChannelForm(FlaskForm):

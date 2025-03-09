@@ -10,4 +10,6 @@ dependencies = [
     "pytelegrambotapi>=4.26.0",
     "python-dotenv>=1.0.1",
     "pytz>=2025.1",
+    "uwsgi>=2.0.28",
+    "wtforms>=3.2.1",
 ]
