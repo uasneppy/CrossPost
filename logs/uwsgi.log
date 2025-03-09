@@ -423,3 +423,102 @@ Sun Mar  9 10:26:43 2025 - GET /static/js/main.js - 304 - 0ms
 Sun Mar  9 10:26:44 2025 - GET /api/stats - 200 - 0ms
 Sun Mar  9 10:26:54 2025 - GET /channels - 200 - 13ms
 Sun Mar  9 10:26:54 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:26:54 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:26:55 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:26:58 2025 - GET /pending - 200 - 18ms
+Sun Mar  9 10:26:58 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:26:58 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:26:59 2025 - GET /api/stats - 200 - 1ms
+Sun Mar  9 10:27:01 2025 - GET /channels - 200 - 1ms
+Sun Mar  9 10:27:01 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:27:01 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:27:02 2025 - GET /api/stats - 200 - 4ms
+Sun Mar  9 10:27:03 2025 - GET /channels/-1002467496944/edit - 200 - 13ms
+Sun Mar  9 10:27:03 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:27:03 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:27:04 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:27:10 2025 - GET / - 200 - 1ms
+Sun Mar  9 10:27:10 2025 - GET /static/css/styles.css - 304 - 0ms
+Sun Mar  9 10:27:11 2025 - GET /static/js/main.js - 304 - 0ms
+Sun Mar  9 10:27:11 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:27:42 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:28:12 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:28:42 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:29:12 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:30:17 2025 - GET /api/stats - 200 - 1ms
+Sun Mar  9 10:31:17 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:32:17 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:33:17 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:34:17 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:35:17 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:36:17 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:37:17 2025 - GET /api/stats - 200 - 1ms
+Sun Mar  9 10:38:17 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:39:17 2025 - GET /api/stats - 200 - 1ms
+Sun Mar  9 10:39:47 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:40:12 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:40:43 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:41:12 2025 - GET /api/stats - 200 - 1ms
+Sun Mar  9 10:41:42 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:42:12 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:42:42 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:43:12 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:43:41 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:44:11 2025 - GET /api/stats - 200 - 0ms
+Sun Mar  9 10:44:41 2025 - GET /api/stats - 200 - 0ms
+gateway "uWSGI http 1" has been buried (pid: 4011)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/runner/workspace
+closing all non-uwsgi socket fds > 2 (max_fd = 83886)...
+found fd 6 mapped to socket 0 (127.0.0.1:8000)
+running /home/runner/workspace/.pythonlibs/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+[uwsgi-static] added mapping for /static => ./static
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Mar  9 10:45:10 2025] ***
+compiled with version: 13.2.0 on 01 January 1980 00:00:00
+os: Linux-6.2.16 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+nodename: 99f49ff5867c
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/runner/workspace
+detected binary path: /home/runner/workspace/.pythonlibs/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 83886
+!!! no /etc/mime.types file found !!!
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 inherited INET address 127.0.0.1:8000 fd 6
+Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Python main interpreter initialized at 0x7fb081457b18
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4000)
+spawned uWSGI worker 1 (pid: 4139, cores: 2)
+spawned uWSGI worker 2 (pid: 4140, cores: 2)
+spawned uWSGI worker 3 (pid: 4141, cores: 2)
+spawned uWSGI worker 4 (pid: 4142, cores: 2)
+*** Stats server enabled on 127.0.0.1:9191 fd: 18 ***
+spawned uWSGI http 1 (pid: 4143)
+Python auto-reloader enabled
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fb081457b18 pid: 4139 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fb081457b18 pid: 4142 (default app)
+Warning: ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fb081457b18 pid: 4141 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fb081457b18 pid: 4140 (default app)
+Sun Mar  9 10:45:11 2025 - GET /api/stats - 200 - 3ms

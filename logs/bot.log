@@ -805,3 +805,17 @@ Traceback (most recent call last):
     raise ApiTelegramException(method_name, result, result_json)
 telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 
+2025-03-09 10:57:29,960 - __main__ - INFO - Bot initialized with state storage
+2025-03-09 10:57:29,977 - bot - INFO - Bot initialized with state storage
+2025-03-09 10:57:29,977 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 10:57:29,978 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 10:57:30,430 - __main__ - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 10:57:30,432 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 10:57:30,432 - utils.scheduler - INFO - Scheduler started
+2025-03-09 10:57:30,433 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 10:57:30,433 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 10:57:30,434 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 10:57:30,434 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 10:57:30,435 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 10:57:32,289 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 10:57:32,289 - __main__ - INFO - Bot started

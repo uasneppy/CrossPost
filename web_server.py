@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import sys
 import threading
 import logging
 import time
@@ -25,17 +26,56 @@ load_dotenv()
 def initialize_bot():
     """Initialize the bot without starting polling."""
     try:
-        import bot as bot_module
-        
-        # Use the initialize function from bot.py
-        bot_instance = bot_module.initialize()
-        if not bot_instance:
-            logger.error("Failed to initialize bot")
+        # Check if token is available
+        if not os.getenv("TELEGRAM_BOT_TOKEN"):
+            logger.error("TELEGRAM_BOT_TOKEN environment variable not set")
+            logger.error("Please set the TELEGRAM_BOT_TOKEN environment variable")
             return None
             
-        return bot_instance
+        # Try to import the bot module
+        try:
+            import sys
+            logger.info(f"Python path: {sys.path}")
+            import bot as bot_module
+            logger.info("Successfully imported bot module")
+        except ImportError as e:
+            logger.error(f"Failed to import bot module: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return None
+        except Exception as e:
+            logger.error(f"Unknown error importing bot module: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return None
+        
+        # Try to initialize the bot
+        try:
+            logger.info("Initializing bot...")
+            bot_instance = bot_module.initialize()
+            
+            if not bot_instance:
+                logger.error("Bot initialization returned None")
+                return None
+                
+            logger.info("Bot instance created successfully")
+            return bot_instance
+            
+        except AttributeError as e:
+            logger.error(f"Bot module doesn't have initialize function: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return None
+        except Exception as e:
+            logger.error(f"Error during bot initialization: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return None
+            
     except Exception as e:
-        logger.error(f"Error initializing bot: {e}")
+        logger.error(f"Unexpected error in initialize_bot: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
         return None
 
 def heartbeat_middleware(bot_instance):
@@ -196,6 +236,16 @@ def main():
     os.makedirs('static', exist_ok=True)
     os.makedirs('data', exist_ok=True)
     
+    # Log environment and runtime information
+    logger.info(f"Python version: {sys.version}")
+    logger.info(f"Running as user: {os.getenv('USER', 'unknown')}")
+    logger.info(f"Current directory: {os.getcwd()}")
+    logger.info(f"TELEGRAM_BOT_TOKEN set: {'Yes' if os.getenv('TELEGRAM_BOT_TOKEN') else 'No'}")
+    
+    # Check if running under uWSGI
+    is_uwsgi = bool(os.environ.get("UWSGI_ORIGINAL_PROC_NAME"))
+    logger.info(f"Running under uWSGI: {is_uwsgi}")
+    
     # Check if ADMIN_PASSWORD is set
     if not os.getenv("ADMIN_PASSWORD"):
         logger.warning("ADMIN_PASSWORD environment variable not set. Using default password 'admin'.")
@@ -209,12 +259,24 @@ def main():
     # Write a marker file to indicate the bot is starting
     with open("logs/bot_starting.txt", "w") as f:
         f.write(f"Bot starting at {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Running under uWSGI: {is_uwsgi}\n")
+    
+    # Import bot modules directly to catch any import errors
+    try:
+        logger.info("Importing bot module...")
+        import bot as bot_module
+        logger.info("Bot module imported successfully")
+    except Exception as e:
+        logger.critical(f"Failed to import bot module: {e}")
+        import traceback
+        logger.critical(traceback.format_exc())
     
     # Initialize the bot with retry logic
     _bot_instance = None
     max_init_retries = 5
     for i in range(max_init_retries):
         try:
+            logger.info(f"Attempting to initialize bot ({i+1}/{max_init_retries})...")
             _bot_instance = initialize_bot()
             if _bot_instance:
                 logger.info(f"Bot initialized successfully on attempt {i+1}/{max_init_retries}")
@@ -223,6 +285,8 @@ def main():
                 logger.error(f"Bot initialization returned None on attempt {i+1}/{max_init_retries}")
         except Exception as e:
             logger.error(f"Error initializing bot on attempt {i+1}/{max_init_retries}: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
         
         if i < max_init_retries - 1:
             logger.info("Retrying bot initialization in 5 seconds...")
@@ -233,41 +297,48 @@ def main():
         _heartbeat_timestamp = time.time()
         
         # Start the bot polling in a separate thread
-        _bot_thread = threading.Thread(target=run_bot, args=(_bot_instance,), daemon=True)
-        _bot_thread.start()
-        logger.info("Bot thread started successfully")
-        
-        # Start the watchdog thread
-        watchdog = threading.Thread(target=watchdog_thread, daemon=True)
-        watchdog.start()
-        logger.info("Watchdog thread started")
+        try:
+            logger.info("Starting bot thread...")
+            _bot_thread = threading.Thread(target=run_bot, args=(_bot_instance,), daemon=True)
+            _bot_thread.start()
+            logger.info("Bot thread started successfully")
+            
+            # Start the watchdog thread
+            watchdog = threading.Thread(target=watchdog_thread, daemon=True)
+            watchdog.start()
+            logger.info("Watchdog thread started")
+        except Exception as e:
+            logger.critical(f"Failed to start bot thread: {e}")
+            import traceback
+            logger.critical(traceback.format_exc())
     else:
         logger.critical("Failed to initialize bot after multiple attempts. Web server will run without bot functionality.")
     
     # Write a marker file to indicate the bot has started
     with open("logs/bot_started.txt", "w") as f:
         f.write(f"Bot started at {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Bot instance created: {bool(_bot_instance)}\n")
+        f.write(f"Bot thread created: {bool(_bot_thread) if '_bot_thread' in locals() else False}\n")
     
     # Let uWSGI handle the web server
     # We don't need to manually start Flask as uWSGI will handle it
     port = int(os.getenv("PORT", 5000))
-    logger.info(f"Web application ready to be served by uWSGI on port {port}")
-    logger.info("uWSGI is configured in uwsgi.ini and will be started automatically")
-    logger.info("Flask application instance is available via server:app")
+    logger.info(f"Web application ready to be served on port {port}")
     
-    # Keep the main thread alive to maintain the bot thread
-    try:
+    if is_uwsgi:
+        logger.info("Running under uWSGI - Flask application instance is already being served")
+    else:
         # This will be reached when running directly, not through uWSGI
-        # In production, uWSGI will handle this part
-        if not os.environ.get("UWSGI_ORIGINAL_PROC_NAME"):
-            logger.info("Running in direct execution mode, starting Flask server for development")
+        logger.info("Running in direct execution mode, starting Flask server for development")
+        try:
             app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False, threaded=True)
-    except KeyboardInterrupt:
-        logger.info("Keyboard interrupt received, shutting down")
-        shutdown_handler()
-    except Exception as e:
-        logger.critical(f"Web server error: {e}")
-        # The workflow system will restart the entire process
+        except KeyboardInterrupt:
+            logger.info("Keyboard interrupt received, shutting down")
+            shutdown_handler()
+        except Exception as e:
+            logger.critical(f"Web server error: {e}")
+            import traceback
+            logger.critical(traceback.format_exc())
 
 if __name__ == "__main__":
     main()

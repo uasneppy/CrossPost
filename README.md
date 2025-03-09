@@ -107,6 +107,16 @@ For production environments, the project is configured to use uWSGI, a high-perf
    uwsgi --ini uwsgi.ini
    ```
 
+3. For troubleshooting, you can use the simplified configuration:
+   ```
+   uwsgi --ini uwsgi_simple.ini
+   ```
+
+4. Or use the diagnostic startup script:
+   ```
+   python start.py
+   ```
+
 This provides several advantages over the development server:
 - Multi-process and multi-threaded capabilities for better performance
 - Process monitoring and auto-restart for reliability
@@ -122,3 +132,87 @@ To customize the uWSGI configuration, edit the `uwsgi.ini` file. The default con
 - Detailed logging to `./logs/uwsgi.log`
 - Stats server for monitoring
 - Automatic reload on Python code changes
+
+## Production Deployment on Cloud Platforms
+
+### Replit
+
+To deploy on Replit:
+
+1. Set up the required secrets in the Replit Secrets panel:
+   - `TELEGRAM_BOT_TOKEN`
+   - `ADMIN_PASSWORD` (optional)
+   - `FLASK_SECRET_KEY` (optional)
+
+2. Configure `web-interface-workflow` to run the application:
+   ```
+   uwsgi --ini uwsgi.ini
+   ```
+
+3. If you encounter issues, try the simplified configuration:
+   ```
+   uwsgi --ini uwsgi_simple.ini
+   ```
+
+### DigitalOcean, AWS, GCP, or Azure
+
+For deployment on major cloud platforms:
+
+1. Set up environment variables through the platform's environment management:
+   - `TELEGRAM_BOT_TOKEN`
+   - `ADMIN_PASSWORD`
+   - `FLASK_SECRET_KEY`
+
+2. For optimal security and performance, use a reverse proxy:
+   
+   Example Nginx configuration:
+   ```nginx
+   server {
+       listen 80;
+       server_name yourdomain.com;
+       
+       location / {
+           include uwsgi_params;
+           uwsgi_pass 127.0.0.1:5000;
+       }
+       
+       location /static {
+           alias /path/to/app/static;
+       }
+   }
+   ```
+
+3. Set up a process manager to ensure the application runs continuously:
+   
+   Example systemd service file (/etc/systemd/system/tg-community-bot.service):
+   ```ini
+   [Unit]
+   Description=Ukrainian TG Community Bot
+   After=network.target
+   
+   [Service]
+   User=yourusername
+   WorkingDirectory=/path/to/app
+   Environment="TELEGRAM_BOT_TOKEN=your_token_here"
+   Environment="ADMIN_PASSWORD=your_password_here"
+   ExecStart=/usr/local/bin/uwsgi --ini uwsgi.ini
+   Restart=always
+   
+   [Install]
+   WantedBy=multi-user.target
+   ```
+
+## Troubleshooting
+
+If you encounter issues during deployment, please refer to the [TROUBLESHOOTING.md](TROUBLESHOOTING.md) document for detailed solutions to common problems.
+
+Key troubleshooting steps:
+1. Check the logs in the `logs/` directory
+2. Verify environment variables are correctly set
+3. Try the simplified configuration with `uwsgi_simple.ini`
+4. Run the diagnostic script with `python start.py`
+
+For persistent issues, you can run each component separately to isolate the problem:
+- Web server only: `python server.py`
+- Bot only: `python bot.py`
+- Combined with verbose logging: `python web_server.py`
