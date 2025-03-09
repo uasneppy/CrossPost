@@ -48,14 +48,14 @@ def start_command(message):
 def help_command(message):
     """Show help information."""
     response = (
-        "📚 *Bot Commands*\n\n"
+        "📚 BOT COMMANDS\n\n"
         "/apply - Apply to add your channel to our network\n"
         "/settings - Manage your channel's settings\n"
         "/schedule - Set your channel's crossposting schedule\n"
         "/status - Check your channel's status\n"
         "/cancel - Cancel registration process\n"
         "/help - Show this help message\n\n"
-        "*About the Bot*\n"
+        "ABOUT THE BOT\n"
         "This bot facilitates crossposting between verified Ukrainian Telegram channels. "
         "Channels can opt in or out of crossposting on specific days. "
         "Crossposts happen exactly at 6:00 PM Kyiv time and include a selection of up to 10 channels.\n\n"
@@ -155,10 +155,9 @@ def channel_name_handler(message, bot):
         # Move to the next step
         bot.send_message(
             message.chat.id,
-            f"Step 2 of 5: Please send the URL of your channel *{channel_name}*.\n\n"
+            f"Step 2 of 5: Please send the URL of your channel '{channel_name}'.\n\n"
             f"For example: @yourchannel",
-            reply_markup=markup,
-            parse_mode="Markdown"
+            reply_markup=markup
         )
         
         # Update state
@@ -316,12 +315,10 @@ def emoji_handler(message, bot):
             types.KeyboardButton(CANCEL_COMMAND)
         )
         
-        # Escape special characters to avoid Markdown parsing issues
-        safe_channel_name = channel_name.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
-        
+        # Avoid Markdown formatting problems by not using it
         bot.send_message(
             message.chat.id,
-            f"Step 4 of 5: Now, you need to make the bot an administrator in your channel *{safe_channel_name}* ({channel_url_formatted}).\n\n"
+            f"Step 4 of 5: Now, you need to make the bot an administrator in your channel '{channel_name}' ({channel_url_formatted}).\n\n"
             "1. Go to your channel\n"
             "2. Open channel settings\n"
             "3. Go to 'Administrators'\n"
@@ -331,8 +328,7 @@ def emoji_handler(message, bot):
             "7. Save the changes\n\n"
             f"Selected emojis: {emoji_list}\n\n"
             "When you've done this, click the button below to continue.",
-            reply_markup=markup,
-            parse_mode="Markdown"
+            reply_markup=markup
         )
         
         # Update state
@@ -382,16 +378,13 @@ def admin_verification_handler(message, bot):
         markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         markup.add(types.KeyboardButton(CANCEL_COMMAND))
         
-        # Escape special characters to avoid Markdown parsing issues
-        safe_channel_name = channel_name.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
-        
+        # Avoid Markdown formatting problems by not using it
         bot.send_message(
             message.chat.id,
-            f"Step 5 of 5: Finally, please forward a post from your channel *{safe_channel_name}* ({channel_url_formatted}).\n\n"
+            f"Step 5 of 5: Finally, please forward a post from your channel '{channel_name}' ({channel_url_formatted}).\n\n"
             f"Selected emojis: {emoji_list}\n\n"
             "This will help us verify your ownership and complete the application process.",
-            reply_markup=markup,
-            parse_mode="Markdown"
+            reply_markup=markup
         )
         
         # Update state
@@ -496,15 +489,12 @@ def post_forward_handler(message, bot):
         channel_url = user_sessions[user_id]["channel"]["username"]
         channel_url_formatted = f"@{channel_url}"
         
-        # Escape special characters to avoid Markdown parsing issues
-        safe_channel_name = channel_name.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
-        
+        # Avoid Markdown formatting problems by not using it
         bot.send_message(
             message.chat.id,
-            f"Thank you! Your channel *{safe_channel_name}* ({channel_url_formatted}) has been submitted for review.\n\n"
+            f"Thank you! Your channel '{channel_name}' ({channel_url_formatted}) has been submitted for review.\n\n"
             "An admin will verify and approve your channel soon. "
-            "You can check the status of your application with /status.",
-            parse_mode="Markdown"
+            "You can check the status of your application with /status."
         )
     else:
         bot.send_message(
@@ -611,27 +601,23 @@ def status_command(message, bot):
         )
         return
     
-    message_text = "*Your Channel Status*\n\n"
+    message_text = "YOUR CHANNEL STATUS\n\n"
     
     if user_approved:
-        message_text += "*Approved Channels:*\n"
+        message_text += "APPROVED CHANNELS:\n"
         for channel_id, channel_data in user_approved:
             title = channel_data.get("title", "Unknown")
-            # Escape special Markdown characters
-            safe_title = title.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
-            message_text += f"• {safe_title}\n"
+            message_text += f"• {title}\n"
         message_text += "\n"
     
     if user_pending:
-        message_text += "*Pending Approval:*\n"
+        message_text += "PENDING APPROVAL:\n"
         for channel_id, channel_data in user_pending:
             title = channel_data.get("title", "Unknown")
-            # Escape special Markdown characters
-            safe_title = title.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
-            message_text += f"• {safe_title}\n"
+            message_text += f"• {title}\n"
         message_text += "\n"
     
-    bot.send_message(message.chat.id, message_text, parse_mode="Markdown")
+    bot.send_message(message.chat.id, message_text)
 
 # Callback query handler
 def callback_query_handler(call, bot):
@@ -675,15 +661,12 @@ def callback_query_handler(call, bot):
         
         # Send the settings menu
         title = channel_info.get('title', 'Unknown')
-        # Escape special characters to avoid Markdown parsing issues
-        safe_title = title.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
         
         bot.edit_message_text(
-            f"Settings for channel: *{safe_title}*",
+            f"Settings for channel: '{title}'",
             call.message.chat.id,
             call.message.message_id,
-            reply_markup=markup,
-            parse_mode="Markdown"
+            reply_markup=markup
         )
         bot.answer_callback_query(call.id)
     
@@ -726,16 +709,13 @@ def callback_query_handler(call, bot):
         
         # Send the schedule menu
         title = channel_info.get('title', 'Unknown')
-        # Escape special characters to avoid Markdown parsing issues
-        safe_title = title.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
         
         bot.edit_message_text(
-            f"Schedule for channel: *{safe_title}*\n\n"
+            f"Schedule for channel: '{title}'\n\n"
             f"Toggle days when you want your channel to participate in crossposts:",
             call.message.chat.id,
             call.message.message_id,
-            reply_markup=markup,
-            parse_mode="Markdown"
+            reply_markup=markup
         )
         bot.answer_callback_query(call.id)
     
@@ -795,16 +775,13 @@ def callback_query_handler(call, bot):
                 
                 # Update the message
                 title = channel_info.get('title', 'Unknown')
-                # Escape special characters to avoid Markdown parsing issues
-                safe_title = title.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
                 
                 bot.edit_message_text(
-                    f"Schedule for channel: *{safe_title}*\n\n"
+                    f"Schedule for channel: '{title}'\n\n"
                     f"Toggle days when you want your channel to participate in crossposts:",
                     call.message.chat.id,
                     call.message.message_id,
-                    reply_markup=markup,
-                    parse_mode="Markdown"
+                    reply_markup=markup
                 )
         else:
             bot.answer_callback_query(call.id, "Failed to update schedule")
@@ -835,17 +812,14 @@ def callback_query_handler(call, bot):
         ))
         
         title = channel_info.get('title', 'Unknown')
-        # Escape special characters to avoid Markdown parsing issues
-        safe_title = title.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
         
         bot.edit_message_text(
-            f"Emojis for channel: *{safe_title}*\n\n"
+            f"Emojis for channel: '{title}'\n\n"
             f"Current emojis: {emoji_text}\n\n"
             f"To change emojis, use the /apply command again.",
             call.message.chat.id,
             call.message.message_id,
-            reply_markup=markup,
-            parse_mode="Markdown"
+            reply_markup=markup
         )
         bot.answer_callback_query(call.id)
     
@@ -885,21 +859,17 @@ def callback_query_handler(call, bot):
             callback_data=f"settings_{channel_id}"
         ))
         
-        # Escape special characters to avoid Markdown parsing issues
-        safe_title = title.replace("*", "\\*").replace("_", "\\_").replace("`", "\\`")
-        
         # Send channel info
         bot.edit_message_text(
-            f"*Channel Information*\n\n"
-            f"Title: {safe_title}\n"
+            f"CHANNEL INFORMATION\n\n"
+            f"Title: {title}\n"
             f"URL: {url}\n"
             f"Type: {is_sfw}\n"
             f"Subscribers: {sub_count}\n"
             f"Custom Emojis: {emojis}",
             call.message.chat.id,
             call.message.message_id,
-            reply_markup=markup,
-            parse_mode="Markdown"
+            reply_markup=markup
         )
         bot.answer_callback_query(call.id)
 
@@ -917,7 +887,8 @@ def register_channel_handlers(bot):
     @bot.message_handler(commands=['help'])
     def handle_help(message):
         response = help_command(message)
-        bot.send_message(message.chat.id, response, parse_mode="Markdown")
+        # Avoid Markdown formatting issues by not using parse_mode
+        bot.send_message(message.chat.id, response)
     
     @bot.message_handler(commands=['apply'])
     def handle_apply(message):

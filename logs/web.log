@@ -4261,3 +4261,370 @@ telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsucc
 2025-03-09 15:39:15,413 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:39:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
 2025-03-09 15:39:16,136 - server - INFO - User None retrieved stats with scope: network
 2025-03-09 15:39:16,137 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:39:16] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:39:39,692 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-09 15:39:40,090 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-09 15:39:41,753 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-09 15:39:41,753 - handlers.channel - INFO - Processing channel name for user 1336308262: Mems
+2025-03-09 15:39:41,753 - handlers.channel - INFO - Stored channel title 'Mems' for user 1336308262
+2025-03-09 15:39:41,899 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-09 15:39:41,899 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-09 15:39:46,324 - handlers.channel - INFO - Handling waiting_channel_url state for user 1336308262
+2025-03-09 15:39:46,324 - handlers.channel - INFO - Processing channel URL for user 1336308262: dreams_of_the_dragon
+2025-03-09 15:39:46,325 - handlers.channel - INFO - Stored channel username 'dreams_of_the_dragon' for user 1336308262
+2025-03-09 15:39:46,469 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-09 15:39:46,469 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-09 15:39:46,650 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:39:46,650 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:39:46] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:40:03,194 - handlers.channel - INFO - User 436699517 started channel application process
+2025-03-09 15:40:05,281 - handlers.channel - INFO - Set state to waiting_channel_name for user 436699517
+2025-03-09 15:40:12,677 - handlers.channel - INFO - Handling waiting_channel_name state for user 436699517
+2025-03-09 15:40:12,677 - handlers.channel - INFO - Processing channel name for user 436699517: Сни Дракона
+2025-03-09 15:40:12,677 - handlers.channel - INFO - Stored channel title 'Сни Дракона' for user 436699517
+2025-03-09 15:40:12,943 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-09 15:40:12,944 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-09 15:40:16,646 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:40:16,647 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:40:16] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:40:19,813 - handlers.channel - INFO - Handling waiting_channel_url state for user 436699517
+2025-03-09 15:40:19,813 - handlers.channel - INFO - Processing channel URL for user 436699517: @dreams_of_the_dragon
+2025-03-09 15:40:19,813 - handlers.channel - INFO - Stored channel username 'dreams_of_the_dragon' for user 436699517
+2025-03-09 15:40:19,967 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-09 15:40:19,967 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-09 15:40:46,646 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:40:46,646 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:40:46] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:41:16,656 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:41:16,659 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:41:16] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:42:42,659 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:42:42,660 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:42:42] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:43:01,527 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:43:01,527 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:43:01] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:43:16,664 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:43:16,664 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:43:16] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:43:46,662 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:43:46,662 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:43:46] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:44:19,835 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-09 15:44:19,836 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-09 15:44:20,943 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:44:20,943 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:44:20] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:44:21,841 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 15:44:21,841 - __main__ - INFO - Cleanup complete. Exiting.
+2025-03-09 15:44:21,841 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 15:44:21,841 - __main__ - INFO - Cleanup complete. Exiting.
+2025-03-09 15:56:41,610 - __main__ - INFO - Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+2025-03-09 15:56:41,611 - __main__ - INFO - Running as user: runner
+2025-03-09 15:56:41,611 - __main__ - INFO - Current directory: /home/runner/workspace
+2025-03-09 15:56:41,611 - __main__ - INFO - TELEGRAM_BOT_TOKEN set: Yes
+2025-03-09 15:56:41,612 - __main__ - INFO - Running under uWSGI: False
+2025-03-09 15:56:41,612 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 15:56:41,612 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 15:56:41,617 - __main__ - INFO - Importing bot module...
+2025-03-09 15:56:41,623 - bot - INFO - Bot initialized with state storage
+2025-03-09 15:56:41,623 - __main__ - INFO - Bot module imported successfully
+2025-03-09 15:56:41,623 - __main__ - INFO - Attempting to initialize bot (1/5)...
+2025-03-09 15:56:41,624 - __main__ - INFO - Python path: ['/home/runner/workspace', '/nix/store/lc7qv2ldzrs1aq3hbyzmbgvn0h2w26pl-sitecustomize/lib/python/site-packages', '/nix/store/dfg63lldbvcj207iyr9z0xw21d8ax02n-python3.11-pip-24.0/lib/python3.11/site-packages', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python311.zip', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/lib-dynload', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/nix/store/wblvmd5y7izx0z10d1w7ga7zc4apjxmb-python3.11-setuptools-75.1.1/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/setuptools/_vendor']
+2025-03-09 15:56:41,624 - __main__ - INFO - Successfully imported bot module
+2025-03-09 15:56:41,624 - __main__ - INFO - Initializing bot...
+2025-03-09 15:56:41,635 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 15:56:41,635 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 15:56:42,129 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 15:56:42,131 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 15:56:42,132 - utils.scheduler - INFO - Scheduler started
+2025-03-09 15:56:42,132 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 15:56:42,133 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 15:56:42,135 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 15:56:42,136 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 15:56:42,136 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 15:56:42,538 - utils.crosspost - INFO - Successfully updated subscriber counts for 1 channels
+2025-03-09 15:56:42,538 - bot - INFO - Bot started
+2025-03-09 15:56:42,538 - __main__ - INFO - Bot instance created successfully
+2025-03-09 15:56:42,538 - __main__ - INFO - Bot initialized successfully on attempt 1/5
+2025-03-09 15:56:42,538 - __main__ - INFO - Starting bot thread...
+2025-03-09 15:56:42,539 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 15:56:42,541 - __main__ - INFO - Bot thread started successfully
+2025-03-09 15:56:42,542 - __main__ - INFO - Watchdog thread started
+2025-03-09 15:56:42,542 - __main__ - INFO - Watchdog thread started
+2025-03-09 15:56:42,542 - __main__ - INFO - Web application ready to be served on port 5000
+2025-03-09 15:56:42,542 - __main__ - INFO - Running in direct execution mode, starting Flask server for development
+2025-03-09 15:56:42,559 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.28:5000
+2025-03-09 15:56:42,559 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 15:56:43,511 - server - INFO - User None accessed admin dashboard with 1 channels and 0 pending applications
+2025-03-09 15:56:43,548 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:56:43] "GET / HTTP/1.1" 200 -
+2025-03-09 15:56:43,833 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:56:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 15:56:44,135 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:56:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 15:56:44,888 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:56:44,888 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:56:44] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:56:48,592 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-09 15:56:48,593 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-09 15:56:54,517 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-09 15:56:54,518 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-09 15:57:01,228 - TeleBot - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-09 15:57:01,229 - TeleBot - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/util.py", line 93, in run
+    task(*args, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-03-09 15:57:14,908 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:57:14,909 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:57:14] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:57:45,681 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:57:45,681 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:57:45] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:58:14,905 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:58:14,905 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:58:14] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:58:44,559 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 15:58:44,559 - __main__ - INFO - Cleanup complete. Exiting.
+2025-03-09 15:58:45,684 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:58:45,685 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:58:45] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:58:48,315 - __main__ - INFO - Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+2025-03-09 15:58:48,315 - __main__ - INFO - Running as user: runner
+2025-03-09 15:58:48,316 - __main__ - INFO - Current directory: /home/runner/workspace
+2025-03-09 15:58:48,317 - __main__ - INFO - TELEGRAM_BOT_TOKEN set: Yes
+2025-03-09 15:58:48,317 - __main__ - INFO - Running under uWSGI: False
+2025-03-09 15:58:48,317 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 15:58:48,318 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 15:58:48,318 - __main__ - INFO - Importing bot module...
+2025-03-09 15:58:48,321 - bot - INFO - Bot initialized with state storage
+2025-03-09 15:58:48,322 - __main__ - INFO - Bot module imported successfully
+2025-03-09 15:58:48,322 - __main__ - INFO - Attempting to initialize bot (1/5)...
+2025-03-09 15:58:48,323 - __main__ - INFO - Python path: ['/home/runner/workspace', '/nix/store/lc7qv2ldzrs1aq3hbyzmbgvn0h2w26pl-sitecustomize/lib/python/site-packages', '/nix/store/dfg63lldbvcj207iyr9z0xw21d8ax02n-python3.11-pip-24.0/lib/python3.11/site-packages', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python311.zip', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/lib-dynload', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/nix/store/wblvmd5y7izx0z10d1w7ga7zc4apjxmb-python3.11-setuptools-75.1.1/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/setuptools/_vendor']
+2025-03-09 15:58:48,323 - __main__ - INFO - Successfully imported bot module
+2025-03-09 15:58:48,323 - __main__ - INFO - Initializing bot...
+2025-03-09 15:58:48,336 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 15:58:48,337 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 15:58:48,720 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 15:58:48,722 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 15:58:48,723 - utils.scheduler - INFO - Scheduler started
+2025-03-09 15:58:48,723 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 15:58:48,724 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 15:58:48,725 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 15:58:48,725 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 15:58:48,727 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 15:58:49,014 - utils.crosspost - INFO - Successfully updated subscriber counts for 1 channels
+2025-03-09 15:58:49,014 - bot - INFO - Bot started
+2025-03-09 15:58:49,014 - __main__ - INFO - Bot instance created successfully
+2025-03-09 15:58:49,014 - __main__ - INFO - Bot initialized successfully on attempt 1/5
+2025-03-09 15:58:49,014 - __main__ - INFO - Starting bot thread...
+2025-03-09 15:58:49,014 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 15:58:49,014 - __main__ - INFO - Bot thread started successfully
+2025-03-09 15:58:49,016 - __main__ - INFO - Watchdog thread started
+2025-03-09 15:58:49,016 - __main__ - INFO - Watchdog thread started
+2025-03-09 15:58:49,017 - __main__ - INFO - Web application ready to be served on port 5000
+2025-03-09 15:58:49,017 - __main__ - INFO - Running in direct execution mode, starting Flask server for development
+2025-03-09 15:58:49,025 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.28:5000
+2025-03-09 15:58:49,025 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 15:58:49,503 - server - INFO - User None accessed admin dashboard with 1 channels and 0 pending applications
+2025-03-09 15:58:49,619 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:58:49] "GET / HTTP/1.1" 200 -
+2025-03-09 15:58:49,855 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:58:49] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 15:58:50,023 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:58:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 15:58:50,173 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:58:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 15:58:50,718 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:58:50,719 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:58:50] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:59:20,738 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:59:20,738 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:20] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:59:32,981 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-09 15:59:33,495 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-09 15:59:37,350 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-09 15:59:37,351 - handlers.channel - INFO - Processing channel name for user 1336308262: Сни
+2025-03-09 15:59:37,351 - handlers.channel - INFO - Stored channel title 'Сни' for user 1336308262
+2025-03-09 15:59:37,416 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 15:59:37,416 - __main__ - INFO - Cleanup complete. Exiting.
+2025-03-09 15:59:37,797 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-09 15:59:37,797 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-09 15:59:41,527 - __main__ - INFO - Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+2025-03-09 15:59:41,528 - __main__ - INFO - Running as user: runner
+2025-03-09 15:59:41,528 - __main__ - INFO - Current directory: /home/runner/workspace
+2025-03-09 15:59:41,528 - __main__ - INFO - TELEGRAM_BOT_TOKEN set: Yes
+2025-03-09 15:59:41,528 - __main__ - INFO - Running under uWSGI: False
+2025-03-09 15:59:41,528 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 15:59:41,528 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 15:59:41,529 - __main__ - INFO - Importing bot module...
+2025-03-09 15:59:41,531 - bot - INFO - Bot initialized with state storage
+2025-03-09 15:59:41,531 - __main__ - INFO - Bot module imported successfully
+2025-03-09 15:59:41,531 - __main__ - INFO - Attempting to initialize bot (1/5)...
+2025-03-09 15:59:41,532 - __main__ - INFO - Python path: ['/home/runner/workspace', '/nix/store/lc7qv2ldzrs1aq3hbyzmbgvn0h2w26pl-sitecustomize/lib/python/site-packages', '/nix/store/dfg63lldbvcj207iyr9z0xw21d8ax02n-python3.11-pip-24.0/lib/python3.11/site-packages', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python311.zip', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/lib-dynload', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/nix/store/wblvmd5y7izx0z10d1w7ga7zc4apjxmb-python3.11-setuptools-75.1.1/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/setuptools/_vendor']
+2025-03-09 15:59:41,532 - __main__ - INFO - Successfully imported bot module
+2025-03-09 15:59:41,532 - __main__ - INFO - Initializing bot...
+2025-03-09 15:59:41,543 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 15:59:41,544 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 15:59:41,950 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 15:59:41,952 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 15:59:41,953 - utils.scheduler - INFO - Scheduler started
+2025-03-09 15:59:41,954 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 15:59:41,954 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 15:59:41,955 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 15:59:41,955 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 15:59:41,956 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 15:59:42,213 - utils.crosspost - INFO - Successfully updated subscriber counts for 1 channels
+2025-03-09 15:59:42,213 - bot - INFO - Bot started
+2025-03-09 15:59:42,213 - __main__ - INFO - Bot instance created successfully
+2025-03-09 15:59:42,213 - __main__ - INFO - Bot initialized successfully on attempt 1/5
+2025-03-09 15:59:42,213 - __main__ - INFO - Starting bot thread...
+2025-03-09 15:59:42,213 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 15:59:42,214 - __main__ - INFO - Bot thread started successfully
+2025-03-09 15:59:42,215 - __main__ - INFO - Watchdog thread started
+2025-03-09 15:59:42,216 - __main__ - INFO - Watchdog thread started
+2025-03-09 15:59:42,216 - __main__ - INFO - Web application ready to be served on port 5000
+2025-03-09 15:59:42,216 - __main__ - INFO - Running in direct execution mode, starting Flask server for development
+2025-03-09 15:59:42,223 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.28:5000
+2025-03-09 15:59:42,223 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 15:59:42,672 - server - INFO - User None accessed admin dashboard with 1 channels and 0 pending applications
+2025-03-09 15:59:42,700 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:42] "GET / HTTP/1.1" 200 -
+2025-03-09 15:59:43,002 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 15:59:43,144 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 15:59:43,811 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:59:43,811 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:43] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:59:50,223 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:50] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 15:59:50,721 - handlers.channel - INFO - User 1336308262 started channel application process
+2025-03-09 15:59:50,965 - server - INFO - User None accessed admin dashboard with 1 channels and 0 pending applications
+2025-03-09 15:59:50,965 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:50] "GET / HTTP/1.1" 200 -
+2025-03-09 15:59:51,219 - handlers.channel - INFO - Set state to waiting_channel_name for user 1336308262
+2025-03-09 15:59:51,261 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 15:59:51,405 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 15:59:52,037 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 15:59:52,037 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 15:59:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 15:59:53,312 - handlers.channel - INFO - Handling waiting_channel_name state for user 1336308262
+2025-03-09 15:59:53,312 - handlers.channel - INFO - Processing channel name for user 1336308262: сни
+2025-03-09 15:59:53,312 - handlers.channel - INFO - Stored channel title 'сни' for user 1336308262
+2025-03-09 15:59:53,709 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-09 15:59:53,709 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-09 15:59:59,893 - handlers.channel - INFO - Handling waiting_channel_url state for user 1336308262
+2025-03-09 15:59:59,893 - handlers.channel - INFO - Processing channel URL for user 1336308262: dreams_of_the_dragon
+2025-03-09 15:59:59,894 - handlers.channel - INFO - Stored channel username 'dreams_of_the_dragon' for user 1336308262
+2025-03-09 16:00:00,000 - apscheduler.executors.default - INFO - Running job "create_and_send_crosspost (trigger: date[2025-03-09 18:00:00 EET], next run at: 2025-03-09 18:00:00 EET)" (scheduled at 2025-03-09 18:00:00+02:00)
+2025-03-09 16:00:00,000 - apscheduler.scheduler - INFO - Removed job daily_crosspost
+2025-03-09 16:00:00,001 - utils.crosspost - INFO - Creating crosspost for 1 active channels
+2025-03-09 16:00:00,008 - apscheduler.executors.default - INFO - Running job "update_all_channel_subscribers (trigger: cron[minute='0'], next run at: 2025-03-09 18:00:00 EET)" (scheduled at 2025-03-09 18:00:00+02:00)
+2025-03-09 16:00:00,009 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 16:00:00,068 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-09 16:00:00,068 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-09 16:00:00,521 - utils.crosspost - INFO - Found 1 small channels (<300 subscribers) and 0 large channels
+2025-03-09 16:00:00,522 - utils.storage - ERROR - Error decoding JSON from data/channels.json
+2025-03-09 16:00:00,523 - utils.crosspost - INFO - Found 0 channels with reserved positions for SFW content
+2025-03-09 16:00:00,523 - utils.crosspost - INFO - Successfully updated subscriber counts for 1 channels
+2025-03-09 16:00:00,523 - apscheduler.executors.default - INFO - Job "update_all_channel_subscribers (trigger: cron[minute='0'], next run at: 2025-03-09 19:00:00 EET)" executed successfully
+2025-03-09 16:00:00,523 - utils.crosspost - INFO - Only 1 channels available, using all of them
+2025-03-09 16:00:00,689 - utils.crosspost - INFO - Preparing SFW crosspost for 1 channels
+2025-03-09 16:00:00,689 - utils.crosspost - WARNING - No other channels to promote to -1001761783348, skipping
+2025-03-09 16:00:00,689 - utils.crosspost - INFO - Completed crosspost for SFW group
+2025-03-09 16:00:00,689 - apscheduler.executors.default - INFO - Job "create_and_send_crosspost (trigger: date[2025-03-09 18:00:00 EET], next run at: 2025-03-09 18:00:00 EET)" executed successfully
+2025-03-09 16:00:03,149 - handlers.channel - INFO - Handling waiting_emoji state for user 1336308262
+2025-03-09 16:00:03,149 - handlers.channel - INFO - Processing emoji selection for user 1336308262
+2025-03-09 16:00:03,149 - handlers.channel - INFO - Found emojis: ['🇺🇦', '💻', '🎮']
+2025-03-09 16:00:03,149 - handlers.channel - INFO - Stored emojis ['🇺🇦', '💻', '🎮'] for user 1336308262
+2025-03-09 16:00:03,362 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_emoji
+2025-03-09 16:00:03,362 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_emoji to ChannelStates:waiting_admin_verification
+2025-03-09 16:00:06,842 - handlers.channel - INFO - Handling waiting_admin_verification state for user 1336308262
+2025-03-09 16:00:06,842 - handlers.channel - INFO - Processing admin verification for user 1336308262
+2025-03-09 16:00:06,842 - handlers.channel - INFO - Channel data so far: {'title': 'сни', 'username': 'dreams_of_the_dragon', 'emojis': ['🇺🇦', '💻', '🎮']}
+2025-03-09 16:00:06,842 - handlers.channel - INFO - Skipping admin verification check for now
+2025-03-09 16:00:07,012 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_admin_verification
+2025-03-09 16:00:07,012 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_admin_verification to ChannelStates:waiting_post_forward
+2025-03-09 16:00:20,411 - handlers.channel - INFO - Handling waiting_post_forward state for user 1336308262
+2025-03-09 16:00:20,411 - handlers.channel - INFO - Processing forwarded post from user 1336308262
+2025-03-09 16:00:20,411 - handlers.channel - INFO - Message details: forward_from_chat={'id': -1001738314674, 'type': 'channel', 'title': 'Сни Дракона', 'username': 'dreams_of_the_dragon', 'first_name': None, 'last_name': None, 'is_forum': None, 'max_reaction_count': None, 'photo': None, 'bio': None, 'join_to_send_messages': None, 'join_by_request': None, 'has_private_forwards': None, 'has_restricted_voice_and_video_messages': None, 'description': None, 'invite_link': None, 'pinned_message': None, 'permissions': None, 'slow_mode_delay': None, 'message_auto_delete_time': None, 'has_protected_content': None, 'sticker_set_name': None, 'can_set_sticker_set': None, 'linked_chat_id': None, 'location': None, 'active_usernames': None, 'emoji_status_custom_emoji_id': None, 'has_hidden_members': None, 'has_aggressive_anti_spam_enabled': None, 'emoji_status_expiration_date': None, 'available_reactions': None, 'accent_color_id': None, 'background_custom_emoji_id': None, 'profile_accent_color_id': None, 'profile_background_custom_emoji_id': None, 'has_visible_history': None, 'unrestrict_boost_count': None, 'custom_emoji_sticker_set_name': None, 'business_intro': None, 'business_location': None, 'business_opening_hours': None, 'personal_chat': None, 'birthdate': None, 'can_send_paid_media': None}
+2025-03-09 16:00:20,412 - handlers.channel - INFO - Chat type: channel
+2025-03-09 16:00:20,412 - handlers.channel - INFO - Processing channel: -1001738314674 - Сни Дракона
+2025-03-09 16:00:22,687 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 16:00:22,687 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 16:00:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 16:00:40,768 - handlers.channel - INFO - User 1336308262 requested channel status
+2025-03-09 16:00:40,769 - handlers.channel - INFO - Found 0 approved and 1 pending channels for user 1336308262
+2025-03-09 16:00:46,407 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 16:00:52,690 - server - INFO - User None retrieved stats with scope: network
+2025-03-09 16:00:52,690 - werkzeug - INFO - 172.31.128.28 - - [09/Mar/2025 16:00:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 16:00:58,812 - handlers.admin - INFO - Admin callback: admin_back
+2025-03-09 16:00:58,812 - handlers.admin - INFO - Admin callback: admin_back - returning to admin panel
+2025-03-09 16:00:59,269 - handlers.admin - INFO - Admin panel markup displayed successfully

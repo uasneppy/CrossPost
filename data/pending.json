@@ -1,1 +1,23 @@
-{}
+{
+  "-1001738314674": {
+    "title": "сни",
+    "username": "dreams_of_the_dragon",
+    "emojis": [
+      "🇺🇦",
+      "💻",
+      "🎮"
+    ],
+    "id": -1001738314674,
+    "is_sfw": true,
+    "schedule": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true
+    },
+    "owner_id": 1336308262
+  }
+}
