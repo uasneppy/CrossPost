@@ -1,0 +1,18 @@
+[Unit]
+Description=Ukrainian TG Community Bot
+After=network.target
+
+[Service]
+User=YOUR_USERNAME
+WorkingDirectory=/path/to/bot/directory
+Environment="TELEGRAM_BOT_TOKEN=your_bot_token"
+Environment="ADMIN_PASSWORD=your_admin_password"
+Environment="FLASK_SECRET_KEY=your_secret_key"
+ExecStart=/usr/bin/python3 web_server.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

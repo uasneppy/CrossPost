@@ -2019,3 +2019,67 @@ telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsucc
 2025-03-09 12:07:39,887 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:39] "GET /channels HTTP/1.1" 200 -
 2025-03-09 12:07:40,052 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2025-03-09 12:07:40,168 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 12:07:40,999 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:40] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:08:11,013 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:08:11] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:08:42,005 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:08:42] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:09:12,008 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:09:12] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:09:27,600 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 12:09:27,600 - __main__ - INFO - Cleanup complete. Exiting.
+2025-03-09 12:18:14,876 - __main__ - INFO - Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+2025-03-09 12:18:14,877 - __main__ - INFO - Running as user: runner
+2025-03-09 12:18:14,877 - __main__ - INFO - Current directory: /home/runner/workspace
+2025-03-09 12:18:14,877 - __main__ - INFO - TELEGRAM_BOT_TOKEN set: Yes
+2025-03-09 12:18:14,877 - __main__ - INFO - Running under uWSGI: False
+2025-03-09 12:18:14,877 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 12:18:14,877 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 12:18:14,878 - __main__ - INFO - Importing bot module...
+2025-03-09 12:18:15,103 - bot - INFO - Bot initialized with state storage
+2025-03-09 12:18:15,104 - __main__ - INFO - Bot module imported successfully
+2025-03-09 12:18:15,105 - __main__ - INFO - Attempting to initialize bot (1/5)...
+2025-03-09 12:18:15,105 - __main__ - INFO - Python path: ['/home/runner/workspace', '/nix/store/lc7qv2ldzrs1aq3hbyzmbgvn0h2w26pl-sitecustomize/lib/python/site-packages', '/nix/store/dfg63lldbvcj207iyr9z0xw21d8ax02n-python3.11-pip-24.0/lib/python3.11/site-packages', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python311.zip', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/lib-dynload', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/nix/store/wblvmd5y7izx0z10d1w7ga7zc4apjxmb-python3.11-setuptools-75.1.1/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/setuptools/_vendor']
+2025-03-09 12:18:15,105 - __main__ - INFO - Successfully imported bot module
+2025-03-09 12:18:15,106 - __main__ - INFO - Initializing bot...
+2025-03-09 12:18:15,109 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 12:18:15,109 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 12:18:15,496 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 12:18:15,499 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 12:18:15,499 - utils.scheduler - INFO - Scheduler started
+2025-03-09 12:18:15,500 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 12:18:15,500 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 12:18:15,501 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 12:18:15,501 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 12:18:15,501 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 12:18:16,989 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 12:18:16,990 - bot - INFO - Bot started
+2025-03-09 12:18:16,990 - __main__ - INFO - Bot instance created successfully
+2025-03-09 12:18:16,990 - __main__ - INFO - Bot initialized successfully on attempt 1/5
+2025-03-09 12:18:16,990 - __main__ - INFO - Starting bot thread...
+2025-03-09 12:18:16,991 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 12:18:16,991 - __main__ - INFO - Bot thread started successfully
+2025-03-09 12:18:16,993 - __main__ - INFO - Watchdog thread started
+2025-03-09 12:18:16,993 - __main__ - INFO - Watchdog thread started
+2025-03-09 12:18:16,994 - __main__ - INFO - Web application ready to be served on port 5000
+2025-03-09 12:18:16,994 - __main__ - INFO - Running in direct execution mode, starting Flask server for development
+2025-03-09 12:18:16,998 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.76:5000
+2025-03-09 12:18:16,998 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 12:18:17,936 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:17] "GET / HTTP/1.1" 200 -
+2025-03-09 12:18:18,223 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 12:18:18,512 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 12:18:18,726 - handlers.channel - INFO - User 1336308262 requested settings
+2025-03-09 12:18:18,726 - handlers.channel - INFO - Found 5 approved channels
+2025-03-09 12:18:18,726 - handlers.channel - INFO - Added channel -1002204399883: Testing to menu
+2025-03-09 12:18:18,726 - handlers.channel - INFO - Added channel -1002467496944: Testing SFW to menu
+2025-03-09 12:18:18,727 - handlers.channel - INFO - Added channel -1002357763694: Memes SFW to menu
+2025-03-09 12:18:18,727 - handlers.channel - INFO - Added channel -1002487566547: Memes NSFW to menu
+2025-03-09 12:18:18,727 - handlers.channel - INFO - Added channel -1002297658240: Testing SFW #2 to menu
+2025-03-09 12:18:19,219 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:19] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:18:24,653 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:24] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 12:18:25,259 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:25] "GET / HTTP/1.1" 200 -
+2025-03-09 12:18:25,489 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 12:18:25,540 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 12:18:26,332 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:26] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:18:56,355 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:18:56] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:19:26,349 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:19:26] "GET /api/stats HTTP/1.1" 200 -

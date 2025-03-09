@@ -107,7 +107,41 @@ export ADMIN_PASSWORD="your_web_admin_password"
 export FLASK_SECRET_KEY="your_random_secret_key"
 ```
 
-For production, you can add these to `/etc/environment` or use a systemd service with environment variables.
+For production, you can add these to `/etc/environment` or use a systemd service with environment variables. We've provided two options for running as a background service:
+
+1. **Using the provided systemd service** (recommended for production servers):
+   ```bash
+   # 1. Edit the service file with your actual values
+   nano tg-community-bot.service
+   
+   # 2. Copy to systemd directory
+   sudo cp tg-community-bot.service /etc/systemd/system/
+   
+   # 3. Reload systemd configuration
+   sudo systemctl daemon-reload
+   
+   # 4. Enable and start the service
+   sudo systemctl enable tg-community-bot
+   sudo systemctl start tg-community-bot
+   
+   # 5. Check status
+   sudo systemctl status tg-community-bot
+   ```
+
+2. **Using the included daemon script** (for systems without systemd):
+   ```bash
+   # Make the script executable
+   chmod +x run_as_daemon.sh
+   
+   # Start as daemon
+   ./run_as_daemon.sh start
+   
+   # Check status
+   ./run_as_daemon.sh status
+   
+   # Stop daemon
+   ./run_as_daemon.sh stop
+   ```
 
 ## Reset Application State
 
