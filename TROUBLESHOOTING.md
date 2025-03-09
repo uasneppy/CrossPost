@@ -1,173 +1,133 @@
-# Troubleshooting Guide
+# Troubleshooting Ukrainian TG Community Bot
 
-This guide provides solutions for common issues when deploying the Ukrainian TG Community Bot.
+This guide helps you diagnose and fix common issues with the Ukrainian TG Community Bot deployment.
 
-## Internal Server Error (500)
+## Quick Start
 
-If you're getting a 500 Internal Server Error when starting with uWSGI, try these steps:
+The bot can be started in different modes using the `restart.sh` script:
 
-1. **Check environment variables**
+```bash
+# Show all available options
+./restart.sh help
 
-   Make sure you have set the required environment variables:
+# Recommended for production:
+./restart.sh wsgi
+
+# For development/testing:
+./restart.sh combined
+
+# For troubleshooting:
+./restart.sh simple
+```
+
+## Common Issues
+
+### Bot not starting with uWSGI
+
+If the bot fails to start when using uWSGI, try these steps:
+
+1. **Check logs**: Look for error messages in the `logs` directory:
    ```bash
-   export TELEGRAM_BOT_TOKEN="your_token_here"
-   export ADMIN_PASSWORD="your_admin_password"  # defaults to 'admin' if not set
-   export FLASK_SECRET_KEY="your_secret_key"    # generated randomly if not set
+   tail -n 100 logs/uwsgi.log
+   tail -n 100 logs/uwsgi-errors.log
    ```
 
-2. **Check logs**
-
-   Look at the logs for detailed error information:
+2. **Try the simplified configuration**:
    ```bash
-   cat logs/uwsgi.log
-   cat logs/uwsgi-errors.log
-   cat logs/uwsgi-startup.log
-   cat logs/web.log
+   ./restart.sh simple
    ```
 
-3. **Try the simple configuration**
-
-   Use the simplified uWSGI configuration:
+3. **Try the direct WSGI mode**:
    ```bash
-   uwsgi --ini uwsgi_simple.ini
+   ./restart.sh wsgi
    ```
 
-4. **Try running with the diagnostic script**
-
-   Use our diagnostic start script:
+4. **Verify environment variables**: Make sure `TELEGRAM_BOT_TOKEN` is set:
    ```bash
-   python start.py
+   echo $TELEGRAM_BOT_TOKEN
    ```
 
-5. **Try running without uWSGI**
-
-   Test if the Flask app runs directly:
+5. **Check the web server directly**:
    ```bash
-   python server.py
+   ./restart.sh web
    ```
 
-   Test if the combined app (web+bot) runs directly:
+6. **Check the bot directly**:
    ```bash
-   python web_server.py
+   ./restart.sh bot
    ```
 
-## Authentication Issues
+### Bot starts but doesn't respond to messages
 
-If you're having problems with authentication:
-
-1. **Reset credentials**
-
-   Set a simple password for testing:
+1. Check if the bot is polling:
    ```bash
-   export ADMIN_PASSWORD="admin"
+   grep "polling" logs/bot.log
    ```
 
-2. **Clear browser cache**
-
-   Your browser might be caching failed authentication attempts.
-
-3. **Check the log**
-
-   Look for authentication-related messages in the logs.
-
-## Bot Not Working
-
-If the Telegram bot isn't responding:
-
-1. **Verify token**
-
-   Make sure your `TELEGRAM_BOT_TOKEN` is correctly set and valid.
-
-2. **Check logs**
-
-   Look for bot-specific errors in `logs/bot.log` and `logs/web.log`.
-
-3. **Check internet connectivity**
-
-   Make sure your server can reach api.telegram.org.
-
-4. **Try running bot separately**
-
-   Test the bot component in isolation:
+2. Verify your bot token:
    ```bash
-   python bot.py
+   # Set a new token if needed
+   export TELEGRAM_BOT_TOKEN="your_new_token"
    ```
 
-## Permission Issues
-
-If you're experiencing permission problems:
-
-1. **Check directory permissions**
-
-   Make sure all directories are writable:
+3. Restart in combined mode to see real-time logs:
    ```bash
-   chmod -R 755 ./logs
-   chmod -R 755 ./data
-   chmod -R 755 ./static
-   chmod -R 755 ./templates
+   ./restart.sh combined
    ```
 
-2. **Create missing directories**
+### Web Interface Issues
 
-   Ensure all required directories exist:
-   ```bash
-   mkdir -p logs data static templates
+1. **Can't access web interface**: Make sure the server is binding to 0.0.0.0 instead of localhost:
+   ```
+   # This should appear in the logs
+   * Running on http://0.0.0.0:5000
    ```
 
-## Missing Dependencies
-
-If you're missing dependencies:
-
-1. **Install all required packages**
-
+2. **Authentication issues**: The default admin password is 'admin' unless you set `ADMIN_PASSWORD`:
    ```bash
-   pip install -r project_requirements.txt
+   export ADMIN_PASSWORD="your_secure_password"
    ```
 
-2. **Check for system dependencies**
+3. **Errors loading data**: Check file permissions in the data directory:
+   ```bash
+   ls -la data/
+   chmod 644 data/*.json
+   ```
 
-   Some packages may require system libraries.
+## Environment Setup
 
-## Specific Cloud Provider Issues
+The application requires these environment variables:
 
-### Replit
+```bash
+# Required
+export TELEGRAM_BOT_TOKEN="your_bot_token"
 
-- Make sure your secrets are properly set in the Replit secrets panel.
-- Use port 5000 as it's the default for Replit.
+# Optional (defaults will be used if not provided)
+export ADMIN_PASSWORD="your_web_admin_password"
+export FLASK_SECRET_KEY="your_random_secret_key"
+```
 
-### DigitalOcean / AWS / GCP
+For production, you can add these to `/etc/environment` or use a systemd service with environment variables.
 
-- Check firewall settings to ensure port 5000 is accessible.
-- Consider using a proper reverse proxy like Nginx for production.
+## Reset Application State
 
-### Shared Hosting
+If you need to reset the application state:
 
-- Many shared hosts don't support long-running processes. Consider using a VPS instead.
+```bash
+# Backup current data
+mkdir -p data_backup
+cp data/*.json data_backup/
 
-## Advanced Troubleshooting
+# Reset data files
+echo "{}" > data/channels.json
+echo "{}" > data/pending.json
+echo "{}" > data/schedule.json
+```
 
-If you're still having issues:
+## Contact Support
 
-1. **Enable debug mode temporarily**
+If you continue to experience issues after trying these troubleshooting steps, please contact the developers with:
 
-   Edit server.py to set debug=True (but remember to set it back to False for production).
-
-2. **Check thread management**
-
-   If the bot works alone but not with uWSGI, there might be threading issues.
-
-3. **Examine uwsgi.ini**
-
-   Try adjusting the number of processes and threads if your server has limited resources.
-
-4. **Check system resources**
-
-   Make sure you have enough RAM and CPU available.
-
-## Getting Help
-
-If you're still experiencing issues after trying these solutions:
-
-1. Open an issue on the project repository with detailed error logs.
-2. Include information about your deployment environment.
-3. List the steps you've already taken to troubleshoot.
+1. Relevant log files from the `logs` directory
+2. Information about your environment (OS, Python version)
+3. Steps you've already tried to resolve the issue

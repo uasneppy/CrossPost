@@ -63,6 +63,7 @@ def check_files():
         'server.py',
         'bot.py',
         'web_server.py',
+        'wsgi.py',  # Added wsgi.py as a required file
         'uwsgi.ini',
         'utils/storage.py',
         'utils/crosspost.py',
@@ -105,13 +106,33 @@ def start_server():
         
         logger.info("server.py test successful")
         
-        # Now try running web_server.py to test bot initialization
-        logger.info("Testing web_server.py with Python interpreter...")
-        # Don't actually run it, just import to check for errors
-        import web_server
-        logger.info("web_server.py imported successfully")
+        # Now test wsgi.py to make sure it can be imported
+        logger.info("Testing wsgi.py with Python interpreter...")
+        try:
+            # Check if the file exists first
+            if not os.path.exists("wsgi.py"):
+                logger.error("wsgi.py file not found")
+                return False
+                
+            # Just check for syntax errors without executing the module
+            result = subprocess.run(
+                [sys.executable, "-m", "py_compile", "wsgi.py"],
+                capture_output=True,
+                text=True
+            )
+            
+            if result.returncode != 0:
+                logger.error(f"wsgi.py compilation failed: {result.stderr}")
+                return False
+                
+            logger.info("wsgi.py syntax check passed successfully")
+        except Exception as e:
+            logger.error(f"wsgi.py check failed: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return False
         
-        # Now start uWSGI
+        # Now start uWSGI with the new configuration
         logger.info("Starting uWSGI...")
         cmd = ["uwsgi", "--ini", "uwsgi.ini"]
         
@@ -125,9 +146,21 @@ def start_server():
         if process.poll() is not None:
             # If process.poll() returns something, the process has terminated
             logger.error(f"uWSGI terminated unexpectedly with return code {process.returncode}")
-            return False
-        
-        logger.info("uWSGI server started successfully")
+            
+            # If main uwsgi.ini failed, try the simple version
+            logger.warning("Trying simple uWSGI configuration...")
+            cmd = ["uwsgi", "--ini", "uwsgi_simple.ini"]
+            process = subprocess.Popen(cmd)
+            
+            time.sleep(5)
+            if process.poll() is not None:
+                logger.error(f"Simple uWSGI configuration also failed with return code {process.returncode}")
+                return False
+            else:
+                logger.info("Simple uWSGI server started successfully")
+        else:
+            logger.info("uWSGI server started successfully")
+            
         return True
         
     except Exception as e:

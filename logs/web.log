@@ -1872,3 +1872,150 @@ telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsucc
 2025-03-09 11:00:01,870 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
 2025-03-09 11:00:01,870 - apscheduler.executors.default - INFO - Job "update_all_channel_subscribers (trigger: cron[minute='0'], next run at: 2025-03-09 14:00:00 EET)" executed successfully
 2025-03-09 11:00:22,642 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:00:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:00:52,599 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:00:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:01:22,646 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:01:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:01:52,654 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:01:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:03:17,651 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:03:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:04:17,764 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:04:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:04:22,642 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:04:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:04:52,650 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:04:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:05:54,300 - handlers.admin - INFO - Admin callback: view_approved
+2025-03-09 11:06:17,658 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:06:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:07:17,666 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:07:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:08:17,662 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:08:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:09:17,663 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:09:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:10:18,326 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:10:18] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:11:17,689 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:11:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:12:17,670 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:12:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:13:17,672 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:13:17] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:13:25,325 - handlers.channel - INFO - User 1126690339 started channel application process
+2025-03-09 11:13:25,470 - handlers.channel - INFO - Set state to waiting_channel_name for user 1126690339
+2025-03-09 11:13:51,816 - handlers.channel - INFO - Handling waiting_channel_name state for user 1126690339
+2025-03-09 11:13:51,816 - handlers.channel - INFO - Processing channel name for user 1126690339: https://t.me/gamefolklore
+2025-03-09 11:13:51,816 - handlers.channel - INFO - Stored channel title 'https://t.me/gamefolklore' for user 1126690339
+2025-03-09 11:13:51,964 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-09 11:13:51,965 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-09 11:14:08,556 - handlers.channel - INFO - User 1126690339 started channel application process
+2025-03-09 11:14:08,705 - handlers.channel - INFO - Set state to waiting_channel_name for user 1126690339
+2025-03-09 11:14:13,899 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:14:13] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:14:19,286 - handlers.channel - INFO - Handling waiting_channel_name state for user 1126690339
+2025-03-09 11:14:19,287 - handlers.channel - INFO - Processing channel name for user 1126690339: Ігрова корчма Джейса
+2025-03-09 11:14:19,287 - handlers.channel - INFO - Stored channel title 'Ігрова корчма Джейса' for user 1126690339
+2025-03-09 11:14:19,552 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-09 11:14:19,553 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-09 11:14:22,612 - werkzeug - INFO - 172.31.128.20 - - [09/Mar/2025 11:14:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 11:14:44,315 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 11:14:44,315 - __main__ - INFO - Cleanup complete. Exiting.
+2025-03-09 12:05:48,173 - __main__ - INFO - Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+2025-03-09 12:05:48,175 - __main__ - INFO - Running as user: runner
+2025-03-09 12:05:48,176 - __main__ - INFO - Current directory: /home/runner/workspace
+2025-03-09 12:05:48,176 - __main__ - INFO - TELEGRAM_BOT_TOKEN set: Yes
+2025-03-09 12:05:48,176 - __main__ - INFO - Running under uWSGI: False
+2025-03-09 12:05:48,176 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 12:05:48,176 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 12:05:48,176 - __main__ - INFO - Importing bot module...
+2025-03-09 12:05:48,734 - bot - INFO - Bot initialized with state storage
+2025-03-09 12:05:48,734 - __main__ - INFO - Bot module imported successfully
+2025-03-09 12:05:48,734 - __main__ - INFO - Attempting to initialize bot (1/5)...
+2025-03-09 12:05:48,735 - __main__ - INFO - Python path: ['/home/runner/workspace', '/nix/store/lc7qv2ldzrs1aq3hbyzmbgvn0h2w26pl-sitecustomize/lib/python/site-packages', '/nix/store/dfg63lldbvcj207iyr9z0xw21d8ax02n-python3.11-pip-24.0/lib/python3.11/site-packages', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python311.zip', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/lib-dynload', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/nix/store/wblvmd5y7izx0z10d1w7ga7zc4apjxmb-python3.11-setuptools-75.1.1/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/setuptools/_vendor']
+2025-03-09 12:05:48,735 - __main__ - INFO - Successfully imported bot module
+2025-03-09 12:05:48,735 - __main__ - INFO - Initializing bot...
+2025-03-09 12:05:48,739 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 12:05:48,739 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 12:05:49,141 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 12:05:49,142 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 12:05:49,143 - utils.scheduler - INFO - Scheduler started
+2025-03-09 12:05:49,143 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 12:05:49,144 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 12:05:49,144 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 12:05:49,145 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 12:05:49,145 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 12:05:50,569 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 12:05:50,569 - bot - INFO - Bot started
+2025-03-09 12:05:50,570 - __main__ - INFO - Bot instance created successfully
+2025-03-09 12:05:50,570 - __main__ - INFO - Bot initialized successfully on attempt 1/5
+2025-03-09 12:05:50,570 - __main__ - INFO - Starting bot thread...
+2025-03-09 12:05:50,570 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 12:05:50,570 - __main__ - INFO - Bot thread started successfully
+2025-03-09 12:05:50,572 - __main__ - INFO - Watchdog thread started
+2025-03-09 12:05:50,574 - __main__ - INFO - Watchdog thread started
+2025-03-09 12:05:50,574 - __main__ - INFO - Web application ready to be served on port 5000
+2025-03-09 12:05:50,574 - __main__ - INFO - Running in direct execution mode, starting Flask server for development
+2025-03-09 12:05:50,578 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.76:5000
+2025-03-09 12:05:50,578 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 12:05:51,186 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:05:51] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 12:05:51,538 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:05:51] "GET / HTTP/1.1" 200 -
+2025-03-09 12:05:51,819 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:05:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 12:05:52,165 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:05:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 12:05:52,825 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:05:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:05:59,452 - handlers.channel - INFO - User 1126690339 started channel application process
+2025-03-09 12:05:59,614 - handlers.channel - INFO - Set state to waiting_channel_name for user 1126690339
+2025-03-09 12:06:05,232 - handlers.channel - INFO - Handling waiting_channel_name state for user 1126690339
+2025-03-09 12:06:05,233 - handlers.channel - INFO - Processing channel name for user 1126690339: Ігрова корчма Джейса
+2025-03-09 12:06:05,233 - handlers.channel - INFO - Stored channel title 'Ігрова корчма Джейса' for user 1126690339
+2025-03-09 12:06:05,398 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_name
+2025-03-09 12:06:05,398 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_name to ChannelStates:waiting_channel_url
+2025-03-09 12:06:10,818 - handlers.channel - INFO - Handling waiting_channel_url state for user 1126690339
+2025-03-09 12:06:10,819 - handlers.channel - INFO - Processing channel URL for user 1126690339: @jaycegameinn
+2025-03-09 12:06:10,819 - handlers.channel - INFO - Stored channel username 'jaycegameinn' for user 1126690339
+2025-03-09 12:06:10,980 - handlers.channel - INFO - Current state before transition: ChannelStates:waiting_channel_url
+2025-03-09 12:06:10,981 - handlers.channel - INFO - State transitioned from ChannelStates:waiting_channel_url to ChannelStates:waiting_emoji
+2025-03-09 12:06:22,835 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:06:22] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:06:52,833 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:06:52] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:06:55,737 - __main__ - INFO - Shutdown requested. Cleaning up...
+2025-03-09 12:06:55,737 - __main__ - INFO - Cleanup complete. Exiting.
+2025-03-09 12:06:59,122 - __main__ - INFO - Python version: 3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+2025-03-09 12:06:59,122 - __main__ - INFO - Running as user: runner
+2025-03-09 12:06:59,122 - __main__ - INFO - Current directory: /home/runner/workspace
+2025-03-09 12:06:59,122 - __main__ - INFO - TELEGRAM_BOT_TOKEN set: Yes
+2025-03-09 12:06:59,122 - __main__ - INFO - Running under uWSGI: False
+2025-03-09 12:06:59,122 - __main__ - WARNING - ADMIN_PASSWORD environment variable not set. Using default password 'admin'.
+2025-03-09 12:06:59,122 - __main__ - WARNING - FLASK_SECRET_KEY environment variable not set. Generating a random key.
+2025-03-09 12:06:59,123 - __main__ - INFO - Importing bot module...
+2025-03-09 12:06:59,276 - bot - INFO - Bot initialized with state storage
+2025-03-09 12:06:59,277 - __main__ - INFO - Bot module imported successfully
+2025-03-09 12:06:59,277 - __main__ - INFO - Attempting to initialize bot (1/5)...
+2025-03-09 12:06:59,277 - __main__ - INFO - Python path: ['/home/runner/workspace', '/nix/store/lc7qv2ldzrs1aq3hbyzmbgvn0h2w26pl-sitecustomize/lib/python/site-packages', '/nix/store/dfg63lldbvcj207iyr9z0xw21d8ax02n-python3.11-pip-24.0/lib/python3.11/site-packages', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python311.zip', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11', '/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/lib-dynload', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages', '/nix/store/wblvmd5y7izx0z10d1w7ga7zc4apjxmb-python3.11-setuptools-75.1.1/lib/python3.11/site-packages', '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/setuptools/_vendor']
+2025-03-09 12:06:59,277 - __main__ - INFO - Successfully imported bot module
+2025-03-09 12:06:59,277 - __main__ - INFO - Initializing bot...
+2025-03-09 12:06:59,278 - handlers.channel - INFO - Channel handlers registered
+2025-03-09 12:06:59,279 - handlers.admin - INFO - Admin handlers registered
+2025-03-09 12:06:59,678 - bot - INFO - Admin commands will be handled based on user ID since telebot doesn't support scoped commands
+2025-03-09 12:06:59,679 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-09 12:06:59,680 - utils.scheduler - INFO - Scheduler started
+2025-03-09 12:06:59,680 - apscheduler.scheduler - INFO - Added job "schedule_daily_crosspost" to job store "default"
+2025-03-09 12:06:59,681 - apscheduler.scheduler - INFO - Added job "update_all_channel_subscribers" to job store "default"
+2025-03-09 12:06:59,681 - utils.scheduler - INFO - Scheduling crosspost for exactly 6 PM Kyiv time: 2025-03-09 18:00:00+02:00
+2025-03-09 12:06:59,682 - apscheduler.scheduler - INFO - Added job "create_and_send_crosspost" to job store "default"
+2025-03-09 12:06:59,682 - utils.crosspost - INFO - Updating subscriber counts for all channels
+2025-03-09 12:07:01,172 - utils.crosspost - INFO - Successfully updated subscriber counts for 5 channels
+2025-03-09 12:07:01,172 - bot - INFO - Bot started
+2025-03-09 12:07:01,172 - __main__ - INFO - Bot instance created successfully
+2025-03-09 12:07:01,172 - __main__ - INFO - Bot initialized successfully on attempt 1/5
+2025-03-09 12:07:01,173 - __main__ - INFO - Starting bot thread...
+2025-03-09 12:07:01,173 - __main__ - INFO - Starting bot polling in separate thread
+2025-03-09 12:07:01,175 - __main__ - INFO - Bot thread started successfully
+2025-03-09 12:07:01,175 - __main__ - INFO - Watchdog thread started
+2025-03-09 12:07:01,175 - __main__ - INFO - Watchdog thread started
+2025-03-09 12:07:01,176 - __main__ - INFO - Web application ready to be served on port 5000
+2025-03-09 12:07:01,176 - __main__ - INFO - Running in direct execution mode, starting Flask server for development
+2025-03-09 12:07:01,180 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.128.76:5000
+2025-03-09 12:07:01,180 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-09 12:07:01,531 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:01] "GET / HTTP/1.1" 200 -
+2025-03-09 12:07:01,812 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 12:07:01,826 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 12:07:02,671 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:02] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:07:09,574 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:09] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-09 12:07:10,309 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:10] "GET / HTTP/1.1" 200 -
+2025-03-09 12:07:10,469 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 12:07:10,591 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-09 12:07:11,365 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:11] "GET /api/stats HTTP/1.1" 200 -
+2025-03-09 12:07:39,887 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:39] "GET /channels HTTP/1.1" 200 -
+2025-03-09 12:07:40,052 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-09 12:07:40,168 - werkzeug - INFO - 172.31.128.76 - - [09/Mar/2025 12:07:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -

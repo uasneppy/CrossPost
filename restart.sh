@@ -12,6 +12,7 @@ function print_usage {
     echo "  web         - Start just the web server"
     echo "  bot         - Start just the bot"
     echo "  combined    - Start web server and bot combined (development mode)"
+    echo "  wsgi        - Start with wsgi.py (recommended for production)"
     echo "  help        - Show this help message"
     echo ""
 }
@@ -56,6 +57,10 @@ case "$1" in
     combined)
         echo "Starting web server and bot combined (development mode)..."
         python web_server.py
+        ;;
+    wsgi)
+        echo "Starting with wsgi.py (recommended for production)..."
+        uwsgi --http 0.0.0.0:5000 --wsgi-file wsgi.py --callable application --master --processes 1 --threads 2 --pythonpath .
         ;;
     "" | help)
         print_usage
