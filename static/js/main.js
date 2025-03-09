@@ -35,13 +35,65 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (nsfwChannelsElement) nsfwChannelsElement.textContent = data.nsfw_channels;
                 if (totalSubscribersElement) totalSubscribersElement.textContent = data.total_subscribers;
                 
+                // Check if we should update subtitle based on user scope
+                const statsSubtitle = document.getElementById('stats-subtitle');
+                if (statsSubtitle && data.scope) {
+                    if (data.scope === 'network') {
+                        statsSubtitle.textContent = 'Мережева статистика';
+                    } else {
+                        statsSubtitle.textContent = 'Статистика ваших каналів';
+                    }
+                }
+                
+                // Update last updated timestamp
+                const lastUpdatedElement = document.getElementById('last-updated');
+                if (lastUpdatedElement && data.timestamp) {
+                    const date = new Date(data.timestamp);
+                    const formattedDate = date.toLocaleString('uk-UA');
+                    lastUpdatedElement.textContent = `Останнє оновлення: ${formattedDate}`;
+                }
+                
                 // Update the pie chart if it exists
                 if (window.channelsChart) {
                     window.channelsChart.data.datasets[0].data = [data.sfw_channels, data.nsfw_channels];
+                    
+                    // Add scope label to chart title if present
+                    if (data.scope) {
+                        const scopeTitle = data.scope === 'network' ? 'Мережеве співвідношення' : 'Ваші канали';
+                        window.channelsChart.options.plugins.title = {
+                            display: true,
+                            text: scopeTitle,
+                            font: {
+                                size: 14
+                            }
+                        };
+                    }
+                    
                     window.channelsChart.update();
                 }
             })
-            .catch(error => console.error('Error fetching stats:', error));
+            .catch(error => {
+                console.error('Error fetching stats:', error);
+                // Show error message on the UI
+                const errorElement = document.createElement('div');
+                errorElement.className = 'alert alert-danger mt-3';
+                errorElement.textContent = 'Помилка завантаження статистики. Спробуйте пізніше.';
+                
+                // Remove previous error messages
+                const oldErrors = document.querySelectorAll('.alert-danger');
+                oldErrors.forEach(el => el.remove());
+                
+                // Add error to the first stat card
+                const statCard = document.querySelector('.card');
+                if (statCard) {
+                    statCard.appendChild(errorElement);
+                    
+                    // Auto-remove after 5 seconds
+                    setTimeout(() => {
+                        errorElement.remove();
+                    }, 5000);
+                }
+            });
     }
     
     // Run immediately

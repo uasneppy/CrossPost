@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title|default('Керувати зображеннями') }} - Українське ТҐ-Комʼюніті{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Керування зображеннями для кросспостів</h2>
+            </div>
+            <div class="card-body">
+                <p class="mb-4">
+                    Тут можна завантажити зображення для кросспостів. Використовуйте різні зображення для SFW (безпечний вміст) та NSFW (дорослий вміст) каналів.
+                </p>
+                
+                <form method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    
+                    <div class="row">
+                        <!-- SFW Image -->
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-success text-white">
+                                    <h3 class="card-title h5 mb-0">SFW Зображення</h3>
+                                </div>
+                                <div class="card-body">
+                                    {% if sfw_exists %}
+                                    <div class="text-center mb-3">
+                                        <p class="text-success">✅ SFW зображення завантажено</p>
+                                        <img src="/generated-icon.png" alt="SFW Image" class="img-thumbnail mb-3" style="max-height: 200px;">
+                                    </div>
+                                    {% else %}
+                                    <div class="text-center mb-3">
+                                        <p class="text-danger">⚠️ SFW зображення відсутнє</p>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    <div class="mb-3">
+                                        <label for="sfw_image" class="form-label">Завантажити нове SFW зображення:</label>
+                                        <input class="form-control" type="file" id="sfw_image" name="sfw_image" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- NSFW Image -->
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-danger text-white">
+                                    <h3 class="card-title h5 mb-0">NSFW Зображення</h3>
+                                </div>
+                                <div class="card-body">
+                                    {% if nsfw_exists %}
+                                    <div class="text-center mb-3">
+                                        <p class="text-success">✅ NSFW зображення завантажено</p>
+                                        <img src="/nsfw-icon.png" alt="NSFW Image" class="img-thumbnail mb-3" style="max-height: 200px;">
+                                    </div>
+                                    {% else %}
+                                    <div class="text-center mb-3">
+                                        <p class="text-danger">⚠️ NSFW зображення відсутнє</p>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    <div class="mb-3">
+                                        <label for="nsfw_image" class="form-label">Завантажити нове NSFW зображення:</label>
+                                        <input class="form-control" type="file" id="nsfw_image" name="nsfw_image" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">« Назад до панелі керування</a>
+                        <button type="submit" class="btn btn-primary">Зберегти зображення</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

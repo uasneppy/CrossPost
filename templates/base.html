@@ -27,15 +27,22 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == url_for('list_channels') %}active{% endif %}" href="{{ url_for('list_channels') }}">
-                            <i class="bi bi-megaphone"></i> Канали
+                            <i class="bi bi-megaphone"></i> {% if is_admin is defined and is_admin %}Всі Канали{% else %}Мої Канали{% endif %}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == url_for('list_pending') %}active{% endif %}" href="{{ url_for('list_pending') }}">
-                            <i class="bi bi-hourglass-split"></i> Заявки
+                            <i class="bi bi-hourglass-split"></i> {% if is_admin is defined and is_admin %}Всі Заявки{% else %}Мої Заявки{% endif %}
                             <span class="badge bg-warning text-dark pending-count"></span>
                         </a>
                     </li>
+                    {% if is_admin is defined and is_admin %}
+                    <li class="nav-item">
+                        <span class="nav-link">
+                            <i class="bi bi-shield-check text-warning"></i> Адмін
+                        </span>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

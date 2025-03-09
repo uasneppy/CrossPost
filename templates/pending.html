@@ -5,6 +5,19 @@
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h1>{{ title }}</h1>
+    {% if is_admin is defined and is_admin %}
+    <div class="badge bg-warning text-dark p-2">
+        <i class="bi bi-shield-check"></i> Адміністратор
+    </div>
+    {% endif %}
+</div>
+
+<div class="alert alert-info" role="alert">
+    {% if is_admin is defined and is_admin %}
+        <i class="bi bi-info-circle"></i> Ви бачите список усіх заявок на додавання каналів до мережі. Як адміністратор, ви можете розглянути та прийняти рішення щодо кожної заявки.
+    {% else %}
+        <i class="bi bi-info-circle"></i> Ви бачите список ваших заявок на додавання каналів до мережі. Ви можете переглянути статус кожної з них.
+    {% endif %}
 </div>
 
 <div class="row">
@@ -19,6 +32,10 @@
                             <th>Тип</th>
                             <th>Підписники</th>
                             <th>Емодзі</th>
+                            {% if is_admin is defined and is_admin %}
+                            <th>Власник</th>
+                            <th>Дата подання</th>
+                            {% endif %}
                             <th>Дії</th>
                         </tr>
                     </thead>
@@ -34,6 +51,26 @@
                                 </td>
                                 <td>{{ channel.subscribers|default(0)|int }}</td>
                                 <td>{{ channel.emojis|default([])|join(' ') }}</td>
+                                {% if is_admin is defined and is_admin %}
+                                <td>
+                                    {% if channel.owner_id %}
+                                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="ID користувача">
+                                            <i class="bi bi-person"></i> {{ channel.owner_id }}
+                                        </span>
+                                    {% else %}
+                                        <span class="badge bg-secondary">
+                                            <i class="bi bi-question-circle"></i> Невідомо
+                                        </span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if channel.created_at %}
+                                        {{ channel.created_at }}
+                                    {% else %}
+                                        <span class="text-muted">Невідомо</span>
+                                    {% endif %}
+                                </td>
+                                {% endif %}
                                 <td>
                                     <a href="{{ url_for('view_pending', channel_id=channel_id) }}" class="btn btn-sm btn-outline-primary">
                                         <i class="bi bi-eye"></i> Переглянути
@@ -46,7 +83,12 @@
             </div>
         {% else %}
             <div class="alert alert-info">
-                <i class="bi bi-info-circle"></i> Немає заявок на розгляді.
+                <i class="bi bi-info-circle"></i> 
+                {% if is_admin is defined and is_admin %}
+                    Немає заявок на розгляді.
+                {% else %}
+                    У вас немає поданих заявок.
+                {% endif %}
             </div>
         {% endif %}
     </div>

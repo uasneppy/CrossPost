@@ -4,10 +4,30 @@
 
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h1>{{ title }}</h1>
+    <div>
+        <h1>{{ title }}</h1>
+        {% if is_admin is defined and is_admin %}
+            <span class="badge bg-warning text-dark">
+                <i class="bi bi-shield-check"></i> Адмін-режим
+            </span>
+        {% endif %}
+        {% if channel.owner_id and g.user_id and channel.owner_id == g.user_id %}
+            <span class="badge bg-info">
+                <i class="bi bi-person-check"></i> Ваша заявка
+            </span>
+        {% endif %}
+    </div>
     <a href="{{ url_for('list_pending') }}" class="btn btn-outline-secondary">
         <i class="bi bi-arrow-left"></i> Назад до заявок
     </a>
+</div>
+
+<div class="alert alert-info" role="alert">
+    {% if is_admin is defined and is_admin %}
+        <i class="bi bi-info-circle"></i> Як адміністратор, ви можете схвалити або відхилити цю заявку.
+    {% else %}
+        <i class="bi bi-info-circle"></i> Це стан вашої заявки на участь у мережі. Ви не можете редагувати її, поки вона знаходиться на розгляді адміністратора.
+    {% endif %}
 </div>
 
 <div class="row">
@@ -54,12 +74,27 @@
                         <th>Дата подання:</th>
                         <td>{{ channel.application_date if channel.application_date else 'Невідомо' }}</td>
                     </tr>
+                    {% if is_admin is defined and is_admin %}
+                    <tr>
+                        <th>Власник:</th>
+                        <td>
+                            {% if channel.owner_id %}
+                                <span class="badge bg-secondary">
+                                    <i class="bi bi-person"></i> {{ channel.owner_id }}
+                                </span>
+                            {% else %}
+                                <span class="text-muted">Невідомо</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endif %}
                 </table>
             </div>
         </div>
     </div>
     
     <div class="col-md-4">
+        {% if is_admin is defined and is_admin %}
         <div class="card mb-4">
             <div class="card-body">
                 <h2 class="card-title">Прийняти рішення</h2>
@@ -73,6 +108,20 @@
                 </form>
             </div>
         </div>
+        {% else %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Статус заявки</h2>
+                <div class="alert alert-warning">
+                    <i class="bi bi-hourglass-split"></i> Заявка на розгляді
+                </div>
+                <p class="text-muted">
+                    Ваша заявка очікує розгляду адміністратором. 
+                    Ви отримаєте повідомлення в Telegram, коли рішення буде прийнято.
+                </p>
+            </div>
+        </div>
+        {% endif %}
         
         {% if channel.sample_post %}
         <div class="card mb-4">

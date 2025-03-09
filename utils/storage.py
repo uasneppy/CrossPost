@@ -40,6 +40,18 @@ def get_channels() -> Dict[str, Dict]:
     """Get all approved channels."""
     return load_json(config.CHANNELS_FILE)
 
+def get_user_channels(user_id: int) -> Dict[str, Dict]:
+    """Get all approved channels owned by a specific user."""
+    channels = get_channels()
+    user_channels = {}
+    
+    for channel_id, channel_data in channels.items():
+        # Check if channel is owned by this user
+        if channel_data.get("owner_id") == user_id:
+            user_channels[channel_id] = channel_data
+            
+    return user_channels
+
 def save_channels(channels: Dict[str, Dict]) -> bool:
     """Save all approved channels."""
     return save_json(config.CHANNELS_FILE, channels)
@@ -47,6 +59,18 @@ def save_channels(channels: Dict[str, Dict]) -> bool:
 def get_pending_channels() -> Dict[str, Dict]:
     """Get all pending channel applications."""
     return load_json(config.PENDING_FILE)
+
+def get_user_pending_channels(user_id: int) -> Dict[str, Dict]:
+    """Get all pending channel applications owned by a specific user."""
+    pending = get_pending_channels()
+    user_pending = {}
+    
+    for channel_id, channel_data in pending.items():
+        # Check if channel is owned by this user
+        if channel_data.get("owner_id") == user_id:
+            user_pending[channel_id] = channel_data
+            
+    return user_pending
 
 def save_pending_channels(pending: Dict[str, Dict]) -> bool:
     """Save all pending channel applications."""
@@ -198,6 +222,28 @@ def is_channel_approved(channel_id: str) -> bool:
     """Check if a channel is in the approved list."""
     channels = get_channels()
     return channel_id in channels
+    
+def is_channel_owner(channel_id: str, user_id: int) -> bool:
+    """Check if a user owns a specific channel.
+    
+    Args:
+        channel_id: The ID of the channel
+        user_id: The ID of the user
+        
+    Returns:
+        True if the user owns the channel, False otherwise
+    """
+    # Check in approved channels
+    channels = get_channels()
+    if channel_id in channels and channels[channel_id].get("owner_id") == user_id:
+        return True
+    
+    # Check in pending channels
+    pending = get_pending_channels()
+    if channel_id in pending and pending[channel_id].get("owner_id") == user_id:
+        return True
+        
+    return False
 
 def set_channel_reserved_position(channel_id: str, position: int) -> bool:
     """Set a reserved position for a channel in crosspost lists.

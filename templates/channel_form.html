@@ -43,16 +43,6 @@
                     </div>
                     
                     <div class="mb-3">
-                        <label for="url" class="form-label">URL каналу</label>
-                        {{ form.url(class="form-control", id="url") }}
-                        {% if form.url.errors %}
-                            {% for error in form.url.errors %}
-                                <div class="text-danger">{{ error }}</div>
-                            {% endfor %}
-                        {% endif %}
-                    </div>
-                    
-                    <div class="mb-3">
                         <label for="emojis" class="form-label">Емодзі (через кому)</label>
                         {{ form.emojis(class="form-control", id="emojis") }}
                         <div class="form-text">Введіть до 3 емодзі, які представляють канал, розділяючи їх комами</div>

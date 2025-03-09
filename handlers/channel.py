@@ -471,6 +471,8 @@ def post_forward_handler(message, bot):
     
     # Submit application
     channel_data = user_sessions[user_id]["channel"]
+    # Store the owner's user ID for user isolation
+    channel_data["owner_id"] = user_id
     channel_id = str(channel_data["id"])
     
     success = storage.add_pending_channel(channel_id, channel_data)
@@ -504,34 +506,28 @@ def settings_command(message, bot):
     user_id = message.from_user.id
     logger.info(f"User {user_id} requested settings")
     
-    # Get all approved channels
-    all_channels = storage.get_channels()
-    logger.info(f"Found {len(all_channels)} approved channels")
+    # Get only the channels owned by this user
+    user_channels = storage.get_user_channels(user_id)
+    logger.info(f"Found {len(user_channels)} approved channels for user {user_id}")
     
-    # For now, we'll show all channels that the user might own
-    # In production, you would filter based on channel ownership
-    # by checking if the user is an admin in each channel
-    
-    # For demonstration purposes, we'll just show all channels
-    # This would need to be replaced with proper ownership verification
-    if not all_channels:
+    if not user_channels:
         bot.send_message(
             message.chat.id,
-            "There are no approved channels in the network yet.\n\n"
+            "You don't have any approved channels in the network yet.\n\n"
             "Use /apply to submit a channel for approval."
         )
-        logger.info("No approved channels found")
+        logger.info(f"No approved channels found for user {user_id}")
         return
     
     markup = types.InlineKeyboardMarkup(row_width=1)
     
-    for channel_id, channel_data in all_channels.items():
+    for channel_id, channel_data in user_channels.items():
         channel_title = channel_data.get("title", "Unknown")
         markup.add(types.InlineKeyboardButton(
             channel_title,
             callback_data=f"settings_{channel_id}"
         ))
-        logger.info(f"Added channel {channel_id}: {channel_title} to menu")
+        logger.info(f"Added channel {channel_id}: {channel_title} to menu for user {user_id}")
     
     bot.send_message(
         message.chat.id,
@@ -545,30 +541,28 @@ def schedule_command(message, bot):
     user_id = message.from_user.id
     logger.info(f"User {user_id} requested schedule management")
     
-    # Get all approved channels
-    all_channels = storage.get_channels()
-    logger.info(f"Found {len(all_channels)} approved channels")
+    # Get only the channels owned by this user
+    user_channels = storage.get_user_channels(user_id)
+    logger.info(f"Found {len(user_channels)} approved channels for user {user_id}")
     
-    # For demonstration purposes, show all channels
-    # In production, you would filter based on channel ownership
-    if not all_channels:
+    if not user_channels:
         bot.send_message(
             message.chat.id,
-            "There are no approved channels in the network yet.\n\n"
+            "You don't have any approved channels in the network yet.\n\n"
             "Use /apply to submit a channel for approval."
         )
-        logger.info("No approved channels found")
+        logger.info(f"No approved channels found for user {user_id}")
         return
     
     markup = types.InlineKeyboardMarkup(row_width=1)
     
-    for channel_id, channel_data in all_channels.items():
+    for channel_id, channel_data in user_channels.items():
         channel_title = channel_data.get("title", "Unknown")
         markup.add(types.InlineKeyboardButton(
             channel_title,
             callback_data=f"schedule_{channel_id}"
         ))
-        logger.info(f"Added channel {channel_id}: {channel_title} to schedule menu")
+        logger.info(f"Added channel {channel_id}: {channel_title} to schedule menu for user {user_id}")
     
     bot.send_message(
         message.chat.id,
@@ -580,16 +574,17 @@ def schedule_command(message, bot):
 def status_command(message, bot):
     """Check channel status."""
     user_id = message.from_user.id
+    logger.info(f"User {user_id} requested channel status")
     
-    # For demonstration purposes, show all channels and pending applications
-    # In a real implementation, you'd need to verify ownership
-    approved_channels = storage.get_channels()
-    pending_channels = storage.get_pending_channels()
+    # Get only channels owned by this user
+    user_approved_channels = storage.get_user_channels(user_id)
+    user_pending_channels = storage.get_user_pending_channels(user_id)
     
-    # In a real implementation, filter by user ownership
-    # For now, we'll show all (this would be a security issue in production)
-    user_approved = list(approved_channels.items())
-    user_pending = list(pending_channels.items())
+    logger.info(f"Found {len(user_approved_channels)} approved and {len(user_pending_channels)} pending channels for user {user_id}")
+    
+    # Convert to lists for consistency with the rest of the code
+    user_approved = list(user_approved_channels.items())
+    user_pending = list(user_pending_channels.items())
     
     if not user_approved and not user_pending:
         bot.send_message(
@@ -630,6 +625,13 @@ def callback_query_handler(call, bot):
         if not channel_info:
             bot.answer_callback_query(call.id, "Channel not found")
             return
+            
+        # Check if user is the channel owner
+        user_id = call.from_user.id
+        if not storage.is_channel_owner(channel_id, user_id):
+            bot.answer_callback_query(call.id, "You don't have permission to manage this channel")
+            logger.warning(f"User {user_id} attempted to access settings for channel {channel_id} without permission")
+            return
         
         # Create inline keyboard for channel settings
         markup = types.InlineKeyboardMarkup(row_width=1)
@@ -666,6 +668,13 @@ def callback_query_handler(call, bot):
         
         if not channel_info:
             bot.answer_callback_query(call.id, "Channel not found")
+            return
+            
+        # Check if user is the channel owner
+        user_id = call.from_user.id
+        if not storage.is_channel_owner(channel_id, user_id):
+            bot.answer_callback_query(call.id, "You don't have permission to manage this channel")
+            logger.warning(f"User {user_id} attempted to access schedule for channel {channel_id} without permission")
             return
         
         # Get current schedule
@@ -714,6 +723,13 @@ def callback_query_handler(call, bot):
             day_idx = int(day_idx)
         except ValueError:
             bot.answer_callback_query(call.id, "Invalid day index")
+            return
+            
+        # Check if user is the channel owner
+        user_id = call.from_user.id
+        if not storage.is_channel_owner(channel_id, user_id):
+            bot.answer_callback_query(call.id, "You don't have permission to modify this channel")
+            logger.warning(f"User {user_id} attempted to toggle schedule for channel {channel_id} without permission")
             return
         
         # Toggle the day in the schedule
@@ -767,6 +783,13 @@ def callback_query_handler(call, bot):
         if not channel_info:
             bot.answer_callback_query(call.id, "Channel not found")
             return
+            
+        # Check if user is the channel owner
+        user_id = call.from_user.id
+        if not storage.is_channel_owner(channel_id, user_id):
+            bot.answer_callback_query(call.id, "You don't have permission to view this channel")
+            logger.warning(f"User {user_id} attempted to access emojis for channel {channel_id} without permission")
+            return
         
         # Show current emojis
         current_emojis = channel_info.get("emojis", [])
@@ -795,6 +818,13 @@ def callback_query_handler(call, bot):
         
         if not channel_info:
             bot.answer_callback_query(call.id, "Channel not found")
+            return
+            
+        # Check if user is the channel owner
+        user_id = call.from_user.id
+        if not storage.is_channel_owner(channel_id, user_id):
+            bot.answer_callback_query(call.id, "You don't have permission to view this channel")
+            logger.warning(f"User {user_id} attempted to access info for channel {channel_id} without permission")
             return
         
         # Get subscriber count

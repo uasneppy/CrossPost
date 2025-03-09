@@ -1,8 +1,91 @@
 {% extends "base.html" %}
 
-{% block title %}Головна - Українське ТҐ-Комʼюніті{% endblock %}
+{% block title %}{{ title|default('Головна') }} - Українське ТҐ-Комʼюніті{% endblock %}
 
 {% block content %}
+<div class="row">
+    <div class="col-md-12 mb-4">
+        <div class="alert alert-info">
+            <h4 class="alert-heading">{{ title|default('Панель управління') }}</h4>
+            <p>
+                Ви переглядаєте повну статистику мережі як адміністратор. 
+                Ви маєте доступ до управління всіма каналами та заявками в системі.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Панель керування адміністратора</h2>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <!-- Approve Channel Button -->
+                    <div class="col-md-3">
+                        <a href="{{ url_for('list_pending') }}" class="btn btn-success d-flex flex-column align-items-center justify-content-center p-4 h-100">
+                            <i class="bi bi-check-circle fs-2 mb-2"></i>
+                            <span>Схвалити канал</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Reject Channel Button -->
+                    <div class="col-md-3">
+                        <a href="{{ url_for('list_pending') }}" class="btn btn-danger d-flex flex-column align-items-center justify-content-center p-4 h-100">
+                            <i class="bi bi-x-circle fs-2 mb-2"></i>
+                            <span>Відхилити канал</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Remove Channel Button -->
+                    <div class="col-md-3">
+                        <a href="{{ url_for('list_channels') }}" class="btn btn-warning d-flex flex-column align-items-center justify-content-center p-4 h-100">
+                            <i class="bi bi-trash fs-2 mb-2"></i>
+                            <span>Видалити канал</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Trigger Post Button -->
+                    <div class="col-md-3">
+                        <a href="{{ url_for('trigger_post') }}" class="btn btn-primary d-flex flex-column align-items-center justify-content-center p-4 h-100">
+                            <i class="bi bi-send fs-2 mb-2"></i>
+                            <span>Запустити публікацію</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row g-3 mt-3">
+                    <!-- Update Subscribers Button -->
+                    <div class="col-md-4">
+                        <a href="{{ url_for('update_subscribers') }}" class="btn btn-info d-flex flex-column align-items-center justify-content-center p-4 h-100">
+                            <i class="bi bi-arrow-repeat fs-2 mb-2"></i>
+                            <span>Оновити кількість підписників</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Manage Images Button -->
+                    <div class="col-md-4">
+                        <a href="{{ url_for('manage_images') }}" class="btn btn-secondary d-flex flex-column align-items-center justify-content-center p-4 h-100">
+                            <i class="bi bi-image fs-2 mb-2"></i>
+                            <span>Керувати зображеннями</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Channel List Button -->
+                    <div class="col-md-4">
+                        <a href="{{ url_for('list_channels') }}" class="btn btn-dark d-flex flex-column align-items-center justify-content-center p-4 h-100">
+                            <i class="bi bi-list-ul fs-2 mb-2"></i>
+                            <span>Список каналів</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-md-6">
         <div class="card mb-4">
@@ -73,6 +156,9 @@
             <div class="card-body">
                 <h2 class="card-title">Графіки</h2>
                 <canvas id="channelsChart"></canvas>
+                <div class="text-center mt-3">
+                    <small class="text-muted">Останнє оновлення: {{ now.strftime('%d.%m.%Y %H:%M:%S') }}</small>
+                </div>
             </div>
         </div>
     </div>
@@ -93,6 +179,9 @@
                                 <div>
                                     <strong>{{ channel.title|default(channel.name|default('Без імені')) }}</strong>
                                     <small class="text-muted d-block">@{{ channel.username|default('невідомий') }}</small>
+                                    {% if is_admin is defined and is_admin and channel.owner_id %}
+                                        <small class="text-muted d-block">Власник ID: {{ channel.owner_id }}</small>
+                                    {% endif %}
                                 </div>
                                 <div>
                                     <a href="{{ url_for('view_pending', channel_id=channel_id) }}" class="btn btn-sm btn-outline-info">
@@ -128,6 +217,9 @@
                                     <div>
                                         <strong>{{ channel.title|default(channel.name|default('Без імені')) }}</strong>
                                         <small class="text-muted d-block">@{{ channel.username|default('невідомий') }} - {{ channel.subscribers|default(0) }} підписників</small>
+                                        {% if is_admin is defined and is_admin and channel.owner_id %}
+                                            <small class="text-muted d-block">Власник ID: {{ channel.owner_id }}</small>
+                                        {% endif %}
                                     </div>
                                     <div>
                                         <span class="badge {% if not channel.is_sfw|default(true) %}bg-danger{% else %}bg-success{% endif %}">
